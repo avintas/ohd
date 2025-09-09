@@ -24,7 +24,7 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
               <p className="text-[#a0aec0] leading-relaxed mb-6">
-                By using OnlyHockey, you agree to these Terms of Service. If you don't agree, please don't use our services.
+                By using OnlyHockey, you agree to these Terms of Service. If you don&apos;t agree, please don&apos;t use our services.
               </p>
 
               <h2 className="text-2xl font-bold text-white mb-4">Description of Service</h2>
@@ -35,7 +35,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">User Accounts</h2>
               <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
                 <li>You must provide accurate information when creating an account</li>
-                <li>You're responsible for maintaining account security</li>
+                <li>You&apos;re responsible for maintaining account security</li>
                 <li>One account per person</li>
                 <li>Must be 13 years or older to create an account (under 18 requires parental consent)</li>
               </ul>
@@ -67,13 +67,13 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">Disclaimers</h2>
               <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
                 <li>OnlyHockey content is for entertainment and educational purposes</li>
-                <li>We don't guarantee accuracy of all statistical information</li>
+                <li>We don&apos;t guarantee accuracy of all statistical information</li>
                 <li>Services provided "as is" without warranties</li>
               </ul>
 
               <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
               <p className="text-[#a0aec0] leading-relaxed mb-6">
-                OnlyHockey's liability is limited to the amount you paid for our services in the past 12 months.
+                OnlyHockey&apos;s liability is limited to the amount you paid for our services in the past 12 months.
               </p>
 
               <h2 className="text-2xl font-bold text-white mb-4">Changes to Terms</h2>

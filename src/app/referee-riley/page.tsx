@@ -47,7 +47,7 @@ export default function RefereeRileyPage() {
                   <h3 className="font-semibold text-white mb-2">Referee Riley</h3>
                   <p className="text-[#a0aec0] mb-3">
                     🏒 Rule Spotlight: Offside explained! A player is offside if they enter 
-                    the attacking zone before the puck. But here's the key: both skates must 
+                    the attacking zone before the puck. But here&apos;s the key: both skates must 
                     completely cross the blue line!
                   </p>
                   <div className="text-sm text-[#718096]">1 hour ago</div>

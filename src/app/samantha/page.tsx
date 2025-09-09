@@ -46,7 +46,7 @@ export default function SamanthaPage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Samantha</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    🏒 Did you know? Wayne Gretzky holds 61 NHL records! Here's a fun fact: 
+                    🏒 Did you know? Wayne Gretzky holds 61 NHL records! Here&apos;s a fun fact: 
                     He has more career assists (1,963) than any other player has total points!
                   </p>
                   <div className="text-sm text-[#718096]">2 hours ago</div>

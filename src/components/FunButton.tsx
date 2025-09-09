@@ -10,7 +10,7 @@ export function FunButton() {
     "Hockey is life!",
     "Puck yeah!",
     "Ice to meet you!",
-    "That's how we roll... on ice!",
+    "That&apos;s how we roll... on ice!",
     "Stick with it!",
     "Goal-den moment!",
     "Ice cold moves!",

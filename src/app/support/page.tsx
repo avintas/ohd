@@ -41,7 +41,7 @@ export default function SupportPage() {
               <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
                 <li>Contact <a href="mailto:support@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">support@onlyhockey.com</a> with your order number</li>
                 <li>Provide reason for refund request</li>
-                <li>We'll process approved refunds within 5-7 business days</li>
+                <li>We&apos;ll process approved refunds within 5-7 business days</li>
                 <li>Refunds issued to original payment method</li>
               </ul>
 
