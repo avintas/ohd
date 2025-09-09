@@ -9,7 +9,7 @@ export default function CaptainHeartPage() {
           {/* Page Title */}
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-              Heart's Hub
+              Heart&apos;s Hub
             </h1>
           </div>
 
@@ -47,8 +47,8 @@ export default function CaptainHeartPage() {
                   <h3 className="font-semibold text-white mb-2">Captain Heart</h3>
                   <p className="text-[#a0aec0] mb-3">
                     ❤️ Community Spotlight: Shoutout to all the parents who wake up at 5am 
-                    for practice! Your dedication doesn't go unnoticed. 
-                    You're the real MVPs of youth hockey! 🏆
+                    for practice! Your dedication doesn&apos;t go unnoticed. 
+                    You&apos;re the real MVPs of youth hockey! 🏆
                   </p>
                   <div className="text-sm text-[#718096]">2 hours ago</div>
                 </div>
@@ -69,7 +69,7 @@ export default function CaptainHeartPage() {
                   <p className="text-[#a0aec0] mb-3">
                     🤝 Remember: Every player started somewhere. Be encouraging to beginners, 
                     celebrate small victories, and help build the next generation of hockey lovers. 
-                    We're all in this together!
+                    We&apos;re all in this together!
                   </p>
                   <div className="text-sm text-[#718096]">5 hours ago</div>
                 </div>

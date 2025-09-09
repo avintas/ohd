@@ -9,7 +9,7 @@ export default function IronMikePage() {
           {/* Page Title */}
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-              Coach's Corner
+              Coach&apos;s Corner
             </h1>
           </div>
 
@@ -27,7 +27,7 @@ export default function IronMikePage() {
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">Iron Mike</h2>
             <p className="text-sm text-[#4cc9f0] mb-4">Coach</p>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Welcome to the coach's office! Get expert training tips, motivation, 
+              Welcome to the coach&apos;s office! Get expert training tips, motivation, 
               and the winning mindset you need to dominate on the ice.
             </p>
           </div>
@@ -46,8 +46,8 @@ export default function IronMikePage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Iron Mike</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    💪 Monday Motivation: "Champions aren't made in the comfort zone. 
-                    Every practice, every drill, every moment on the ice is your chance to get better!"
+                    💪 Monday Motivation: &quot;Champions aren&apos;t made in the comfort zone. 
+                    Every practice, every drill, every moment on the ice is your chance to get better!&quot;
                   </p>
                   <div className="text-sm text-[#718096]">1 hour ago</div>
                 </div>
@@ -66,7 +66,7 @@ export default function IronMikePage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Iron Mike</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    🏒 Today's Drill Focus: Perfect your wrist shot technique. 
+                    🏒 Today&apos;s Drill Focus: Perfect your wrist shot technique. 
                     Keep your bottom hand firm, snap those wrists, and follow through! 
                     Practice makes permanent.
                   </p>

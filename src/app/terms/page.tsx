@@ -68,7 +68,7 @@ export default function TermsPage() {
               <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
                 <li>OnlyHockey content is for entertainment and educational purposes</li>
                 <li>We don&apos;t guarantee accuracy of all statistical information</li>
-                <li>Services provided "as is" without warranties</li>
+                <li>Services provided &quot;as is&quot; without warranties</li>
               </ul>
 
               <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>

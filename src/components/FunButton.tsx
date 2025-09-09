@@ -48,7 +48,7 @@ export function FunButton() {
           
           {clickCount > 0 && (
             <div className="text-[#a0aec0] text-sm animate-fade-in">
-              <p className="mb-2">"{hockeyQuotes[clickCount % hockeyQuotes.length]}"</p>
+              <p className="mb-2">&quot;{hockeyQuotes[clickCount % hockeyQuotes.length]}&quot;</p>
               <p>Clicks: {clickCount}</p>
             </div>
           )}

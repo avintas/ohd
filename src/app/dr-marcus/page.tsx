@@ -67,7 +67,7 @@ export default function DrMarcusPage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Dr. Marcus</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    ❄️ Recovery Reminder: Ice baths aren't just for pros! 
+                    ❄️ Recovery Reminder: Ice baths aren&apos;t just for pros! 
                     10-15 minutes in cold water after intense training helps reduce 
                     inflammation and speeds up recovery.
                   </p>

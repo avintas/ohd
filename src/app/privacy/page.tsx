@@ -11,7 +11,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Your privacy matters to us. Here's how we protect and handle your information.
+              Your privacy matters to us. Here&apos;s how we protect and handle your information.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
 
               <h2 className="text-2xl font-bold text-white mb-4">Information Sharing</h2>
               <p className="text-[#a0aec0] leading-relaxed mb-4">
-                We don't sell your personal information. We may share data with:
+                We don&apos;t sell your personal information. We may share data with:
               </p>
               <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
                 <li><strong className="text-white">Service Providers:</strong> Payment processors, email services, and analytics tools</li>

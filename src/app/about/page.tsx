@@ -108,11 +108,11 @@ export default function AboutPage() {
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-4">
                 I envision OnlyHockey becoming the go-to source for hockey fans who want more than basic 
                 news and stats. A place where you discover fascinating hockey facts you never knew, find 
-                motivation from the game's greatest wisdom, and access shareable content that sparks 
+                motivation from the game&apos;s greatest wisdom, and access shareable content that sparks 
                 conversations and connections.
               </p>
               <p className="text-lg text-[#a0aec0] leading-relaxed">
-                Whether you're sharing a mind-blowing statoid with your hockey group chat, sending a 
+                Whether you&apos;re sharing a mind-blowing statoid with your hockey group chat, sending a 
                 motivational hockey quote to your kid before their game, or just learning something new 
                 about the sport you love—OnlyHockey exists to enhance your hockey experience.
               </p>
