@@ -17,25 +17,11 @@ export function Header() {
         {/* Navigation - Right aligned */}
         <nav className="flex items-center gap-4 md:gap-8" aria-label="Main navigation">
           <Link 
-            href="/hockey-trivia" 
+            href="/faq" 
             className="text-[#a0aec0] hover:text-[#4cc9f0] transition-colors duration-200 text-sm md:text-base"
-            aria-label="Play hockey trivia games"
+            aria-label="Frequently Asked Questions"
           >
-            Hockey Trivia
-          </Link>
-          <Link 
-            href="/uplift" 
-            className="text-[#a0aec0] hover:text-[#4cc9f0] transition-colors duration-200 text-sm md:text-base"
-            aria-label="Access Uplift features"
-          >
-            Uplift
-          </Link>
-          <Link 
-            href="/cast" 
-            className="text-[#a0aec0] hover:text-[#4cc9f0] transition-colors duration-200 text-sm md:text-base"
-            aria-label="Listen to hockey podcasts"
-          >
-            Cast
+            FAQ
           </Link>
         </nav>
       </div>
