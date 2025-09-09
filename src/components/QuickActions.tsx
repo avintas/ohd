@@ -28,7 +28,7 @@ export function QuickActions() {
             >
               <div className="text-3xl mb-2">🧠</div>
               <h3 className="text-sm font-semibold text-white group-hover:text-[#4cc9f0] transition-colors">
-                Hockey Trivia
+                Train Your Brain
               </h3>
             </Link>
             
@@ -42,7 +42,7 @@ export function QuickActions() {
             >
               <div className="text-3xl mb-2">📚</div>
               <h3 className="text-sm font-semibold text-white group-hover:text-[#4cc9f0] transition-colors">
-                Stories
+                Tune In..
               </h3>
             </Link>
             
@@ -64,7 +64,7 @@ export function QuickActions() {
             >
               <div className="text-3xl mb-2">💪</div>
               <h3 className="text-sm font-semibold text-white group-hover:text-[#4cc9f0] transition-colors">
-                Motivator
+                One on One With Coach Mike
               </h3>
             </Link>
             
@@ -78,7 +78,7 @@ export function QuickActions() {
             >
               <div className="text-3xl mb-2">❤️</div>
               <h3 className="text-sm font-semibold text-white group-hover:text-[#4cc9f0] transition-colors">
-                H.u.g.
+                Send a H.U.G.
               </h3>
             </Link>
             

@@ -49,6 +49,15 @@ export default function BroadcasterMikePage() {
                     🎙️ Legendary Moment: &quot;Do you believe in miracles? YES!&quot; 
                     Al Michaels&apos; call during the 1980 Miracle on Ice remains one of the most 
                     iconic moments in sports broadcasting history.
+                    <br />
+                    <a 
+                      href="https://www.youtube.com/shorts/0WNVhbEDsAU" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#4cc9f0] hover:text-white transition-colors underline"
+                    >
+                      Watch Al Michaels' iconic call →
+                    </a>
                   </p>
                   <div className="text-sm text-[#718096]">3 hours ago</div>
                 </div>
