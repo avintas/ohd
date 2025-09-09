@@ -46,8 +46,8 @@ export default function BroadcasterMikePage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Broadcaster Mike</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    🎙️ Legendary Moment: "Do you believe in miracles? YES!" 
-                    Al Michaels' call during the 1980 Miracle on Ice remains one of the most 
+                    🎙️ Legendary Moment: &quot;Do you believe in miracles? YES!&quot; 
+                    Al Michaels&apos; call during the 1980 Miracle on Ice remains one of the most 
                     iconic moments in sports broadcasting history.
                   </p>
                   <div className="text-sm text-[#718096]">3 hours ago</div>
@@ -88,8 +88,8 @@ export default function BroadcasterMikePage() {
                 <div className="flex-1">
                   <h3 className="font-semibold text-white mb-2">Broadcaster Mike</h3>
                   <p className="text-[#a0aec0] mb-3">
-                    ✨ Inspiration: Maurice "Rocket" Richard once said, "I played hockey because I loved it, 
-                    not because it was a way to make a living." That passion is what separates legends 
+                    ✨ Inspiration: Maurice &quot;Rocket&quot; Richard once said, &quot;I played hockey because I loved it, 
+                    not because it was a way to make a living.&quot; That passion is what separates legends 
                     from simply talented players.
                   </p>
                   <div className="text-sm text-[#718096]">1 day ago</div>

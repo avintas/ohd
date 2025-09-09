@@ -14,8 +14,8 @@ export default function AboutPage() {
               A Passion Project Born from Pure Hockey Love
             </h2>
             <p className="text-xl text-[#a0aec0] max-w-3xl mx-auto leading-relaxed">
-              OnlyHockey isn't your typical startup story. There's no boardroom, no investors, 
-              and no corporate strategy meetings. It's just me—a hockey fanatic who believes 
+              OnlyHockey isn&apos;t your typical startup story. There&apos;s no boardroom, no investors, 
+              and no corporate strategy meetings. It&apos;s just me—a hockey fanatic who believes 
               the greatest sport on earth deserves content as dynamic and engaging as the game itself.
             </p>
           </div>
@@ -27,10 +27,10 @@ export default function AboutPage() {
             </h2>
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748] mb-8">
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-4">
-                I'm a solo entrepreneur driven by one simple belief: hockey fans deserve better than 
+                I&apos;m a solo entrepreneur driven by one simple belief: hockey fans deserve better than 
                 recycled highlights and stale statistics. We deserve content that captures the heart, 
                 soul, and intelligence of hockey culture. Content worth sharing with fellow fans, 
-                family members, and anyone who needs to understand why we're so passionate about this incredible game.
+                family members, and anyone who needs to understand why we&apos;re so passionate about this incredible game.
               </p>
               <p className="text-lg text-[#a0aec0] leading-relaxed">
                 This project grows from genuine hockey obsession, not market research. Every factoid, 
@@ -47,7 +47,7 @@ export default function AboutPage() {
             </h2>
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748]">
               <p className="text-lg text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com has been my proving ground for years. Through that platform, I've learned 
+                OnlyHockey.com has been my proving ground for years. Through that platform, I&apos;ve learned 
                 what hockey fans truly want and developed innovative approaches to product development and 
                 logistics that put the fan experience first. This new chapter builds on those lessons 
                 while focusing on what I do best: creating shareable hockey content that connects people 
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748] mb-8">
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-6">
                 Sure, I could chase venture capital and rapid scaling. But that would change everything 
-                about what makes OnlyHockey special. When you're driven by passion rather than quarterly 
+                about what makes OnlyHockey special. When you&apos;re driven by passion rather than quarterly 
                 reports, you make different decisions:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -126,8 +126,8 @@ export default function AboutPage() {
             </h2>
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748]">
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-4">
-                Every successful hockey team needs players who do the little things that don't show up 
-                in box scores but make everyone else better. That's what I aim to be for hockey culture: 
+                Every successful hockey team needs players who do the little things that don&apos;t show up 
+                in box scores but make everyone else better. That&apos;s what I aim to be for hockey culture: 
                 the person creating content that makes hockey conversations richer, family connections 
                 stronger, and fan experiences more meaningful.
               </p>
@@ -165,15 +165,15 @@ export default function AboutPage() {
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748] mb-8">
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-6">
                 OnlyHockey exists because hockey deserves content as passionate, intelligent, and 
-                engaging as the fans who love it. This isn't about building the next big tech company—it's 
+                engaging as the fans who love it. This isn&apos;t about building the next big tech company—it&apos;s 
                 about building something meaningful for the hockey community.
               </p>
               <p className="text-xl font-semibold text-[#4cc9f0] mb-6">
                 One fan, one passion project, infinite hockey love.
               </p>
               <blockquote className="text-lg italic text-[#fbbf24] border-l-4 border-[#4cc9f0] pl-6">
-                "The best hockey content comes from someone who truly loves the game, 
-                not someone who loves the business of the game."
+                &quot;The best hockey content comes from someone who truly loves the game, 
+                not someone who loves the business of the game.&quot;
               </blockquote>
             </div>
             
