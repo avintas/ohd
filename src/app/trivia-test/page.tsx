@@ -13,6 +13,7 @@ interface TriviaQuestion {
   difficulty: 'easy' | 'medium' | 'hard';
   points: number;
   audioFile?: string;
+  category: string;
 }
 
 interface QuestionSet {
@@ -37,7 +38,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Montreal Canadiens", "Montreal Maroons", "Quebec Nordiques", "Montreal Wanderers"],
         explanation: "The Canadiens are the only remaining Montreal team from the Original Six era",
         difficulty: "easy",
-        points: 1
+        points: 1,
+        category: "Original Six"
       },
       {
         id: 2,
@@ -46,7 +48,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1917", "1926", "1942", "1967"],
         explanation: "From 1942-1967, the NHL consisted of only six teams",
         difficulty: "easy",
-        points: 1
+        points: 1,
+        category: "Original Six"
       },
       {
         id: 3,
@@ -54,7 +57,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "New York Rangers",
         options: ["Boston Bruins", "New York Rangers", "Detroit Red Wings", "Chicago Blackhawks"],
         difficulty: "easy",
-        points: 1
+        points: 1,
+        category: "Original Six"
       },
       {
         id: 4,
@@ -62,7 +66,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Blue and White",
         options: ["Red and White", "Blue and White", "Black and Gold", "Red and Black"],
         difficulty: "easy",
-        points: 1
+        points: 1,
+        category: "Original Six"
       },
       {
         id: 5,
@@ -71,7 +76,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Toronto Maple Leafs", "Montreal Canadiens", "Detroit Red Wings", "Boston Bruins"],
         explanation: "The Canadiens have won 24 Stanley Cup championships",
         difficulty: "easy",
-        points: 1
+        points: 1,
+        category: "Original Six"
       }
     ]
   },
@@ -88,7 +94,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Paul Henderson", "Phil Esposito", "Bobby Clarke", "Yvan Cournoyer"],
         explanation: "Henderson&apos;s goal with 34 seconds left won the Summit Series",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Cup Legends"
       },
       {
         id: 7,
@@ -97,7 +104,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Boston Bruins (2010)", "Los Angeles Kings (2014)", "No team has ever done this", "Pittsburgh Penguins (2009)"],
         explanation: "No team has ever come back from 3-0 down to win the Stanley Cup Final",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Cup Legends"
       },
       {
         id: 8,
@@ -106,7 +114,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["92 minutes, 1 second", "104 minutes, 46 seconds", "116 minutes, 30 seconds", "128 minutes, 15 seconds"],
         explanation: "Detroit vs Montreal in 1936, ended in the 6th overtime period",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Cup Legends"
       },
       {
         id: 9,
@@ -115,7 +124,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Patrick Roy", "Mario Lemieux", "Wayne Gretzky", "Sidney Crosby"],
         explanation: "Roy won it at age 20 with Montreal in 1986",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Cup Legends"
       },
       {
         id: 10,
@@ -123,7 +133,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Montreal Canadiens",
         options: ["Boston Bruins", "Montreal Canadiens", "Toronto Maple Leafs", "Detroit Red Wings"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Cup Legends"
       }
     ]
   },
@@ -140,7 +151,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Wayne Gretzky", "Mario Lemieux", "Alexander Ovechkin", "Mike Bossy"],
         explanation: "Gretzky scored 92 goals in the 1981-82 season",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Modern Stars"
       },
       {
         id: 12,
@@ -148,7 +160,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Alexander Ovechkin",
         options: ["Connor McDavid", "Alexander Ovechkin", "Sidney Crosby", "Leon Draisaitl"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Modern Stars"
       },
       {
         id: 13,
@@ -156,7 +169,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Edmonton Oilers",
         options: ["Toronto Maple Leafs", "Edmonton Oilers", "Buffalo Sabres", "Arizona Coyotes"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Modern Stars"
       },
       {
         id: 14,
@@ -164,7 +178,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Alexander Ovechkin",
         options: ["Sidney Crosby", "Alexander Ovechkin", "Steven Stamkos", "Connor McDavid"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Modern Stars"
       },
       {
         id: 15,
@@ -172,7 +187,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Marc-Andre Fleury",
         options: ["Carey Price", "Marc-Andre Fleury", "Andrei Vasilevskiy", "Frederik Andersen"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Modern Stars"
       }
     ]
   },
@@ -189,7 +205,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1917", "1929", "1943", "1967"],
         explanation: "Before 1929, forward passes were restricted to certain zones",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Rule Changes"
       },
       {
         id: 17,
@@ -198,7 +215,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1929", "1943", "1956", "1972"],
         explanation: "The center red line was added to reduce two-line pass infractions",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Rule Changes"
       },
       {
         id: 18,
@@ -207,7 +225,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1999", "2005", "2010", "2014"],
         explanation: "Added after the 2004-05 lockout to limit goalie puck handling",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Rule Changes"
       },
       {
         id: 19,
@@ -215,7 +234,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "63 inches",
         options: ["60 inches", "63 inches", "66 inches", "69 inches"],
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Rule Changes"
       },
       {
         id: 20,
@@ -224,7 +244,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1999", "2005", "2010", "2014"],
         explanation: "Eliminated after the lockout to increase offensive play",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Rule Changes"
       }
     ]
   },
@@ -241,7 +262,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Terry Sawchuk", "Jacques Plante", "Glenn Hall", "Gump Worsley"],
         explanation: "Plante started wearing a mask regularly in 1959",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Equipment"
       },
       {
         id: 22,
@@ -249,7 +271,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Frozen rubber",
         options: ["Wood", "Frozen rubber", "Metal", "Leather"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Equipment"
       },
       {
         id: 23,
@@ -258,7 +281,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["1972", "1979", "1985", "1992"],
         explanation: "Mandatory for players entering the league after 1979",
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Equipment"
       },
       {
         id: 24,
@@ -266,7 +290,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "6 feet",
         options: ["5 feet", "6 feet", "7 feet", "8 feet"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Equipment"
       },
       {
         id: 25,
@@ -274,7 +299,8 @@ const QUESTION_SETS: QuestionSet[] = [
         correctAnswer: "Andy Brown",
         options: ["Jacques Plante", "Andy Brown", "Gerry Cheevers", "Ken Dryden"],
         difficulty: "medium",
-        points: 2
+        points: 2,
+        category: "Equipment"
       }
     ]
   },
@@ -291,7 +317,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Sidney Crosby", "Jonathan Toews", "Corey Perry", "Ryan Getzlaf"],
         explanation: "Crosby scored in overtime against USA for Olympic gold",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Overtime Heroes"
       },
       {
         id: 27,
@@ -300,7 +327,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Wayne Gretzky", "Joe Sakic", "Maurice Richard", "Patrick Kane"],
         explanation: "Sakic scored 8 playoff overtime goals in his career",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Overtime Heroes"
       },
       {
         id: 28,
@@ -309,7 +337,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Jonathan Toews", "Patrick Kane", "Marian Hossa", "Duncan Keith"],
         explanation: "Kane&apos;s goal in Game 6 ended Chicago&apos;s 49-year drought",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Overtime Heroes"
       },
       {
         id: 29,
@@ -318,7 +347,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["68 minutes, 47 seconds", "92 minutes, 1 second", "116 minutes, 30 seconds", "140 minutes, 15 seconds"],
         explanation: "Detroit vs Montreal in 1936, lasted into the 6th overtime",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Overtime Heroes"
       },
       {
         id: 30,
@@ -327,7 +357,8 @@ const QUESTION_SETS: QuestionSet[] = [
         options: ["Wayne Gretzky", "Mel Hill", "Maurice Richard", "Joe Sakic"],
         explanation: "Hill scored 3 OT goals for Boston in 1939 playoffs",
         difficulty: "hard",
-        points: 3
+        points: 3,
+        category: "Overtime Heroes"
       }
     ]
   },
@@ -345,7 +376,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "Kalinka is a popular Russian folk song commonly played during hockey games to energize crowds",
         difficulty: "medium",
         points: 2,
-        audioFile: "/audio/kalinka-sample.mp3"
+        audioFile: "/audio/kalinka-sample.mp3",
+        category: "Arena Music"
       },
       {
         id: 32,
@@ -355,7 +387,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "Hava Nagila meaning &apos;Let us rejoice&apos; is played at many hockey celebrations",
         difficulty: "medium",
         points: 2,
-        audioFile: "/audio/hava-nagila-sample.mp3"
+        audioFile: "/audio/hava-nagila-sample.mp3",
+        category: "Arena Music"
       },
       {
         id: 33,
@@ -365,7 +398,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "The stomp-stomp-clap rhythm makes it perfect for crowd participation",
         difficulty: "easy",
         points: 1,
-        audioFile: "/audio/we-will-rock-you-sample.mp3"
+        audioFile: "/audio/we-will-rock-you-sample.mp3",
+        category: "Arena Music"
       },
       {
         id: 34,
@@ -375,7 +409,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "Cotton-Eyed Joe by Rednex is played during intermissions and breaks at many arenas",
         difficulty: "easy",
         points: 1,
-        audioFile: "/audio/cotton-eyed-joe-sample.mp3"
+        audioFile: "/audio/cotton-eyed-joe-sample.mp3",
+        category: "Arena Music"
       },
       {
         id: 35,
@@ -385,7 +420,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "Kernkraft 400 (Sport Chant Stadium Remix) became synonymous with hockey pump-up music",
         difficulty: "hard",
         points: 3,
-        audioFile: "/audio/kernkraft-400-sample.mp3"
+        audioFile: "/audio/kernkraft-400-sample.mp3",
+        category: "Arena Music"
       }
     ]
   },
@@ -403,7 +439,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "The Blackhawks use a classic air horn followed by &apos;Chelsea Dagger&apos; by The Fratellis",
         difficulty: "medium",
         points: 2,
-        audioFile: "/audio/blackhawks-goal-horn.mp3"
+        audioFile: "/audio/blackhawks-goal-horn.mp3",
+        category: "Arena Sounds"
       },
       {
         id: 37,
@@ -413,7 +450,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "The Sharks&apos; foghorn is one of the most recognizable goal celebrations in the NHL",
         difficulty: "medium",
         points: 2,
-        audioFile: "/audio/sharks-foghorn.mp3"
+        audioFile: "/audio/sharks-foghorn.mp3",
+        category: "Arena Sounds"
       },
       {
         id: 38,
@@ -423,7 +461,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "The classic three-clap rhythm chant from Madison Square Garden",
         difficulty: "easy",
         points: 1,
-        audioFile: "/audio/lets-go-rangers-chant.mp3"
+        audioFile: "/audio/lets-go-rangers-chant.mp3",
+        category: "Arena Sounds"
       },
       {
         id: 39,
@@ -433,7 +472,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "The distinctive &apos;ping&apos; sound when a shot hits the goal post",
         difficulty: "easy",
         points: 1,
-        audioFile: "/audio/puck-hits-post.mp3"
+        audioFile: "/audio/puck-hits-post.mp3",
+        category: "Arena Sounds"
       },
       {
         id: 40,
@@ -443,7 +483,8 @@ const QUESTION_SETS: QuestionSet[] = [
         explanation: "&apos;Dirty Water&apos; by The Standells has been the Bruins&apos; victory song since the 1970s",
         difficulty: "hard",
         points: 3,
-        audioFile: "/audio/dirty-water-bruins.mp3"
+        audioFile: "/audio/dirty-water-bruins.mp3",
+        category: "Arena Sounds"
       }
     ]
   }
