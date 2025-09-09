@@ -15,51 +15,12 @@ export default function SupportPage() {
             </p>
           </div>
 
-          {/* Refund Policy */}
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6 text-center">Refund Policy</h2>
-            <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748]">
-              <p className="text-sm text-[#4cc9f0] mb-8">
-                Effective Date: [Insert Date]
-              </p>
-
-              <h3 className="text-xl font-bold text-white mb-4">Digital Products</h3>
-              <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
-                <li><strong className="text-white">Factoids, Motivoids, Statoids:</strong> Full refund within 30 days if unused</li>
-                <li><strong className="text-white">Digital Greeting Cards:</strong> Refund available if not downloaded within 7 days</li>
-                <li><strong className="text-white">Subscription Services:</strong> Pro-rated refund for unused portion</li>
-              </ul>
-
-              <h3 className="text-xl font-bold text-white mb-4">Physical Products</h3>
-              <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
-                <li><strong className="text-white">Greeting Cards:</strong> Full refund within 30 days in original condition</li>
-                <li><strong className="text-white">Merchandise:</strong> Returns accepted within 30 days with original packaging</li>
-                <li><strong className="text-white">Return Shipping:</strong> Customer responsible for return shipping costs</li>
-              </ul>
-
-              <h3 className="text-xl font-bold text-white mb-4">Refund Process</h3>
-              <ul className="text-[#a0aec0] leading-relaxed mb-6 space-y-2">
-                <li>Contact <a href="mailto:support@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">support@onlyhockey.com</a> with your order number</li>
-                <li>Provide reason for refund request</li>
-                <li>We&apos;ll process approved refunds within 5-7 business days</li>
-                <li>Refunds issued to original payment method</li>
-              </ul>
-
-              <h3 className="text-xl font-bold text-white mb-4">Non-Refundable Items</h3>
-              <ul className="text-[#a0aec0] leading-relaxed space-y-2">
-                <li>Custom or personalized products</li>
-                <li>Digital products that have been downloaded or used</li>
-                <li>Gift cards (unless required by law)</li>
-              </ul>
-            </div>
-          </div>
-
           {/* Copyright Notice */}
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 text-center">Copyright Notice</h2>
             <div className="bg-[#16213e] rounded-lg p-8 border border-[#2d3748]">
               <p className="text-sm text-[#4cc9f0] mb-8">
-                Effective Date: [Insert Date]
+                Effective Date: September 09, 2025
               </p>
 
               <h3 className="text-xl font-bold text-white mb-4">Our Content</h3>
@@ -95,8 +56,7 @@ export default function SupportPage() {
 
               <h3 className="text-xl font-bold text-white mb-4">Reporting Copyright Infringement</h3>
               <p className="text-[#a0aec0] leading-relaxed mb-4">
-                If you believe your copyrighted work has been used without permission, contact us at{' '}
-                <a href="mailto:copyright@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">copyright@onlyhockey.com</a> with:
+                If you believe your copyrighted work has been used without permission, contact us with:
               </p>
               <ul className="text-[#a0aec0] leading-relaxed space-y-2">
                 <li>Description of the copyrighted work</li>
@@ -117,31 +77,28 @@ export default function SupportPage() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">Email Support</h4>
                   <div className="space-y-2 text-[#a0aec0]">
-                    <p><strong className="text-white">General:</strong> <a href="mailto:support@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">support@onlyhockey.com</a></p>
-                    <p><strong className="text-white">Privacy:</strong> <a href="mailto:privacy@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">privacy@onlyhockey.com</a></p>
-                    <p><strong className="text-white">Copyright:</strong> <a href="mailto:copyright@onlyhockey.com" className="text-[#4cc9f0] hover:text-[#fbbf24] transition-colors">copyright@onlyhockey.com</a></p>
+                    <p><strong className="text-white">General:</strong> <a href="mailto:team@onlyhockey.com" className="text-[#4cc9f0] hover:text-white transition-colors">team@onlyhockey.com</a></p>
                   </div>
                 </div>
                 
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">Business Hours</h4>
-                  <p className="text-[#a0aec0] mb-4">Monday-Friday, 9 AM - 5 PM EST</p>
+                  <p className="text-[#a0aec0] mb-4">Monday-Friday, 9 AM - 5 PM PST</p>
                   
                   <h4 className="text-lg font-semibold text-white mb-3">Mailing Address</h4>
                   <div className="text-[#a0aec0] space-y-1">
-                    <p>OnlyHockey</p>
-                    <p>[Your Business Address]</p>
-                    <p>[City, State, ZIP]</p>
+                    <p>OnlyHockey.com</p>
+                    <p>TBD</p>
                   </div>
                 </div>
               </div>
 
               <div className="border-t border-[#2d3748] pt-6">
                 <p className="text-sm text-[#718096] mb-2">
-                  Last Updated: [Insert Date]
+                  Last Updated: September 09, 2025
                 </p>
                 <p className="text-sm text-[#a0aec0]">
-                  These policies apply to all OnlyHockey services and may be updated periodically.
+                  These policies apply to all Onlyhockey.com services and may be updated periodically.
                 </p>
               </div>
             </div>
