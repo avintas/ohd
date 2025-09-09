@@ -94,13 +94,15 @@ export function TheCrew() {
           {/* Captain Heart - Community Leader */}
           <Link href="/captain-heart" className="text-center group block">
             <div className="relative mb-3">
-              <Image
-                src="/pims/pim-1009.webp"
-                alt="Captain Heart - Community Leader"
-                width={100}
-                height={100}
-                className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
-              />
+              <div className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto bg-orange-500 border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer flex items-center justify-center">
+                <Image
+                  src="/pims/pim-1009.webp"
+                  alt="Captain Heart - Community Leader"
+                  width={100}
+                  height={100}
+                  className="w-14 h-14 md:w-23 md:h-23 rounded-full object-cover"
+                />
+              </div>
             </div>
             <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Captain Heart</h3>
             <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Community Leader</p>
