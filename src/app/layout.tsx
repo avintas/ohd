@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OHD - OnlyHockey Desktop",
-  description: "OnlyHockey Desktop - Your ultimate hockey companion",
+  title: "OHD - OnlyHockey App",
+  description: "OnlyHockey App - Your ultimate hockey companion",
 };
 
 export default function RootLayout({
