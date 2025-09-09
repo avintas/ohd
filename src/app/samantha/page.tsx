@@ -1,5 +1,6 @@
 import { PageLayout } from '@/components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SamanthaPage() {
   return (
@@ -26,10 +27,20 @@ export default function SamanthaPage() {
             </div>
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">Samantha</h2>
             <p className="text-sm text-[#4cc9f0] mb-4">Trivia Master</p>
-            <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
+            <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto mb-8">
               Welcome to the ultimate hockey trivia headquarters! Test your knowledge, 
               learn amazing facts, and become a true hockey scholar.
             </p>
+            
+            {/* Trivia Challenge Button */}
+            <div className="text-center">
+              <Link 
+                href="/trivia-test"
+                className="inline-flex items-center bg-gradient-to-r from-[#4cc9f0] to-[#3bb5e0] hover:from-[#3bb5e0] hover:to-[#2aa3d0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                🧠 Start Hockey Trivia Challenge
+              </Link>
+            </div>
           </div>
 
           {/* Content Feed Placeholder */}
