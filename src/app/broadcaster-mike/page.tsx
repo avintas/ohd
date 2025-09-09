@@ -56,7 +56,7 @@ export default function BroadcasterMikePage() {
                       rel="noopener noreferrer"
                       className="text-[#4cc9f0] hover:text-white transition-colors underline"
                     >
-                      Watch Al Michaels' iconic call →
+                      Watch Al Michaels&apos; iconic call →
                     </a>
                   </p>
                   <div className="text-sm text-[#718096]">3 hours ago</div>
