@@ -1,7 +1,32 @@
+"use client";
+
 import { PageLayout } from '@/components';
 import Image from 'next/image';
 
 export default function BroadcasterMikePage() {
+  const handleShare = async (type: string, text: string) => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Hockey Story from Broadcaster Mike',
+          text: text
+          // Removed URL so it only shares the formatted text
+        });
+      } catch (error) {
+        // User cancelled or error occurred
+        console.log('Share cancelled or failed');
+      }
+    } else {
+      // Fallback: copy to clipboard
+      try {
+        await navigator.clipboard.writeText(text);
+        alert('Story copied to clipboard!');
+      } catch (error) {
+        // Final fallback
+        prompt('Copy this text:', text);
+      }
+    }
+  };
   return (
     <PageLayout>
       <div className="py-12 md:py-16 px-4 md:px-6">
@@ -59,6 +84,47 @@ export default function BroadcasterMikePage() {
                       Watch Al Michaels&apos; iconic call →
                     </a>
                   </p>
+                  
+                  {/* Share Icons Row */}
+                  <div className="flex items-center space-x-3 mb-3">
+                    <span className="text-xs text-[#718096]">Share:</span>
+                    <button 
+                      onClick={() => handleShare('simple', 'Legendary Moment: "Do you believe in miracles? YES!" Al Michaels\' call during the 1980 Miracle on Ice remains one of the most iconic moments in sports broadcasting history.\n\nShared from Broadcaster Mike on Onlyhockey.com')}
+                      className="text-lg hover:scale-110 transition-transform" 
+                      title="Simple Share"
+                    >
+                      📤
+                    </button>
+                    <button 
+                      onClick={() => handleShare('branded', '🏒 From Broadcaster Mike on Onlyhockey.com:\n\n"Do you believe in miracles? YES!" - Al Michaels\' call during the 1980 Miracle on Ice remains one of the most iconic moments in sports broadcasting history.\n\nRead more hockey stories: ' + window.location.href)}
+                      className="text-lg hover:scale-110 transition-transform" 
+                      title="Branded Share"
+                    >
+                      🏒
+                    </button>
+                    <button 
+                      onClick={() => handleShare('social', '🎙️ LEGENDARY MOMENT: Al Michaels\' "Do you believe in miracles? YES!" call from the 1980 Miracle on Ice - one of sports broadcasting\'s most iconic moments.\n\nVia Onlyhockey.com 🏒')}
+                      className="text-lg hover:scale-110 transition-transform" 
+                      title="Social Media Style"
+                    >
+                      📱
+                    </button>
+                    <button 
+                      onClick={() => handleShare('minimal', '"Do you believe in miracles? YES!"\n\nAl Michaels\' iconic call from the 1980 Miracle on Ice.\n\n- Broadcaster Mike, Onlyhockey.com')}
+                      className="text-lg hover:scale-110 transition-transform" 
+                      title="Clean & Minimal"
+                    >
+                      ✨
+                    </button>
+                    <button 
+                      onClick={() => handleShare('rich', '🏒 Hockey History Moment\n\n"Do you believe in miracles? YES!" - Al Michaels during the 1980 USA vs USSR Olympic hockey game. This call became one of the most iconic moments in sports broadcasting history.\n\nDiscover more legendary hockey moments at Onlyhockey.com')}
+                      className="text-lg hover:scale-110 transition-transform" 
+                      title="Rich Context"
+                    >
+                      🎯
+                    </button>
+                  </div>
+                  
                   <div className="text-sm text-[#718096]">3 hours ago</div>
                 </div>
               </div>
