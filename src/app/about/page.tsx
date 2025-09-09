@@ -148,7 +148,7 @@ export default function AboutPage() {
               <p className="text-lg text-[#a0aec0] leading-relaxed mb-6 text-center">
                 This is a personal journey, and I love connecting with fellow hockey fans. Whether you 
                 have content ideas, want to share how OnlyHockey has enhanced your hockey experience, 
-                or just want to talk hockey, I'm always eager to hear from the community.
+                or just want to talk hockey, I&apos;m always eager to hear from the community.
               </p>
               <div className="text-center space-y-2">
                 <p className="text-[#4cc9f0]">Email: hello@onlyhockey.com</p>
