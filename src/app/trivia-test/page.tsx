@@ -751,11 +751,11 @@ export default function TriviaTestPage() {
     
     switch (type) {
       case 'challenge':
-        shareText = `🏒 Hockey Trivia Challenge!\n\nTry the "${questionSet.name}" question set on Onlyhockey.com!\n\n${questionSet.description}\n\nDifficulty: ${questionSet.difficulty.toUpperCase()}\n5 Questions • Test your hockey knowledge!`;
+        shareText = `🧠 Hockey Trivia Challenge with Samantha!\n\nTry the "${questionSet.name}" question set on Onlyhockey.com!\n\n${questionSet.description}\n\nDifficulty: ${questionSet.difficulty.toUpperCase()}\n5 Questions • Test your hockey knowledge!`;
         break;
       case 'results':
         const percentage = Math.round(((userScore || 0) / (maxScore || 1)) * 100);
-        shareText = `🏒 Just completed "${questionSet.name}" on Onlyhockey.com!\n\nMy Score: ${userScore}/${maxScore} points (${percentage}%)\n\n${percentage >= 80 ? '🏆 Nailed it!' : percentage >= 60 ? '⭐ Not bad!' : '🏒 Room for improvement!'}\n\nTry it yourself!`;
+        shareText = `🧠 Just completed "${questionSet.name}" on Onlyhockey.com!\n\nMy Score: ${userScore}/${maxScore} points (${percentage}%)\n\n${percentage >= 80 ? '🏆 Nailed it!' : percentage >= 60 ? '⭐ Not bad!' : '🏒 Room for improvement!'}\n\nTry Samantha's hockey trivia yourself!`;
         break;
       case 'invite':
         shareText = `🏒 Think you know hockey?\n\nChallenge: "${questionSet.name}"\n${questionSet.description}\n\nCan you beat my knowledge? Try it on Onlyhockey.com!`;
