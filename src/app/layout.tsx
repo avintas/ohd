@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OnlyHockey.com App",
+  title: "OnlyHockey.com",
   description: "OnlyHockey.com App - Your ultimate hockey companion",
   openGraph: {
     title: "OnlyHockey.com - Hockey Trivia with Samantha",
