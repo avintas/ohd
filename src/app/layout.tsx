@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pims/pim-1008.webp",
-        width: 260,
-        height: 260,
+        width: 26,
+        height: 26,
         alt: "Samantha - Hockey Trivia Master",
       },
     ],
