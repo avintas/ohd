@@ -15,7 +15,7 @@ export function TheCrew() {
         </p>
         
         {/* Crew Avatar Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-7 gap-4 md:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {/* Samantha - Trivia Master */}
           <Link href="/samantha" className="text-center group block">
             <div className="relative mb-3">
@@ -108,20 +108,6 @@ export function TheCrew() {
             <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Community Leader</p>
           </Link>
 
-          {/* Dr. Marcus - Injury Prevention */}
-          <Link href="/dr-marcus" className="text-center group block">
-            <div className="relative mb-3">
-              <Image
-                src="/pims/pim-1004.webp"
-                alt="Dr. Marcus - Injury Prevention Therapist"
-                width={100}
-                height={100}
-                className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
-              />
-            </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Dr. Marcus</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Injury Prevention</p>
-          </Link>
         </div>
       </div>
     </section>
