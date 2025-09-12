@@ -11,7 +11,7 @@ export default function AboutPage() {
               About
             </h1>
             <p className="text-xl text-[#a0aec0] leading-relaxed">
-              OnlyHockey.com began in the mid-2000s as an e-commerce platform born from a pure love for the game. We've always loved to innovate, and this project was the proving ground where we pushed the boundaries of what was possible.
+              OnlyHockey.com began in the mid-2000s as an e-commerce platform born from a pure love for the game. We&apos;ve always loved to innovate, and this project was the proving ground where we pushed the boundaries of what was possible.
             </p>
           </div>
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4">
                 <p className="text-lg text-[#a0aec0] leading-relaxed">
-                  We were the first to publish a comprehensive database of professional hockey stick patterns. Most importantly, we were the first to provide the public with "pro-returns"—the actual professional equipment used by the pros.
+                  We were the first to publish a comprehensive database of professional hockey stick patterns. Most importantly, we were the first to provide the public with &quot;pro-returns&quot;—the actual professional equipment used by the pros.
                 </p>
                 <p className="text-lg text-[#a0aec0] leading-relaxed">
                   This platform was a proving ground where we developed a revolutionary logistics system. Using advanced optimization algorithms, we created an innovative system for shipping and packaging that dramatically improved efficiency.

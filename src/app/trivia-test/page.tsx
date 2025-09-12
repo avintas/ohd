@@ -774,14 +774,14 @@ export default function TriviaTestPage() {
           title: `Hockey Trivia: ${questionSet.name}`,
           text: shareText
         });
-      } catch (error) {
+      } catch {
         console.log('Share cancelled or failed');
       }
     } else {
       try {
         await navigator.clipboard.writeText(shareText);
         alert('Challenge copied to clipboard!');
-      } catch (error) {
+      } catch {
         prompt('Copy this text:', shareText);
       }
     }
@@ -854,7 +854,7 @@ export default function TriviaTestPage() {
                     className="flex transition-transform duration-300 ease-in-out"
                     style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
                   >
-                    {QUESTION_SETS.map((set, index) => (
+                    {QUESTION_SETS.map((set) => (
                       <div
                         key={set.id}
                         className="w-full flex-shrink-0 px-4"

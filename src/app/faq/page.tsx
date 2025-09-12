@@ -35,7 +35,7 @@ export default function FAQPage() {
             <div>
               <h2 className="text-xl font-bold text-white mb-3">How can I share content from the site?</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                Most of our content includes built-in sharing features. Look for share icons on individual stories and posts that allow you to share via your device's native sharing options or copy content to your clipboard.
+                Most of our content includes built-in sharing features. Look for share icons on individual stories and posts that allow you to share via your device&apos;s native sharing options or copy content to your clipboard.
               </p>
             </div>
 
@@ -54,9 +54,9 @@ export default function FAQPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">What's the history behind OnlyHockey.com?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">What&apos;s the history behind OnlyHockey.com?</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com began in the mid-2000s as an e-commerce platform. We were pioneers in publishing comprehensive hockey stick pattern databases and providing "pro-returns" - actual professional equipment used by the pros. Today, we focus on creating engaging hockey content for fans.
+                OnlyHockey.com began in the mid-2000s as an e-commerce platform. We were pioneers in publishing comprehensive hockey stick pattern databases and providing &quot;pro-returns&quot; - actual professional equipment used by the pros. Today, we focus on creating engaging hockey content for fans.
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export default function FAQPage() {
             <div>
               <h2 className="text-xl font-bold text-white mb-3">Can I suggest content ideas?</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                Absolutely! We love hearing from our community. Send your content suggestions, story ideas, or feedback to team@onlyhockey.com and we'll consider them for future content.
+                Absolutely! We love hearing from our community. Send your content suggestions, story ideas, or feedback to team@onlyhockey.com and we&apos;ll consider them for future content.
               </p>
             </div>
 

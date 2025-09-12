@@ -18,7 +18,7 @@ export default function BroadcasterMikePage() {
           text: shareText,
           url: shareUrl,
         });
-      } catch (err) {
+      } catch {
         console.log('Share cancelled');
       }
     } else {
@@ -27,7 +27,7 @@ export default function BroadcasterMikePage() {
         await navigator.clipboard.writeText(textWithUrl);
         setShareMessage('Copied to clipboard!');
         setTimeout(() => setShareMessage(''), 2000);
-      } catch (err) {
+      } catch {
         console.error('Failed to copy');
       }
     }

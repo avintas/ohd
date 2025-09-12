@@ -24,7 +24,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                By using OnlyHockey.com, you agree to these Terms of Service. If you don't agree, please don't use our services.
+                By using OnlyHockey.com, you agree to these Terms of Service. If you don&apos;t agree, please don&apos;t use our services.
               </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">User Accounts</h2>
               <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
                 <li>You must provide accurate information when creating an account.</li>
-                <li>You're responsible for maintaining account security.</li>
+                <li>You&apos;re responsible for maintaining account security.</li>
                 <li>One account per person.</li>
                 <li>You must be 13 years or older to create an account (users under 18 require parental consent).</li>
               </ul>
@@ -79,22 +79,22 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">Disclaimers</h2>
               <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
                 <li>OnlyHockey.com content is for entertainment and educational purposes.</li>
-                <li>We don't guarantee the accuracy of all statistical information.</li>
-                <li>Services are provided "as is" without warranties.</li>
+                <li>We don&apos;t guarantee the accuracy of all statistical information.</li>
+                <li>Services are provided &quot;as is&quot; without warranties.</li>
               </ul>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Limitation of Liability</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com's liability is limited to the amount you paid for our services in the past 12 months.
+                OnlyHockey.com&apos;s liability is limited to the amount you paid for our services in the past 12 months.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Changes to Terms</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                We may update these terms with 30 days' notice. Your continued use of our services constitutes your acceptance of the new terms.
+                We may update these terms with 30 days&apos; notice. Your continued use of our services constitutes your acceptance of the new terms.
               </p>
             </div>
           </div>
