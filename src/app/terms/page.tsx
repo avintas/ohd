@@ -24,7 +24,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Acceptance of Terms</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                By using OnlyHockey.com, you agree to these Terms of Service. If you don't agree, please don't use our services.
+                By using OnlyHockey.com, you agree to these Terms of Service. If you don&apos;t agree, please don&apos;t use our services.
               </p>
             </div>
 
@@ -79,7 +79,7 @@ export default function TermsPage() {
               <h2 className="text-2xl font-bold text-white mb-4">Disclaimers</h2>
               <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
                 <li>OnlyHockey.com content is for entertainment and educational purposes.</li>
-                <li>We don't guarantee the accuracy of all statistical information.</li>
+                <li>We don&apos;t guarantee the accuracy of all statistical information.</li>
                 <li>Services are provided "as is" without warranties.</li>
               </ul>
             </div>

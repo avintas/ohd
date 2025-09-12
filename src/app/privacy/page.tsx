@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-2xl font-bold text-white mb-4">Information Sharing</h2>
               <p className="text-[#a0aec0] leading-relaxed mb-4">
-                We don't sell your personal information. We may share data with:
+                We don&apos;t sell your personal information. We may share data with:
               </p>
               <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
                 <li><strong className="text-white">Service Providers:</strong> Payment processors, email services, and analytics tools.</li>

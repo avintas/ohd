@@ -97,7 +97,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Skill Development: Perfect your wrist shot technique. Keep your bottom hand firm, snap those wrists, and follow through! Practice makes permanent - so make sure you're practicing correctly.",
+                  &quot;Skill Development: Perfect your wrist shot technique. Keep your bottom hand firm, snap those wrists, and follow through! Practice makes permanent - so make sure you&apos;re practicing correctly.&quot;,
                   "Wrist Shot Technique"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -195,7 +195,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Conditioning Truth: \"You can't fake being in shape.\" The third period is where games are won. When your legs are fresh and theirs are tired, that's when you strike!",
+                  &quot;Conditioning Truth: \&quot;You can&apos;t fake being in shape.\&quot; The third period is where games are won. When your legs are fresh and theirs are tired, that&apos;s when you strike!&quot;,
                   "Conditioning Importance"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -231,7 +231,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Leadership Lesson: \"Be the player your teammates can count on.\" Leadership isn't about wearing a letter on your jersey - it's about your actions, your effort, and lifting others up when they're down.",
+                  &quot;Leadership Lesson: \&quot;Be the player your teammates can count on.\&quot; Leadership isn&apos;t about wearing a letter on your jersey - it&apos;s about your actions, your effort, and lifting others up when they&apos;re down.&quot;,
                   "Leadership"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

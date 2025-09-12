@@ -966,7 +966,7 @@ export default function TriviaTestPage() {
                     <span className="text-[#4cc9f0] font-semibold">Samantha says:</span>
                   </div>
                   <p className="text-[#a0aec0] text-center italic">
-                    &quot;{score === selectedSet.questions.reduce((sum, q) => sum + q.points, 0) ? "Perfect score! You're a true hockey legend! I'm impressed by your knowledge." :
+                    &quot;{score === selectedSet.questions.reduce((sum, q) => sum + q.points, 0) ? &quot;Perfect score! You&apos;re a true hockey legend! I&apos;m impressed by your knowledge.&quot; :
                      score >= selectedSet.questions.reduce((sum, q) => sum + q.points, 0) * 0.8 ? "Excellent work! Your hockey knowledge is really strong. Keep it up!" :
                      score >= selectedSet.questions.reduce((sum, q) => sum + q.points, 0) * 0.6 ? "Good job! You know your hockey well. A little more studying and you'll be a master!" :
                      "Don't worry, everyone starts somewhere! Keep learning and you'll improve quickly. Hockey knowledge takes time to build!"}&quot;

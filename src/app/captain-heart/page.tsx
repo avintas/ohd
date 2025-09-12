@@ -118,7 +118,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Hockey Values: Respect, teamwork, perseverance, and sportsmanship. These aren't just hockey skills - they're life skills. What you learn on the ice makes you better off the ice too!",
+                  &quot;Hockey Values: Respect, teamwork, perseverance, and sportsmanship. These aren&apos;t just hockey skills - they&apos;re life skills. What you learn on the ice makes you better off the ice too!&quot;,
                   "Hockey Values"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -154,7 +154,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Mental Health Matters: Hockey can be tough - losses hurt, mistakes happen. It's okay to feel disappointed, but remember: you're more than your performance on ice. Take care of your mental game too!",
+                  &quot;Mental Health Matters: Hockey can be tough - losses hurt, mistakes happen. It&apos;s okay to feel disappointed, but remember: you&apos;re more than your performance on ice. Take care of your mental game too!&quot;,
                   "Mental Health"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
