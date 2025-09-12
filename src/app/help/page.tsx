@@ -161,7 +161,7 @@ export default function HelpPage() {
                 <div className="bg-[#1a1f2e] rounded-lg p-6 border border-[#4cc9f0]/20">
                   <h3 className="text-[#4cc9f0] font-semibold mb-3">💡 Pro Tip: Daily Routine</h3>
                   <p className="text-[#a0aec0]">
-                    Start each day with Samantha's daily trivia challenge, then explore new content from our crew members. 
+                    Start each day with Samantha&apos;s daily trivia challenge, then explore new content from our crew members. 
                     This helps build your hockey knowledge consistently over time.
                   </p>
                 </div>
