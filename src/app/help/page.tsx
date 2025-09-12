@@ -27,7 +27,7 @@ export default function HelpPage() {
                   <h3 className="text-xl font-semibold text-white mb-3">Creating Your Account</h3>
                   <p className="text-[#a0aec0] leading-relaxed mb-4">
                     Welcome to OnlyHockey! To get started, create your free account by clicking the profile icon in the top navigation. 
-                    You&apos;ll be able to track your progress, save your favorite content, and customize your experience.
+                    You'll be able to track your progress, save your favorite content, and customize your experience.
                   </p>
                   <ul className="text-[#a0aec0] space-y-2 list-disc list-inside">
                     <li>Choose a unique username and display name</li>
@@ -132,9 +132,9 @@ export default function HelpPage() {
                     <div>
                       <h4 className="text-lg font-medium text-white mb-2">Account Issues</h4>
                       <ul className="text-[#a0aec0] space-y-1 list-disc list-inside">
-                    <li>Forgot password? Use the reset link on the login page</li>
-                    <li>Can&apos;t access account? Check your email for verification</li>
-                    <li>Settings not saving? Make sure to click &quot;Save Changes&quot;</li>
+                        <li>Forgot password? Use the reset link on the login page</li>
+                        <li>Can't access account? Check your email for verification</li>
+                        <li>Settings not saving? Make sure to click "Save Changes"</li>
                         <li>Still having trouble? Contact our support team</li>
                       </ul>
                     </div>
@@ -161,7 +161,7 @@ export default function HelpPage() {
                 <div className="bg-[#1a1f2e] rounded-lg p-6 border border-[#4cc9f0]/20">
                   <h3 className="text-[#4cc9f0] font-semibold mb-3">💡 Pro Tip: Daily Routine</h3>
                   <p className="text-[#a0aec0]">
-                    Start each day with Samantha&apos;s daily trivia challenge, then explore new content from our crew members. 
+                    Start each day with Samantha's daily trivia challenge, then explore new content from our crew members. 
                     This helps build your hockey knowledge consistently over time.
                   </p>
                 </div>
@@ -169,7 +169,7 @@ export default function HelpPage() {
                 <div className="bg-[#1a1f2e] rounded-lg p-6 border border-[#4cc9f0]/20">
                   <h3 className="text-[#4cc9f0] font-semibold mb-3">🎯 Focus Mode</h3>
                   <p className="text-[#a0aec0]">
-                    Turn off animations in Site Settings if you prefer a more focused reading experience or if you&apos;re 
+                    Turn off animations in Site Settings if you prefer a more focused reading experience or if you're 
                     on a slower device. This can improve performance and reduce distractions.
                   </p>
                 </div>
@@ -177,8 +177,8 @@ export default function HelpPage() {
                 <div className="bg-[#1a1f2e] rounded-lg p-6 border border-[#4cc9f0]/20">
                   <h3 className="text-[#4cc9f0] font-semibold mb-3">📱 Mobile Shortcuts</h3>
                   <p className="text-[#a0aec0]">
-                    Add OnlyHockey to your phone&apos;s home screen for quick access. On iOS, use &quot;Add to Home Screen&quot; 
-                    in Safari. On Android, look for &quot;Install App&quot; or &quot;Add to Home Screen&quot; in Chrome.
+                    Add OnlyHockey to your phone's home screen for quick access. On iOS, use "Add to Home Screen" 
+                    in Safari. On Android, look for "Install App" or "Add to Home Screen" in Chrome.
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function HelpPage() {
             <div className="pt-8 border-t border-[#2d3748]">
               <h2 className="text-2xl font-bold text-white mb-6">Still Need Help?</h2>
               <p className="text-[#a0aec0] leading-relaxed mb-6">
-                Can&apos;t find what you&apos;re looking for? Our support team is here to help you get the most out of your OnlyHockey experience.
+                Can't find what you're looking for? Our support team is here to help you get the most out of your OnlyHockey experience.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 

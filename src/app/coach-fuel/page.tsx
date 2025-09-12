@@ -188,7 +188,7 @@ export default function CoachFuelPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Creatine Facts: This supplement can boost explosive power and reduce fatigue. Take 3-5g daily, timing doesn't matter. It's one of the most researched and effective supplements for hockey players!",
+                  "Creatine Facts: This supplement can boost explosive power and reduce fatigue. Take 3-5g daily, timing doesn&apos;t matter. It&apos;s one of the most researched and effective supplements for hockey players!",
                   "Creatine Benefits"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -206,7 +206,7 @@ export default function CoachFuelPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Electrolyte Balance: Plain water isn't enough during intense games. You need sodium, potassium, and magnesium. Sports drinks work, but coconut water with a pinch of sea salt is a natural alternative!",
+                  "Electrolyte Balance: Plain water isn&apos;t enough during intense games. You need sodium, potassium, and magnesium. Sports drinks work, but coconut water with a pinch of sea salt is a natural alternative!",
                   "Electrolyte Strategy"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

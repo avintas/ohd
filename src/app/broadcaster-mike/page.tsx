@@ -89,7 +89,7 @@ export default function BroadcasterMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Legendary Moment: \"Do you believe in miracles? YES!\" Al Michaels' call during the 1980 Miracle on Ice remains one of the most iconic moments in sports broadcasting history.",
+                  "Legendary Moment: \"Do you believe in miracles? YES!\" Al Michaels&apos; call during the 1980 Miracle on Ice remains one of the most iconic moments in sports broadcasting history.",
                   "Miracle on Ice"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -143,7 +143,7 @@ export default function BroadcasterMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Championship Story: The 1994 New York Rangers ended their 54-year Stanley Cup drought with one of the most emotional victories in hockey history. Mark Messier's guarantee and leadership that playoffs became the stuff of legends.",
+                  "Championship Story: The 1994 New York Rangers ended their 54-year Stanley Cup drought with one of the most emotional victories in hockey history. Mark Messier&apos;s guarantee and leadership that playoffs became the stuff of legends.",
                   "1994 Rangers Cup"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -179,7 +179,7 @@ export default function BroadcasterMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Original Six Era: From 1942-1967, the NHL had just six teams. Players often worked summer jobs because hockey salaries weren't enough to live on year-round. Gordie Howe famously worked construction in the off-season!",
+                  "Original Six Era: From 1942-1967, the NHL had just six teams. Players often worked summer jobs because hockey salaries weren&apos;t enough to live on year-round. Gordie Howe famously worked construction in the off-season!",
                   "Original Six Era"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -197,7 +197,7 @@ export default function BroadcasterMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Speed Record: The fastest recorded shot in NHL history belongs to Zdeno Chara at 108.8 mph. But here's the kicker - goalies have just 0.4 seconds to react to a shot from the point. The human eye can barely track it!",
+                  "Speed Record: The fastest recorded shot in NHL history belongs to Zdeno Chara at 108.8 mph. But here&apos;s the kicker - goalies have just 0.4 seconds to react to a shot from the point. The human eye can barely track it!",
                   "Fastest Shot Record"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

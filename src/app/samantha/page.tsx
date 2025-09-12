@@ -90,7 +90,7 @@ export default function SamanthaPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Did you know? Wayne Gretzky holds 61 NHL records! Here's a fun fact: He has more career assists (1,963) than any other player has total points!",
+                  "Did you know? Wayne Gretzky holds 61 NHL records! Here&apos;s a fun fact: He has more career assists (1,963) than any other player has total points!",
                   "Gretzky Records"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -159,7 +159,7 @@ export default function SamanthaPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Speed Demon: Connor McDavid's fastest recorded speed is 25.1 mph (40.4 km/h)! That's faster than most people can run, and he's doing it while controlling a puck on ice!",
+                  "Speed Demon: Connor McDavid&apos;s fastest recorded speed is 25.1 mph (40.4 km/h)! That&apos;s faster than most people can run, and he&apos;s doing it while controlling a puck on ice!",
                   "McDavid Speed"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -211,7 +211,7 @@ export default function SamanthaPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Playoff Beard Tradition: The playoff beard tradition started with the New York Islanders in 1980 during their first Stanley Cup run. It's now a beloved superstition across all of hockey!",
+                  "Playoff Beard Tradition: The playoff beard tradition started with the New York Islanders in 1980 during their first Stanley Cup run. It&apos;s now a beloved superstition across all of hockey!",
                   "Playoff Beard Origin"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

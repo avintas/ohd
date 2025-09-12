@@ -80,7 +80,7 @@ export default function RefereeRileyPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Rule Spotlight: Offside explained! A player is offside if they enter the attacking zone before the puck. But here's the key: both skates must completely cross the blue line!",
+                  "Rule Spotlight: Offside explained! A player is offside if they enter the attacking zone before the puck. But here&apos;s the key: both skates must completely cross the blue line!",
                   "Offside Rule"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -116,7 +116,7 @@ export default function RefereeRileyPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Icing Rule: When a player shoots the puck from behind the center line and it crosses the opposing goal line without being touched, that's icing! Play stops and the faceoff comes back to the defensive zone.",
+                  "Icing Rule: When a player shoots the puck from behind the center line and it crosses the opposing goal line without being touched, that&apos;s icing! Play stops and the faceoff comes back to the defensive zone.",
                   "Icing Rule"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -170,7 +170,7 @@ export default function RefereeRileyPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Body Checking Guidelines: Legal body checks must be made with the shoulder or hip, targeting the opponent's body (not the head). Timing matters - the player must have possession or have just released the puck.",
+                  "Body Checking Guidelines: Legal body checks must be made with the shoulder or hip, targeting the opponent&apos;s body (not the head). Timing matters - the player must have possession or have just released the puck.",
                   "Body Checking Rule"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -188,7 +188,7 @@ export default function RefereeRileyPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "High-Sticking Violation: If the puck goes in the net off a stick that's above the crossbar height, no goal! However, if it deflects off an opponent or their stick after the high-stick, the goal counts.",
+                  "High-Sticking Violation: If the puck goes in the net off a stick that&apos;s above the crossbar height, no goal! However, if it deflects off an opponent or their stick after the high-stick, the goal counts.",
                   "High-Sticking Rule"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -224,7 +224,7 @@ export default function RefereeRileyPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Delayed Penalty: When a team that doesn't have possession commits a penalty, play continues until they touch the puck. The non-offending team often pulls their goalie for an extra attacker during this time.",
+                  "Delayed Penalty: When a team that doesn&apos;t have possession commits a penalty, play continues until they touch the puck. The non-offending team often pulls their goalie for an extra attacker during this time.",
                   "Delayed Penalty"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

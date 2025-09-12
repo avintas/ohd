@@ -755,7 +755,7 @@ export default function TriviaTestPage() {
         break;
       case 'results':
         const percentage = Math.round(((userScore || 0) / (maxScore || 1)) * 100);
-        shareText = `🧠 Just completed "${questionSet.name}" on Onlyhockey.com!\n\nMy Score: ${userScore}/${maxScore} points (${percentage}%)\n\n${percentage >= 80 ? '🏆 Nailed it!' : percentage >= 60 ? '⭐ Not bad!' : '🏒 Room for improvement!'}\n\nTry Samantha's hockey trivia yourself!`;
+        shareText = `🧠 Just completed "${questionSet.name}" on Onlyhockey.com!\n\nMy Score: ${userScore}/${maxScore} points (${percentage}%)\n\n${percentage >= 80 ? '🏆 Nailed it!' : percentage >= 60 ? '⭐ Not bad!' : '🏒 Room for improvement!'}\n\nTry Samantha&apos;s hockey trivia yourself!`;
         break;
       case 'invite':
         shareText = `🏒 Think you know hockey?\n\nChallenge: "${questionSet.name}"\n${questionSet.description}\n\nCan you beat my knowledge? Try it on Onlyhockey.com!`;
@@ -966,10 +966,10 @@ export default function TriviaTestPage() {
                     <span className="text-[#4cc9f0] font-semibold">Samantha says:</span>
                   </div>
                   <p className="text-[#a0aec0] text-center italic">
-                    &quot;{score === selectedSet.questions.reduce((sum, q) => sum + q.points, 0) ? &quot;Perfect score! You&apos;re a true hockey legend! I&apos;m impressed by your knowledge.&quot; :
+                    &quot;{score === selectedSet.questions.reduce((sum, q) => sum + q.points, 0) ? "Perfect score! You&apos;re a true hockey legend! I&apos;m impressed by your knowledge." :
                      score >= selectedSet.questions.reduce((sum, q) => sum + q.points, 0) * 0.8 ? "Excellent work! Your hockey knowledge is really strong. Keep it up!" :
-                     score >= selectedSet.questions.reduce((sum, q) => sum + q.points, 0) * 0.6 ? "Good job! You know your hockey well. A little more studying and you'll be a master!" :
-                     "Don't worry, everyone starts somewhere! Keep learning and you'll improve quickly. Hockey knowledge takes time to build!"}&quot;
+                     score >= selectedSet.questions.reduce((sum, q) => sum + q.points, 0) * 0.6 ? "Good job! You know your hockey well. A little more studying and you&apos;ll be a master!" :
+                     "Don&apos;t worry, everyone starts somewhere! Keep learning and you&apos;ll improve quickly. Hockey knowledge takes time to build!"}&quot;
                   </p>
                 </div>
                 

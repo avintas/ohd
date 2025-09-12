@@ -79,7 +79,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Monday Motivation: \"Champions aren't made in the comfort zone. Every practice, every drill, every moment on the ice is your chance to get better!\"",
+                  "Monday Motivation: \"Champions aren&apos;t made in the comfort zone. Every practice, every drill, every moment on the ice is your chance to get better!\"",
                   "Monday Motivation"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -97,7 +97,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  &quot;Skill Development: Perfect your wrist shot technique. Keep your bottom hand firm, snap those wrists, and follow through! Practice makes permanent - so make sure you&apos;re practicing correctly.&quot;,
+                  "Skill Development: Perfect your wrist shot technique. Keep your bottom hand firm, snap those wrists, and follow through! Practice makes permanent - so make sure you&apos;re practicing correctly.",
                   "Wrist Shot Technique"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -124,7 +124,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Coach's Recommendation: Want to learn from one of hockey's greatest coaches? Mike Keenan's book is a masterclass in leadership, strategy, and winning mentality. A must-read for serious students of the game!",
+                  "Coach&apos;s Recommendation: Want to learn from one of hockey&apos;s greatest coaches? Mike Keenan&apos;s book is a masterclass in leadership, strategy, and winning mentality. A must-read for serious students of the game!",
                   "Mike Keenan Book"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -195,7 +195,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  &quot;Conditioning Truth: \&quot;You can&apos;t fake being in shape.\&quot; The third period is where games are won. When your legs are fresh and theirs are tired, that&apos;s when you strike!&quot;,
+                  "Conditioning Truth: \"You can&apos;t fake being in shape.\" The third period is where games are won. When your legs are fresh and theirs are tired, that&apos;s when you strike!",
                   "Conditioning Importance"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -231,7 +231,7 @@ export default function IronMikePage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  &quot;Leadership Lesson: \&quot;Be the player your teammates can count on.\&quot; Leadership isn&apos;t about wearing a letter on your jersey - it&apos;s about your actions, your effort, and lifting others up when they&apos;re down.&quot;,
+                  "Leadership Lesson: \"Be the player your teammates can count on.\" Leadership isn&apos;t about wearing a letter on your jersey - it&apos;s about your actions, your effort, and lifting others up when they&apos;re down.",
                   "Leadership"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"

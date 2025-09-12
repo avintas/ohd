@@ -82,7 +82,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Community Spotlight: Shoutout to all the parents who wake up at 5am for practice! Your dedication doesn't go unnoticed. You're the real MVPs of youth hockey!",
+                  "Community Spotlight: Shoutout to all the parents who wake up at 5am for practice! Your dedication doesn&apos;t go unnoticed. You&apos;re the real MVPs of youth hockey!",
                   "Parent Appreciation"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -100,7 +100,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Remember: Every player started somewhere. Be encouraging to beginners, celebrate small victories, and help build the next generation of hockey lovers. We're all in this together!",
+                  "Remember: Every player started somewhere. Be encouraging to beginners, celebrate small victories, and help build the next generation of hockey lovers. We&apos;re all in this together!",
                   "Supporting Beginners"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -118,7 +118,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  &quot;Hockey Values: Respect, teamwork, perseverance, and sportsmanship. These aren&apos;t just hockey skills - they&apos;re life skills. What you learn on the ice makes you better off the ice too!&quot;,
+                  "Hockey Values: Respect, teamwork, perseverance, and sportsmanship. These aren&apos;t just hockey skills - they&apos;re life skills. What you learn on the ice makes you better off the ice too!",
                   "Hockey Values"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -154,7 +154,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  &quot;Mental Health Matters: Hockey can be tough - losses hurt, mistakes happen. It&apos;s okay to feel disappointed, but remember: you&apos;re more than your performance on ice. Take care of your mental game too!&quot;,
+                  "Mental Health Matters: Hockey can be tough - losses hurt, mistakes happen. It&apos;s okay to feel disappointed, but remember: you&apos;re more than your performance on ice. Take care of your mental game too!",
                   "Mental Health"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -172,7 +172,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Celebrate Effort: Not every game ends in a win, not every shot goes in. But effort? That's something to celebrate every single time. Recognize the hustle, the heart, and the never-give-up attitude!",
+                  "Celebrate Effort: Not every game ends in a win, not every shot goes in. But effort? That&apos;s something to celebrate every single time. Recognize the hustle, the heart, and the never-give-up attitude!",
                   "Celebrating Effort"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -190,7 +190,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "Inclusive Hockey: Hockey is for everyone - all backgrounds, all skill levels, all ages. Let's make sure our rinks are welcoming spaces where everyone feels they belong. Diversity makes our sport stronger!",
+                  "Inclusive Hockey: Hockey is for everyone - all backgrounds, all skill levels, all ages. Let&apos;s make sure our rinks are welcoming spaces where everyone feels they belong. Diversity makes our sport stronger!",
                   "Inclusive Hockey"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
@@ -208,7 +208,7 @@ export default function CaptainHeartPage() {
               </p>
               <button
                 onClick={() => handleShare(
-                  "H.U.G. Reminder: Send a Hockey Universal Greeting to someone who needs encouragement today. A simple \"You've got this!\" or \"Great effort out there!\" can make someone's entire week. Spread the hockey love!",
+                  "H.U.G. Reminder: Send a Hockey Universal Greeting to someone who needs encouragement today. A simple \"You&apos;ve got this!\" or \"Great effort out there!\" can make someone&apos;s entire week. Spread the hockey love!",
                   "H.U.G. Reminder"
                 )}
                 className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
