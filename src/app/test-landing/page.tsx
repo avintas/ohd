@@ -3,7 +3,7 @@ import {
   HeroSection
 } from '@/components';
 
-export default function TestPage() {
+export default function TestLanding() {
   return (
     <PageLayout>
       <HeroSection />

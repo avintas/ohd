@@ -1,8 +1,8 @@
 import { 
   PageLayout, 
-  HeroSection, 
-  TheCrew, 
-  QuickActions
+  HeroSection,
+  TheCrew,
+  FinalWelcome
 } from '@/components';
 
 export default function Home() {
@@ -10,8 +10,7 @@ export default function Home() {
     <PageLayout>
       <HeroSection />
       <TheCrew />
-      <QuickActions />
-
+      <FinalWelcome />
     </PageLayout>
   );
 }

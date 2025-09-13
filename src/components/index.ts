@@ -7,5 +7,7 @@ export { PageLayout } from './PageLayout';
 export { HeroSection } from './HeroSection';
 
 // Page sections
+export { ActionSection } from './ActionSection';
 export { TheCrew } from './TheCrew';
+export { FinalWelcome } from './FinalWelcome';
 export { QuickActions } from './QuickActions';
