@@ -44,7 +44,7 @@ export default function SamanthaPage() {
                   From the Original Six era to today's modern game, Samantha has studied every stat, memorized every record, and can tell you fascinating stories about legendary players, iconic moments, and little-known hockey facts that will amaze your friends.
                 </p>
                 <p>
-                  When she's not creating challenging trivia questions, you'll find Samantha at the local rink, cheering on her favorite team, or diving deep into hockey archives to uncover the next great trivia gem. Her passion for the game is infectious, and her goal is simple: make learning about hockey as fun and exciting as playing it!
+                  When she&apos;s not creating challenging trivia questions, you&apos;ll find Samantha at the local rink, cheering on her favorite team, or diving deep into hockey archives to uncover the next great trivia gem. Her passion for the game is infectious, and her goal is simple: make learning about hockey as fun and exciting as playing it!
                 </p>
                 <div className="text-center mt-6">
                   <span className="text-[#4cc9f0] font-semibold">🏒 "Every hockey fan has a story. Let's discover yours!" 🏒</span>
