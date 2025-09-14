@@ -17,7 +17,7 @@ export function TheCrew() {
         {/* Crew Avatar Grid */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {/* Samantha - Trivia Master */}
-          <Link href="/samantha" className="text-center group block">
+          <Link href="/trivia-zone" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1008.webp"

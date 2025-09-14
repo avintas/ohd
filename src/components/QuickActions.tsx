@@ -23,7 +23,7 @@ export function QuickActions() {
             
             {/* North - Hockey Trivia (Samantha) */}
             <Link 
-              href="/trivia-test"
+              href="/trivia-zone"
               className="bg-[#0a0e1a] border border-[#2d3748] rounded-lg p-4 hover:border-[#4cc9f0] transition-all duration-300 group flex flex-col items-center justify-center"
             >
               <div className="text-3xl mb-2">🧠</div>
