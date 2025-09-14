@@ -1,7 +1,7 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
 interface TriviaQuestion {

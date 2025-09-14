@@ -38,16 +38,16 @@ export default function SamanthaPage() {
               <h3 className="text-xl font-semibold text-white mb-4 text-center">About Samantha</h3>
               <div className="text-[#a0aec0] space-y-4 leading-relaxed">
                 <p>
-                  Meet Samantha, your friendly neighborhood hockey trivia expert! With over a decade of experience covering the NHL and an encyclopedic knowledge of hockey history, she's the perfect guide for your trivia journey.
+                  Meet Samantha, your friendly neighborhood hockey trivia expert! With over a decade of experience covering the NHL and an encyclopedic knowledge of hockey history, she&apos;s the perfect guide for your trivia journey.
                 </p>
                 <p>
-                  From the Original Six era to today's modern game, Samantha has studied every stat, memorized every record, and can tell you fascinating stories about legendary players, iconic moments, and little-known hockey facts that will amaze your friends.
+                  From the Original Six era to today&apos;s modern game, Samantha has studied every stat, memorized every record, and can tell you fascinating stories about legendary players, iconic moments, and little-known hockey facts that will amaze your friends.
                 </p>
                 <p>
                   When she&apos;s not creating challenging trivia questions, you&apos;ll find Samantha at the local rink, cheering on her favorite team, or diving deep into hockey archives to uncover the next great trivia gem. Her passion for the game is infectious, and her goal is simple: make learning about hockey as fun and exciting as playing it!
                 </p>
                 <div className="text-center mt-6">
-                  <span className="text-[#4cc9f0] font-semibold">🏒 "Every hockey fan has a story. Let's discover yours!" 🏒</span>
+                  <span className="text-[#4cc9f0] font-semibold">🏒 &quot;Every hockey fan has a story. Let&apos;s discover yours!&quot; 🏒</span>
                 </div>
               </div>
             </div>
