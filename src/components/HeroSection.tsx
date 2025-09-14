@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -24,7 +25,7 @@ export function HeroSection() {
         
         {/* Action Grid */}
         <div className="grid grid-cols-2 gap-6 max-w-md mx-auto mt-8">
-          <div className="group cursor-pointer transform hover:scale-105 transition-all duration-300 text-center">
+          <Link href="/trivia-zone" className="group cursor-pointer transform hover:scale-105 transition-all duration-300 text-center">
             <Image
               src="/gims/learn.webp"
               alt="Learn and Discover"
@@ -35,8 +36,8 @@ export function HeroSection() {
             <p className="text-lg md:text-xl font-bold text-[#4cc9f0] group-hover:text-[#fbbf24] transition-colors duration-300 mt-3">
               Play Trivia
             </p>
-          </div>
-          <div className="group cursor-pointer transform hover:scale-105 transition-all duration-300 text-center">
+          </Link>
+          <Link href="/captain-heart" className="group cursor-pointer transform hover:scale-105 transition-all duration-300 text-center">
             <Image
               src="/gims/hug.webp"
               alt="Send H.U.G."
@@ -47,7 +48,7 @@ export function HeroSection() {
             <p className="text-lg md:text-xl font-bold text-[#4cc9f0] group-hover:text-[#fbbf24] transition-colors duration-300 mt-3">
               Send a HUG
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
