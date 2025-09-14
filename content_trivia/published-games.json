@@ -1,0 +1,109 @@
+{
+  "publishedGames": [
+    {
+      "id": "dq-001",
+      "title": "Daily Quiz - September 14th",
+      "type": "daily-quiz",
+      "category": "mixed",
+      "file": "september-14-2024.md",
+      "difficulty": "Medium",
+      "estimatedTime": "6 minutes",
+      "questions": 20,
+      "description": "Today's special mix of hockey trivia questions",
+      "featured": true,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "qf-001", 
+      "title": "Quick Fire Challenge",
+      "type": "quick-fire",
+      "category": "general",
+      "file": "1.md",
+      "difficulty": "Medium",
+      "estimatedTime": "3 minutes", 
+      "questions": 10,
+      "description": "Fast-paced hockey trivia for quick thinkers",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "tf-001",
+      "title": "Hockey Geography Basics",
+      "type": "true-false",
+      "category": "hockey-geography", 
+      "file": "hockey-geography-basics.md",
+      "difficulty": "Easy",
+      "estimatedTime": "2 minutes",
+      "questions": 15,
+      "description": "Test your knowledge of NHL team locations and arena facts",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "tf-002",
+      "title": "True or False Challenge",
+      "type": "true-false", 
+      "category": "general",
+      "file": "1.md",
+      "difficulty": "Easy",
+      "estimatedTime": "1 minute",
+      "questions": 8,
+      "description": "Quick true/false hockey facts",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "pq-001",
+      "title": "Legendary Players Picture Quiz",
+      "type": "picture-quiz",
+      "category": "hockey-legends",
+      "file": "legendary-players.md",
+      "difficulty": "Medium",
+      "estimatedTime": "4 minutes",
+      "questions": 15,
+      "description": "Can you identify these hockey legends from their photos?",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "hl-001",
+      "title": "Gretzky Basics",
+      "type": "quick-fire",
+      "category": "hockey-legends",
+      "file": "gretzky-basics.md",
+      "difficulty": "Easy",
+      "estimatedTime": "3 minutes",
+      "questions": 10,
+      "description": "How well do you know The Great One?",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "hg-001",
+      "title": "Canadian Teams Geography",
+      "type": "true-false",
+      "category": "hockey-geography",
+      "file": "canadian-teams.md",
+      "difficulty": "Easy",
+      "estimatedTime": "2 minutes",
+      "questions": 10,
+      "description": "Test your knowledge of Canadian NHL teams and cities",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    },
+    {
+      "id": "rv-001",
+      "title": "Famous Calls Quiz",
+      "type": "picture-quiz",
+      "category": "radio-video",
+      "file": "famous-calls.md",
+      "difficulty": "Hard",
+      "estimatedTime": "5 minutes",
+      "questions": 12,
+      "description": "Match the famous hockey calls to their moments",
+      "featured": false,
+      "publishDate": "2024-09-14"
+    }
+  ],
+  "lastUpdated": "2024-09-14T13:30:00Z"
+}

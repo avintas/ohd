@@ -71,20 +71,55 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10);
-  const [gameState, setGameState] = useState<'playing' | 'finished'>('playing');
+  const [gameState, setGameState] = useState<'ready' | 'playing' | 'finished'>('ready');
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [gameParams, setGameParams] = useState<GameParams | null>(null);
+  const [questions, setQuestions] = useState<TriviaQuestion[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Unwrap params Promise
   useEffect(() => {
     params.then(setGameParams);
   }, [params]);
 
-  // Get questions for this specific game
-  const questions = useMemo(() => {
-    return gameParams ? QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [] : [];
+  // Load questions when gameParams changes
+  useEffect(() => {
+    async function loadQuestions() {
+      if (!gameParams) return;
+      
+      setIsLoading(true);
+      
+      try {
+        // Try to load from markdown files via API
+        const response = await fetch(`/api/trivia/${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+        
+        if (response.ok) {
+          const triviaSet = await response.json();
+          console.log(`✅ Loaded ${triviaSet.questions.length} questions from markdown for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+          setQuestions(triviaSet.questions);
+        } else {
+          // Fallback to hardcoded questions
+          const hardcodedQuestions = QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [];
+          if (hardcodedQuestions.length > 0) {
+            console.log(`⚠️ Using ${hardcodedQuestions.length} hardcoded questions for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+          } else {
+            console.log(`❌ No questions found for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+          }
+          setQuestions(hardcodedQuestions);
+        }
+      } catch (error) {
+        console.error('Error loading questions:', error);
+        // Fallback to hardcoded questions
+        const hardcodedQuestions = QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [];
+        setQuestions(hardcodedQuestions);
+      }
+      
+      setIsLoading(false);
+    }
+    
+    loadQuestions();
   }, [gameParams]);
   
   const handleAnswer = useCallback((answer: string) => {
@@ -124,6 +159,16 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
     }
   }, [timeLeft, gameState, showResult, handleAnswer]);
 
+  const startGame = () => {
+    setCurrentQuestion(0);
+    setScore(0);
+    setTimeLeft(gameParams?.gameType === 'quickfire' ? 10 : 15);
+    setGameState('playing');
+    setSelectedAnswer(null);
+    setShowResult(false);
+    setAnswers([]);
+  };
+
   const resetGame = () => {
     setCurrentQuestion(0);
     setScore(0);
@@ -134,7 +179,26 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
     setAnswers([]);
   };
 
-  if (!gameParams) {
+  const shareTrivia = () => {
+    if (!gameParams) return;
+    
+    const url = window.location.href;
+    const text = `Check out this ${gameParams.gameType} hockey trivia challenge! Can you beat my score?`;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: gameTitle,
+        text: text,
+        url: url,
+      });
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(`${text} ${url}`);
+      alert('Link copied to clipboard!');
+    }
+  };
+
+  if (!gameParams || isLoading) {
     return (
       <PageLayout>
         <div className="py-12 px-4 text-center">
@@ -184,6 +248,36 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
             {gameState === 'playing' && <span>Time: {timeLeft}s</span>}
           </div>
         </div>
+
+        {gameState === 'ready' && (
+          <div className="bg-[#16213e] rounded-lg p-8 text-center relative">
+            {/* Share Button */}
+            <button
+              onClick={shareTrivia}
+              className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
+              title="Share this trivia"
+            >
+              📤
+            </button>
+
+            <h2 className="text-3xl font-bold text-white mb-4">🏒 Ready to Play?</h2>
+            <div className="text-[#a0aec0] mb-6">
+              <p className="text-lg mb-2">Test your hockey knowledge!</p>
+              <div className="flex justify-center gap-8 text-sm">
+                <span>📝 {questions.length} Questions</span>
+                <span>⏱️ {gameParams?.gameType === 'quickfire' ? '10' : '15'} seconds per question</span>
+                <span>🎯 {gameParams?.gameType === 'quickfire' ? '10' : '5'} points each</span>
+              </div>
+            </div>
+            
+            <button
+              onClick={startGame}
+              className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              🚀 Start Game
+            </button>
+          </div>
+        )}
 
         {gameState === 'playing' && (
           <div className="bg-[#16213e] rounded-lg p-8 mb-6">
@@ -240,7 +334,16 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
         )}
 
         {gameState === 'finished' && (
-          <div className="bg-[#16213e] rounded-lg p-8 text-center">
+          <div className="bg-[#16213e] rounded-lg p-8 pr-20 text-center relative">
+            {/* Share Button */}
+            <button
+              onClick={shareTrivia}
+              className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
+              title="Share this trivia"
+            >
+              📤
+            </button>
+
             <h2 className="text-3xl font-bold text-white mb-4">🏆 Challenge Complete!</h2>
             <div className="text-6xl font-bold text-[#4cc9f0] mb-4">{score}</div>
             <p className="text-xl text-[#a0aec0] mb-2">Final Score</p>
