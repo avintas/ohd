@@ -66,159 +66,186 @@ export default function SamanthaPage() {
             <h2 className="text-xl md:text-2xl font-semibold text-white mb-2">Samantha</h2>
             <p className="text-sm text-[#4cc9f0] mb-4">Trivia Master</p>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto mb-8">
-              Welcome to the ultimate hockey trivia headquarters! Test your knowledge, 
-              learn amazing facts, and become a true hockey scholar.
+              Welcome to the ultimate hockey trivia headquarters! Test your knowledge, learn amazing facts, and become a true hockey legend.
             </p>
-            
-            {/* Trivia Challenge Button */}
-            <div className="text-center">
-              <Link 
-                href="/trivia-test"
-                className="inline-flex items-center bg-gradient-to-r from-[#4cc9f0] to-[#3bb5e0] hover:from-[#3bb5e0] hover:to-[#2aa3d0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
-              >
-                🧠 Start Hockey Trivia Challenge
-              </Link>
+          </div>
+
+          {/* Player Stats (Fake Local Storage Data) */}
+          <div className="bg-[#16213e] rounded-lg p-6 mb-8">
+            <h3 className="text-white font-semibold mb-4 text-center">🏒 Your Trivia Stats</h3>
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-[#4cc9f0]">7</div>
+                <div className="text-xs text-[#a0aec0]">Games Played</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-[#fbbf24]">850</div>
+                <div className="text-xs text-[#a0aec0]">Best Score</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-[#fb923c]">12</div>
+                <div className="text-xs text-[#a0aec0]">Win Streak</div>
+              </div>
             </div>
           </div>
 
-          {/* Content Feed */}
-          <div className="space-y-6">
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🏒 Did you know? Wayne Gretzky holds 61 NHL records! Here&apos;s a fun fact: 
-                He has more career assists (1,963) than any other player has total points!
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Did you know? Wayne Gretzky holds 61 NHL records! Here&apos;s a fun fact: He has more career assists (1,963) than any other player has total points!",
-                  "Gretzky Records"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+          {/* Featured Game Grid */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-white text-center mb-8">🎯 Choose Your Challenge</h3>
+            
+            {/* 3x2 Grid Layout */}
+            <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+              
+              {/* Quick Fire */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⚡</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors">Quick Fire</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">10 Questions</p>
+                  <p className="text-xs text-[#a0aec0]">2-3 minutes</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                ⚡ Quick Trivia: Which team has won the most Stanley Cups? 
-                The Montreal Canadiens with 24 championships! Their dynasty years were truly legendary. 🏆
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Quick Trivia: Which team has won the most Stanley Cups? The Montreal Canadiens with 24 championships! Their dynasty years were truly legendary.",
-                  "Stanley Cup Records"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+              {/* True/False */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">✓</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors">True/False</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Lightning</p>
+                  <p className="text-xs text-[#a0aec0]">1 minute</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🥅 Goalie Trivia: Martin Brodeur holds the record for most career wins by a goaltender with 691! 
-                He also holds the record for most shutouts (125) and most games played by a goalie (1,266).
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Goalie Trivia: Martin Brodeur holds the record for most career wins by a goaltender with 691! He also holds the record for most shutouts (125) and most games played by a goalie (1,266).",
-                  "Brodeur Records"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+              {/* Fill Blanks */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📝</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors">Fill Blanks</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Brain Teaser</p>
+                  <p className="text-xs text-[#a0aec0]">5 minutes</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🏆 Original Six Fun Fact: The term &quot;Original Six&quot; is actually misleading! 
-                The NHL started with 4 teams in 1917. The &quot;Original Six&quot; era refers to 1942-1967 
-                when only 6 teams existed.
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Original Six Fun Fact: The term \"Original Six\" is actually misleading! The NHL started with 4 teams in 1917. The \"Original Six\" era refers to 1942-1967 when only 6 teams existed.",
-                  "Original Six History"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+              {/* Picture Quiz */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📸</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors">Picture Quiz</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Visual Fun</p>
+                  <p className="text-xs text-[#a0aec0]">3 minutes</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                ⚡ Speed Demon: Connor McDavid&apos;s fastest recorded speed is 25.1 mph (40.4 km/h)! 
-                That&apos;s faster than most people can run, and he&apos;s doing it while controlling a puck on ice!
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Speed Demon: Connor McDavid&apos;s fastest recorded speed is 25.1 mph (40.4 km/h)! That&apos;s faster than most people can run, and he&apos;s doing it while controlling a puck on ice!",
-                  "McDavid Speed"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+              {/* Timeline Challenge */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📅</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors">Timeline Challenge</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">History Buff</p>
+                  <p className="text-xs text-[#a0aec0]">4+ minutes</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🏒 Penalty Shot History: The penalty shot was first used in the NHL in 1934. 
-                The first penalty shot goal was scored by Ralph &quot;Scotty&quot; Bowman (not the famous coach!) 
-                of the St. Louis Eagles.
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Penalty Shot History: The penalty shot was first used in the NHL in 1934. The first penalty shot goal was scored by Ralph \"Scotty\" Bowman (not the famous coach!) of the St. Louis Eagles.",
-                  "Penalty Shot History"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
-            </div>
+              {/* Daily Quiz */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-gradient-to-br from-[#4cc9f0]/20 to-[#fbbf24]/20 hover:from-[#4cc9f0]/30 hover:to-[#fbbf24]/30 border border-[#4cc9f0] hover:border-[#fbbf24] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#fbbf24] transition-colors">Daily Quiz</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">New Daily</p>
+                  <p className="text-xs text-[#a0aec0]">5-7 minutes</p>
+                </div>
+              </Link>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🥅 Zamboni Fact: The ice resurfacing machine was invented by Frank Zamboni in 1949. 
-                Before that, rinks were cleaned by hand with scrapers and hoses - it took over an hour!
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Zamboni Fact: The ice resurfacing machine was invented by Frank Zamboni in 1949. Before that, rinks were cleaned by hand with scrapers and hoses - it took over an hour!",
-                  "Zamboni History"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
             </div>
+          </div>
 
-            <div className="bg-[#16213e] rounded-lg p-6 group relative">
-              <p className="text-[#a0aec0] pr-20">
-                🏆 Playoff Beard Tradition: The playoff beard tradition started with the New York Islanders 
-                in 1980 during their first Stanley Cup run. It&apos;s now a beloved superstition across all of hockey!
-              </p>
-              <button
-                onClick={() => handleShare(
-                  "Playoff Beard Tradition: The playoff beard tradition started with the New York Islanders in 1980 during their first Stanley Cup run. It&apos;s now a beloved superstition across all of hockey!",
-                  "Playoff Beard Origin"
-                )}
-                className="absolute top-1/2 right-4 -translate-y-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-3xl w-16 h-16 rounded-full flex items-center justify-center shadow-lg"
-                title="Share this trivia"
-              >
-                📤
-              </button>
+          {/* Topic Categories Grid */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-white text-center mb-8">🏒 Pick Your Topic</h3>
+            
+            {/* 3x2 Topic Grid */}
+            <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
+              
+              {/* Original Six */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#fb923c] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏛️</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#fb923c] transition-colors">Original Six</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Team History</p>
+                  <p className="text-xs text-[#a0aec0]">1942-1967</p>
+                </div>
+              </Link>
+
+              {/* Hockey Legends */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#fbbf24] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">👑</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#fbbf24] transition-colors">Hockey Legends</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Player Focus</p>
+                  <p className="text-xs text-[#a0aec0]">Hall of Fame</p>
+                </div>
+              </Link>
+
+              {/* Hockey Geography */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#60a5fa] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🌍</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#60a5fa] transition-colors">Hockey Geography</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Locations</p>
+                  <p className="text-xs text-[#a0aec0]">Arenas & Cities</p>
+                </div>
+              </Link>
+
+              {/* Radio/Video */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#ec4899] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📻</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#ec4899] transition-colors">Radio/Video</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Media</p>
+                  <p className="text-xs text-[#a0aec0]">Famous Calls</p>
+                </div>
+              </Link>
+
+              {/* Goalie Masters */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#10b981] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🥅</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#10b981] transition-colors">Goalie Masters</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Netminders</p>
+                  <p className="text-xs text-[#a0aec0]">Between Pipes</p>
+                </div>
+              </Link>
+
+              {/* Stanley Cup */}
+              <Link href="/trivia-test" className="group">
+                <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#fbbf24] rounded-lg p-4 transition-all duration-300 text-center">
+                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🏆</div>
+                  <h4 className="text-sm font-semibold text-white mb-1 group-hover:text-[#fbbf24] transition-colors">Stanley Cup</h4>
+                  <p className="text-xs text-[#a0aec0] mb-2">Championship</p>
+                  <p className="text-xs text-[#a0aec0]">Ultimate Prize</p>
+                </div>
+              </Link>
+
+            </div>
+          </div>
+
+
+          {/* Recent Activity */}
+          <div className="mt-8 bg-[#0a0e1a] rounded-lg p-6">
+            <h3 className="text-white font-semibold mb-4">🕒 Recent Activity</h3>
+            <div className="space-y-3 text-sm">
+              <div className="flex justify-between items-center">
+                <span className="text-[#a0aec0]">Quick Fire Challenge</span>
+                <span className="text-[#4cc9f0] font-semibold">850 pts</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#a0aec0]">Original Six Masters</span>
+                <span className="text-[#fbbf24] font-semibold">720 pts</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-[#a0aec0]">Hockey Legends</span>
+                <span className="text-[#fb923c] font-semibold">650 pts</span>
+              </div>
             </div>
           </div>
         </div>
