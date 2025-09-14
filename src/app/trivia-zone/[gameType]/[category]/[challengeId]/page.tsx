@@ -1,7 +1,7 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 
 interface TriviaQuestion {
@@ -34,7 +34,7 @@ const QUESTION_SETS: Record<string, Record<string, Record<string, TriviaQuestion
         },
         {
           id: 2,
-          question: "Which player is known as 'The Great One'?",
+          question: "Which player is known as &apos;The Great One&apos;?",
           options: ["Wayne Gretzky", "Mario Lemieux", "Gordie Howe", "Maurice Richard"],
           correctAnswer: "Wayne Gretzky",
           explanation: "Wayne Gretzky earned this nickname through his incredible dominance of the sport.",
@@ -83,19 +83,11 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
   }, [params]);
 
   // Get questions for this specific game
-  const questions = gameParams ? QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [] : [];
+  const questions = useMemo(() => {
+    return gameParams ? QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [] : [];
+  }, [gameParams]);
   
-  // Timer logic
-  useEffect(() => {
-    if (gameState === 'playing' && timeLeft > 0 && !showResult) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-      return () => clearTimeout(timer);
-    } else if (timeLeft === 0 && !showResult) {
-      handleAnswer(''); // Time's up, no answer
-    }
-  }, [timeLeft, gameState, showResult]);
-
-  const handleAnswer = (answer: string) => {
+  const handleAnswer = useCallback((answer: string) => {
     if (showResult) return;
     
     setSelectedAnswer(answer);
@@ -120,7 +112,17 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
         setShowResult(false);
       }
     }, 2000);
-  };
+  }, [showResult, questions, currentQuestion, answers, score, gameParams]);
+
+  // Timer logic
+  useEffect(() => {
+    if (gameState === 'playing' && timeLeft > 0 && !showResult) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    } else if (timeLeft === 0 && !showResult) {
+      handleAnswer(''); // Time's up, no answer
+    }
+  }, [timeLeft, gameState, showResult, handleAnswer]);
 
   const resetGame = () => {
     setCurrentQuestion(0);
@@ -148,7 +150,7 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
       <PageLayout>
         <div className="py-12 px-4 text-center">
           <h1 className="text-3xl font-bold text-white mb-4">Challenge Not Found</h1>
-          <p className="text-[#a0aec0] mb-8">This challenge doesn't exist yet.</p>
+          <p className="text-[#a0aec0] mb-8">This challenge doesn&apos;t exist yet.</p>
           <Link 
             href="/trivia-zone"
             className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-3 px-6 rounded-full"
