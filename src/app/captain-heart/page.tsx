@@ -60,8 +60,16 @@ export default function CaptainHeartPage() {
               </header>
               
               <div className="pt-4">
-                <button className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg">
-                  Join the Hub
+                <button 
+                  onClick={() => {
+                    document.getElementById('hugs-section')?.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
+                  className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  Share a HUG
                 </button>
               </div>
             </div>
@@ -84,7 +92,7 @@ export default function CaptainHeartPage() {
       </div>
 
       {/* Hub Activities Grid */}
-      <div className="py-16 px-4 md:px-6 bg-[#16213e]/30">
+      <div id="hugs-section" className="py-16 px-4 md:px-6 bg-[#16213e]/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
