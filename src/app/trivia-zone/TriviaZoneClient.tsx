@@ -46,9 +46,9 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
               <div className="pt-4">
                 <button 
                   onClick={() => {
-                    document.getElementById('games-section')?.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start'
+                    document.getElementById(&apos;games-section&apos;)?.scrollIntoView({ 
+                      behavior: &apos;smooth&apos;,
+                      block: &apos;start&apos;
                     });
                   }}
                   className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
@@ -96,7 +96,7 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
               {featuredGames.map((game) => (
                 <Link 
                   key={game.id} 
-                  href={`/trivia-zone/${game.type}/${game.category}/${game.file.replace('.md', '')}`}
+                  href={`/trivia-zone/${game.type}/${game.category}/${game.file.replace(&apos;.md&apos;, &apos;&apos;)}`}
                   className="group block"
                 >
                   <div className="bg-[#16213e] hover:bg-[#1e2a4a] border border-[#2d3748] hover:border-[#4cc9f0] rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02]">
@@ -104,7 +104,7 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
                       {/* Left: Game Image/Icon */}
                       <div className="flex-shrink-0 bg-gradient-to-br from-[#4cc9f0]/20 to-[#fbbf24]/20 flex items-center justify-center md:w-48 h-32 md:h-48">
                         <div className="text-6xl md:text-8xl group-hover:scale-110 transition-transform duration-300">
-                          {gameTypeEmojis[game.type] || '🎯'}
+                          {gameTypeEmojis[game.type] || &apos;🎯&apos;}
                         </div>
                       </div>
                       
@@ -166,12 +166,12 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
             {regularGames.map((game) => (
               <Link 
                 key={game.id} 
-                href={`/trivia-zone/${game.type}/${game.category}/${game.file.replace('.md', '')}`}
+                href={`/trivia-zone/${game.type}/${game.category}/${game.file.replace(&apos;.md&apos;, &apos;&apos;)}`}
                 className="group"
               >
                 <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer text-center h-full flex flex-col">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
-                    {gameTypeEmojis[game.type] || '🎯'}
+                    {gameTypeEmojis[game.type] || &apos;🎯&apos;}
                   </div>
                   
                   <h4 className="text-lg font-bold text-white mb-3 group-hover:text-[#4cc9f0] transition-colors flex-grow">
