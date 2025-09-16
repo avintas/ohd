@@ -29,9 +29,9 @@ export function HeroSection() {
             <Image
               src="/gims/learn.webp"
               alt="Learn and Discover"
-              width={200}
-              height={200}
-              className="w-full h-32 object-cover rounded-lg border-2 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 shadow-lg"
+              width={400}
+              height={400}
+              className="w-full h-48 object-cover rounded-lg border-2 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 shadow-lg"
             />
             <p className="text-lg md:text-xl font-bold text-[#4cc9f0] group-hover:text-[#fbbf24] transition-colors duration-300 mt-3">
               Play Trivia
@@ -41,12 +41,12 @@ export function HeroSection() {
             <Image
               src="/gims/hug.webp"
               alt="Send H.U.G."
-              width={200}
-              height={200}
-              className="w-full h-32 object-cover rounded-lg border-2 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 shadow-lg"
+              width={400}
+              height={400}
+              className="w-full h-48 object-cover rounded-lg border-2 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 shadow-lg"
             />
             <p className="text-lg md:text-xl font-bold text-[#4cc9f0] group-hover:text-[#fbbf24] transition-colors duration-300 mt-3">
-              Send a HUG
+              Send a H.U.G.
             </p>
           </Link>
         </div>
