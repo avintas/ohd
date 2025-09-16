@@ -97,11 +97,11 @@ export default function CaptainHeartPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {/* Parent Appreciation Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">❤️</div>
-                <h3 className="text-lg font-bold text-white mb-3">Parent Appreciation</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">❤️</div>
+                <h3 className="text-base font-bold text-white mb-2">Parent Appreciation</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Shoutout to all the parents who wake up at 5am for practice! Your dedication doesn&apos;t go unnoticed. You&apos;re the real MVPs of youth hockey! 🏆
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function CaptainHeartPage() {
                   "Community Spotlight: Shoutout to all the parents who wake up at 5am for practice! Your dedication doesn&apos;t go unnoticed. You&apos;re the real MVPs of youth hockey!",
                   "Parent Appreciation"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -118,11 +118,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Supporting Beginners Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">🤝</div>
-                <h3 className="text-lg font-bold text-white mb-3">Supporting Beginners</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">🤝</div>
+                <h3 className="text-base font-bold text-white mb-2">Supporting Beginners</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Every player started somewhere. Be encouraging to beginners, celebrate small victories, and help build the next generation of hockey lovers. We&apos;re all in this together!
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function CaptainHeartPage() {
                   "Remember: Every player started somewhere. Be encouraging to beginners, celebrate small victories, and help build the next generation of hockey lovers. We&apos;re all in this together!",
                   "Supporting Beginners"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -139,11 +139,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Hockey Values Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">🏒</div>
-                <h3 className="text-lg font-bold text-white mb-3">Hockey Values</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">🏒</div>
+                <h3 className="text-base font-bold text-white mb-2">Hockey Values</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Respect, teamwork, perseverance, and sportsmanship. These aren&apos;t just hockey skills - they&apos;re life skills. What you learn on the ice makes you better off the ice too!
                 </p>
               </div>
@@ -152,7 +152,7 @@ export default function CaptainHeartPage() {
                   "Hockey Values: Respect, teamwork, perseverance, and sportsmanship. These aren&apos;t just hockey skills - they&apos;re life skills. What you learn on the ice makes you better off the ice too!",
                   "Hockey Values"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -160,11 +160,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Volunteer Thanks Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">🌟</div>
-                <h3 className="text-lg font-bold text-white mb-3">Volunteer Thanks</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">🌟</div>
+                <h3 className="text-base font-bold text-white mb-2">Volunteer Thanks</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   To all the coaches, referees, and volunteers who give their time - THANK YOU! Hockey happens because of people like you who care about the community and love of the game.
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function CaptainHeartPage() {
                   "Volunteer Appreciation: To all the coaches, referees, and volunteers who give their time - THANK YOU! Hockey happens because of people like you who care about the community and love of the game.",
                   "Volunteer Thanks"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -181,11 +181,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Mental Health Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">💪</div>
-                <h3 className="text-lg font-bold text-white mb-3">Mental Health Matters</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">💪</div>
+                <h3 className="text-base font-bold text-white mb-2">Mental Health Matters</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Hockey can be tough - losses hurt, mistakes happen. It&apos;s okay to feel disappointed, but remember: you&apos;re more than your performance on ice. Take care of your mental game too!
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function CaptainHeartPage() {
                   "Mental Health Matters: Hockey can be tough - losses hurt, mistakes happen. It&apos;s okay to feel disappointed, but remember: you&apos;re more than your performance on ice. Take care of your mental game too!",
                   "Mental Health"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -202,11 +202,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Celebrating Effort Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">🎉</div>
-                <h3 className="text-lg font-bold text-white mb-3">Celebrating Effort</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">🎉</div>
+                <h3 className="text-base font-bold text-white mb-2">Celebrating Effort</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Not every game ends in a win, not every shot goes in. But effort? That&apos;s something to celebrate every single time. Recognize the hustle, the heart, and the never-give-up attitude!
                 </p>
               </div>
@@ -215,7 +215,7 @@ export default function CaptainHeartPage() {
                   "Celebrate Effort: Not every game ends in a win, not every shot goes in. But effort? That&apos;s something to celebrate every single time. Recognize the hustle, the heart, and the never-give-up attitude!",
                   "Celebrating Effort"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -223,11 +223,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* Inclusive Hockey Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">🤗</div>
-                <h3 className="text-lg font-bold text-white mb-3">Inclusive Hockey</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">🤗</div>
+                <h3 className="text-base font-bold text-white mb-2">Inclusive Hockey</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Hockey is for everyone - all backgrounds, all skill levels, all ages. Let&apos;s make sure our rinks are welcoming spaces where everyone feels they belong. Diversity makes our sport stronger!
                 </p>
               </div>
@@ -236,7 +236,7 @@ export default function CaptainHeartPage() {
                   "Inclusive Hockey: Hockey is for everyone - all backgrounds, all skill levels, all ages. Let&apos;s make sure our rinks are welcoming spaces where everyone feels they belong. Diversity makes our sport stronger!",
                   "Inclusive Hockey"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
@@ -244,11 +244,11 @@ export default function CaptainHeartPage() {
             </div>
 
             {/* H.U.G. Reminder Card */}
-            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
-              <div className="text-center space-y-4">
-                <div className="text-4xl mb-4">💙</div>
-                <h3 className="text-lg font-bold text-white mb-3">H.U.G. Reminder</h3>
-                <p className="text-[#a0aec0] text-sm leading-relaxed">
+            <div className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div className="text-center space-y-2">
+                <div className="text-3xl mb-2">💙</div>
+                <h3 className="text-base font-bold text-white mb-2">H.U.G. Reminder</h3>
+                <p className="text-[#a0aec0] text-xs leading-snug">
                   Send a Hockey Universal Greeting to someone who needs encouragement today. A simple &quot;You&apos;ve got this!&quot; or &quot;Great effort out there!&quot; can make someone&apos;s entire week. Spread the hockey love! 🏒
                 </p>
               </div>
@@ -257,7 +257,7 @@ export default function CaptainHeartPage() {
                   "H.U.G. Reminder: Send a Hockey Universal Greeting to someone who needs encouragement today. A simple \"You&apos;ve got this!\" or \"Great effort out there!\" can make someone&apos;s entire week. Spread the hockey love!",
                   "H.U.G. Reminder"
                 )}
-                className="absolute top-3 right-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
+                className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
                 title="Share this message"
               >
                 📤
