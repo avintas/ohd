@@ -39,7 +39,7 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
                 <div className="space-y-4 text-lg md:text-xl text-[#a0aec0] max-w-lg">
                   <p>Welcome to the ultimate hockey trivia headquarters! Test your knowledge, learn amazing facts, and become a true hockey legend.</p>
                   <p>With Samantha as your expert guide, dive into challenging quizzes covering everything from Original Six history to modern NHL stats.</p>
-                  <p>Ready to prove you're a hockey genius?</p>
+                  <p>Ready to prove you&apos;re a hockey genius?</p>
                 </div>
               </header>
               
@@ -66,7 +66,7 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
                   alt="Samantha - Trivia Master"
                   width={512}
                   height={512}
-                  className="w-80 h-80 md:w-[32rem] md:h-[32rem] object-contain"
+                  className="w-80 h-80 md:w-[32rem] md:h-[32rem] object-contain scale-x-[-1]"
                   priority
                 />
                 {/* Floating badge */}
