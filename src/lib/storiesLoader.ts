@@ -124,7 +124,7 @@ export function determineCurrentLayout(curator: StoriesCurator | null): StoriesL
   
   const now = new Date();
   const today = now.toISOString().split('T')[0]; // YYYY-MM-DD format
-  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase() as keyof typeof curator.schedule;
+  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
   
   // Check for special dates first
   if (curator.schedule['special-dates'][today]) {
@@ -138,7 +138,7 @@ export function determineCurrentLayout(curator: StoriesCurator | null): StoriesL
   }
   
   // Use day-based schedule
-  const dayLayoutName = curator.schedule[dayName];
+  const dayLayoutName = curator.schedule[dayName as keyof Omit<typeof curator.schedule, 'special-dates'>];
   if (dayLayoutName && curator.layouts[dayLayoutName]) {
     return curator.layouts[dayLayoutName];
   }
