@@ -64,7 +64,7 @@ export default function CaptainHeartClient({ hugMessages }: CaptainHeartClientPr
                 </div>
               </header>
               
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <button 
                   onClick={() => {
                     document.getElementById('hugs-section')?.scrollIntoView({ 

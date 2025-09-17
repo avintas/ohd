@@ -7,9 +7,10 @@ import type { StoryMessage } from '@/lib/storiesLoader';
 
 interface BehindTheMicClientProps {
   storyMessages: StoryMessage[];
+  layoutInfo: { name: string; description: string; theme: string } | null;
 }
 
-export default function BehindTheMicClient({ storyMessages }: BehindTheMicClientProps) {
+export default function BehindTheMicClient({ storyMessages, layoutInfo }: BehindTheMicClientProps) {
   const [shareMessage, setShareMessage] = useState('');
 
   const handleShare = async (content: string, title: string) => {
@@ -64,7 +65,7 @@ export default function BehindTheMicClient({ storyMessages }: BehindTheMicClient
                 </div>
               </header>
               
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <button 
                   onClick={() => {
                     document.getElementById('stories-section')?.scrollIntoView({ 
@@ -105,11 +106,18 @@ export default function BehindTheMicClient({ storyMessages }: BehindTheMicClient
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              From the Broadcast Booth
+              {layoutInfo ? layoutInfo.name : 'From the Broadcast Booth'}
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Stories, insights, and wisdom from decades behind the microphone calling hockey&apos;s greatest moments
+              {layoutInfo ? layoutInfo.description : 'Stories, insights, and wisdom from decades behind the microphone calling hockey\'s greatest moments'}
             </p>
+            {layoutInfo && (
+              <div className="mt-4">
+                <span className="bg-[#4cc9f0] text-[#0a0e1a] px-4 py-2 rounded-full text-sm font-bold">
+                  Today&apos;s Theme: {layoutInfo.theme}
+                </span>
+              </div>
+            )}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

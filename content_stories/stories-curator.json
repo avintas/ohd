@@ -1,0 +1,63 @@
+{
+  "currentLayout": "auto",
+  "layouts": {
+    "default": {
+      "name": "Classic Broadcasting",
+      "description": "Timeless stories from the broadcast booth",
+      "stories": ["broadcasting-wisdom", "legendary-call", "voice-of-hockey", "fan-connection"],
+      "maxStories": 6,
+      "theme": "classic"
+    },
+    "monday-motivation": {
+      "name": "Monday Motivation",
+      "description": "Start your week with inspiring hockey stories from the booth",
+      "stories": ["rookie-debut", "broadcasting-wisdom", "voice-of-hockey", "fan-connection"],
+      "maxStories": 4,
+      "theme": "motivational"
+    },
+    "playoff-intensity": {
+      "name": "Playoff Intensity",
+      "description": "High-stakes moments and dramatic calls from playoff hockey",
+      "stories": ["playoff-pressure", "overtime-drama", "legendary-call"],
+      "maxStories": 3,
+      "theme": "dramatic"
+    },
+    "weekend-classics": {
+      "name": "Weekend Classics", 
+      "description": "Nostalgic tales and behind-the-scenes stories for weekend reading",
+      "stories": ["behind-scenes", "voice-of-hockey", "fan-connection", "broadcasting-wisdom"],
+      "maxStories": 6,
+      "theme": "nostalgic"
+    },
+    "behind-the-scenes": {
+      "name": "Behind the Scenes",
+      "description": "What really happens when the cameras aren't rolling",
+      "stories": ["behind-scenes", "rookie-debut", "fan-connection"],
+      "maxStories": 4,
+      "theme": "insider"
+    },
+    "legendary-moments": {
+      "name": "Legendary Moments",
+      "description": "The calls that made hockey history",
+      "stories": ["legendary-call", "overtime-drama", "playoff-pressure", "voice-of-hockey"],
+      "maxStories": 4,
+      "theme": "historic"
+    }
+  },
+  "schedule": {
+    "monday": "monday-motivation",
+    "tuesday": "default",
+    "wednesday": "behind-the-scenes", 
+    "thursday": "default",
+    "friday": "weekend-classics",
+    "saturday": "weekend-classics",
+    "sunday": "legendary-moments",
+    "special-dates": {
+      "2024-10-01": "playoff-intensity",
+      "2024-12-25": "weekend-classics",
+      "2024-01-01": "legendary-moments"
+    }
+  },
+  "fallback": "default",
+  "lastUpdated": "2024-09-17T14:30:00Z"
+}

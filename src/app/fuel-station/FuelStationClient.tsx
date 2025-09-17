@@ -64,7 +64,7 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
                 </div>
               </header>
               
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <button 
                   onClick={() => {
                     document.getElementById('nutrition-section')?.scrollIntoView({ 

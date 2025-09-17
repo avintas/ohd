@@ -64,7 +64,7 @@ export default function IronMikeClient({ motivateMessages }: IronMikeClientProps
                 </div>
               </header>
               
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <button 
                   onClick={() => {
                     document.getElementById('coaching-section')?.scrollIntoView({ 

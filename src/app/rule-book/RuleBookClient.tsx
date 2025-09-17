@@ -2,7 +2,6 @@
 
 import { PageLayout } from '@/components';
 import Image from 'next/image';
-import { useState } from 'react';
 import type { RuleMessage } from '@/lib/rulesLoader';
 
 interface RuleBookClientProps {
@@ -10,42 +9,9 @@ interface RuleBookClientProps {
 }
 
 export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
-  const [shareMessage, setShareMessage] = useState('');
-
-  const handleShare = async (content: string, title: string) => {
-    const shareText = `🏒 Hockey rule explanation from Referee Riley - OnlyHockey.com:\n\n"${content}"\n\nRule Book - Understanding Hockey&apos;s Rules!`;
-    const shareUrl = `${window.location.origin}/rule-book`;
-    
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: `${title} | Referee Riley - Rule Book`,
-          text: shareText,
-          url: shareUrl,
-        });
-      } catch {
-        console.log('Share cancelled');
-      }
-    } else {
-      try {
-        const textWithUrl = `${shareText}\n\n${shareUrl}`;
-        await navigator.clipboard.writeText(textWithUrl);
-        setShareMessage('Copied to clipboard!');
-        setTimeout(() => setShareMessage(''), 2000);
-      } catch {
-        console.error('Failed to copy');
-      }
-    }
-  };
 
   return (
     <PageLayout>
-      {/* Share Message */}
-      {shareMessage && (
-        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg z-50">
-          {shareMessage}
-        </div>
-      )}
 
       {/* Hero Section */}
       <div className="py-16 md:py-24 px-4 md:px-6">
@@ -64,7 +30,7 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
                 </div>
               </header>
               
-              <div className="pt-4">
+              <div className="pt-4 flex justify-center lg:justify-start">
                 <button 
                   onClick={() => {
                     document.getElementById('rules-section')?.scrollIntoView({ 
@@ -114,7 +80,7 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {ruleMessages.map((rule) => (
-              <div key={rule.id} className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div key={rule.id} className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 transition-all duration-300 hover:scale-105 cursor-pointer group">
                 <div className="text-center space-y-2">
                   <div className="text-3xl mb-2">{rule.emoji}</div>
                   <h3 className="text-base font-bold text-white mb-2">{rule.title}</h3>
@@ -122,13 +88,6 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
                     {rule.content}
                   </p>
                 </div>
-                <button
-                  onClick={() => handleShare(rule.content, rule.shareTitle)}
-                  className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg"
-                  title="Share this rule explanation"
-                >
-                  📤
-                </button>
               </div>
             ))}
           </div>

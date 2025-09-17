@@ -11,35 +11,55 @@ export default function AboutPage() {
               About
             </h1>
             <p className="text-xl text-[#a0aec0] leading-relaxed">
-              OnlyHockey.com began in the mid-2000s as an e-commerce platform born from a pure love for the game. We&apos;ve always loved to innovate, and this project was the proving ground where we pushed the boundaries of what was possible.
+              OnlyHockey is a platform built for passionate hockey fans who want more than just highlights and basic news.
             </p>
           </div>
 
           {/* Content - Clean Format */}
           <div className="space-y-12">
             
-            {/* Our Legacy of Firsts */}
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Our Legacy of Firsts
-              </h2>
-              <div className="space-y-4">
-                <p className="text-lg text-[#a0aec0] leading-relaxed">
-                  We were the first to publish a comprehensive database of professional hockey stick patterns. Most importantly, we were the first to provide the public with &quot;pro-returns&quot;—the actual professional equipment used by the pros.
-                </p>
-                <p className="text-lg text-[#a0aec0] leading-relaxed">
-                  This platform was a proving ground where we developed a revolutionary logistics system. Using advanced optimization algorithms, we created an innovative system for shipping and packaging that dramatically improved efficiency.
-                </p>
-              </div>
-            </div>
-
             {/* Our Mission */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Our Mission
               </h2>
               <p className="text-lg text-[#a0aec0] leading-relaxed">
-                Today, we continue to innovate by creating content that reflects the depth and intelligence of the sport. OnlyHockey.com focuses on shareable factoids, motivational quotes, and statistics that enhance the fan experience and spark conversation. Our goal is to be a reliable source for hockey fans who want a deeper connection to the game they love.
+                OnlyHockey is a platform built for passionate hockey fans who want more than just highlights and basic news. We create bite-sized, shareable hockey content that goes beyond the surface—content that educates, motivates, and connects fans to the deeper stories of the game they love.
+              </p>
+            </div>
+
+            {/* What We Do */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                What We Do
+              </h2>
+              <div className="space-y-4">
+                <p className="text-lg text-[#a0aec0] leading-relaxed">
+                  We solve a simple problem: hockey content is scattered across platforms and often too lengthy for quick consumption and sharing. OnlyHockey brings you engaging, easily shareable content in formats perfect for social media and fan conversations.
+                </p>
+                <p className="text-lg text-[#a0aec0] leading-relaxed">
+                  Whether you&apos;re looking for fascinating hockey facts to share with fellow fans, motivational content to encourage the hockey players in your life, or insider insights that make you appreciate the sport even more, we&apos;re your one-stop destination for hockey content that sparks conversation and builds community.
+                </p>
+              </div>
+            </div>
+
+            {/* Who We Serve */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Who We Serve
+              </h2>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">
+                We&apos;re here for hockey fans who are active on social media and love sharing their passion for the game. We&apos;re also here for the parents, grandparents, and family members who want to support and motivate their hockey-playing loved ones with content that celebrates the values and spirit of hockey.
+              </p>
+            </div>
+
+            {/* Our Vision */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Our Vision
+              </h2>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">
+                Hockey deserves content as dynamic and engaging as the sport itself. We&apos;re building a community where fans can discover, enjoy, and share the stories that make hockey the greatest game on earth.
               </p>
             </div>
           </div>
