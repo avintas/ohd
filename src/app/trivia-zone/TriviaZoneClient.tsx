@@ -60,18 +60,18 @@ export default function TriviaZoneClient({ featuredGames, regularGames, gameType
 
             {/* Right Side - Samantha Character */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
+              <div className="text-center">
                 <Image
                   src="/pims/pim-1008.webp"
                   alt="Samantha - Trivia Master"
                   width={512}
                   height={512}
-                  className="w-80 h-80 md:w-[32rem] md:h-[32rem] object-contain scale-x-[-1]"
+                  className="w-64 h-64 md:w-80 md:h-80 object-contain scale-x-[-1]"
                   priority
                 />
-                {/* Floating badge */}
-                <div className="absolute -top-4 -right-4 bg-[#4cc9f0] text-[#0a0e1a] px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                  🧠 Trivia Master
+                <div className="mt-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-white">Samantha</h3>
+                  <p className="text-[#4cc9f0] font-semibold">Trivia Master</p>
                 </div>
               </div>
             </div>
