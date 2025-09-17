@@ -83,7 +83,7 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
             <div className="flex justify-center lg:justify-end">
               <div className="text-center">
                 <Image
-                  src="/pims/pim-1011.webp"
+                  src="/pims/pim-1010.webp"
                   alt="Coach Fuel - Nutrition Expert"
                   width={512}
                   height={512}

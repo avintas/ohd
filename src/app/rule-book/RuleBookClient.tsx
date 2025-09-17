@@ -83,7 +83,7 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
             <div className="flex justify-center lg:justify-end">
               <div className="text-center">
                 <Image
-                  src="/pims/pim-1010.webp"
+                  src="/pims/pim-1007.webp"
                   alt="Referee Riley - Official"
                   width={512}
                   height={512}

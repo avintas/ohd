@@ -61,18 +61,18 @@ export function TheCrew() {
             <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Nutritionist</p>
           </Link>
 
-          {/* Broadcaster Mike - Hockey Storyteller */}
-          <Link href="/broadcaster-mike" className="text-center group block">
+          {/* Don The Mic - Hockey Storyteller */}
+          <Link href="/behind-the-mic" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1011.webp"
-                alt="Broadcaster Mike - Hockey Storyteller"
+                alt="Don The Mic - Hockey Storyteller"
                 width={100}
                 height={100}
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Broadcaster Mike</h3>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Don The Mic</h3>
             <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Hockey Storyteller</p>
           </Link>
 

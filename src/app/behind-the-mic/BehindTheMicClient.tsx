@@ -83,7 +83,7 @@ export default function BehindTheMicClient({ storyMessages }: BehindTheMicClient
             <div className="flex justify-center lg:justify-end">
               <div className="text-center">
                 <Image
-                  src="/pims/pim-1002.webp"
+                  src="/pims/pim-1011.webp"
                   alt="Don The Mic - Broadcaster"
                   width={512}
                   height={512}
