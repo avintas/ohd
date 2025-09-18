@@ -15,12 +15,12 @@ interface SlideData {
   emoji: string;
 }
 
-// Slide data array - 5 slides with your specified content and images
+// Slide data array - 5 unified slides with complete content
 const slidesData: SlideData[] = [
   {
     id: 'trivia',
-    title: 'Master Hockey Trivia',
-    description: 'Challenge yourself with our exciting hockey trivia games. From Original Six history to modern NHL stats, test your knowledge and become a true hockey legend.',
+    title: 'There is Only Hockey - Where Your Knowledge Becomes Legend',
+    description: 'Master Hockey Trivia: Challenge yourself with our exciting hockey trivia games. From Original Six history to modern NHL stats, test your knowledge and become a true hockey legend.',
     image: '/gims/gim-00009.webp',
     ctaText: 'Play Trivia',
     ctaUrl: '/trivia-zone',
@@ -28,8 +28,8 @@ const slidesData: SlideData[] = [
   },
   {
     id: 'hug',
-    title: 'Share the Hockey Love',
-    description: 'Send a Hockey Universal Greeting (H.U.G.) to someone special with Captain Heart. Spread positivity and show your support by sending 💙 digital H.U.G.s to fellow hockey fans around the world.',
+    title: 'There is Only Hockey - Where Your Love Connects Us All',
+    description: 'Share the Hockey Love: Send a Hockey Universal Greeting (H.U.G.) to someone special with Captain Heart. Spread positivity and show your support by sending 💙 digital H.U.G.s to fellow hockey fans around the world.',
     image: '/pims/pim-1009.webp',
     ctaText: 'Send a H.U.G.',
     ctaUrl: '/captain-heart',
@@ -37,17 +37,17 @@ const slidesData: SlideData[] = [
   },
   {
     id: 'support',
-    title: 'Show Support',
-    description: 'Fuel your passion with inspiring hockey quotes and motivational content. Let Iron Mike pump you up for your next game or challenge.',
-    image: '/gims/gim-00012.webp',
+    title: 'There is Only Hockey - Where Your Passion Ignites',
+    description: 'Show Support: Fuel your passion with inspiring hockey quotes and motivational content. Let Iron Mike pump you up for your next game or challenge.',
+    image: '/video/gim-supporter-01.mp4',
     ctaText: 'Get Pumped',
     ctaUrl: '/iron-mike',
     emoji: '💪'
   },
   {
     id: 'stories',
-    title: 'Discover Hockey Stories',
-    description: 'Dive into fascinating hockey tales, behind-the-scenes stories, and legendary moments that shaped the game we all love.',
+    title: 'There is Only Hockey - Where Your Stories Live Forever',
+    description: 'Discover Hockey Stories: Dive into fascinating hockey tales, behind-the-scenes stories, and legendary moments that shaped the game we all love.',
     image: '/gims/gim-00013.webp',
     ctaText: 'Read Stories',
     ctaUrl: '/broadcaster-mike',
@@ -55,54 +55,62 @@ const slidesData: SlideData[] = [
   },
   {
     id: 'crew',
-    title: 'Meet The Crew',
-    description: 'Connect with your hockey guides and discover the personalities behind OnlyHockey. Our crew of friendly experts is here to help you learn, play safer, and have more fun with the greatest game on ice.',
+    title: 'There is Only Hockey - Where Your Guides Await',
+    description: 'Meet The Crew: Connect with your hockey guides and discover the personalities behind OnlyHockey. Our crew of friendly experts is here to help you learn, play safer, and have more fun with the greatest game on ice.',
     image: '/gims/gim-00021.webp',
     ctaText: 'Meet The Crew',
     ctaUrl: '#crew-section',
     emoji: '👥'
+  },
+  // NEW PRIME VIDEO STYLE SLIDES
+  {
+    id: 'prime-trivia',
+    title: 'HOCKEY TRIVIA ZONE',
+    description: 'ORIGINAL SIX TO MODERN NHL • Test your knowledge with Samantha • Challenge friends and climb the leaderboard',
+    image: '/gims/gim-00009.webp',
+    ctaText: 'Start Playing',
+    ctaUrl: '/trivia-zone',
+    emoji: '🎯'
+  },
+  {
+    id: 'prime-hug',
+    title: 'HOCKEY UNIVERSAL GREETINGS',
+    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and the hockey community',
+    image: '/pims/pim-1009.webp',
+    ctaText: 'Send a H.U.G.',
+    ctaUrl: '/captain-heart',
+    emoji: '💙'
+  },
+  {
+    id: 'prime-motivation',
+    title: 'IRON MIKE MOTIVATION',
+    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game on ice',
+    image: '/video/gim-supporter-01.mp4',
+    ctaText: 'Get Motivated',
+    ctaUrl: '/iron-mike',
+    emoji: '🔥'
   }
 ];
 
 export function HeroSection() {
   // State management for slider
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   
   // Touch/swipe handling
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
 
-  // Auto-play functionality - advance slide every 5 seconds
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slidesData.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying]);
-
   // Manual navigation handlers
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false); // Pause auto-play when user manually navigates
-    
-    // Resume auto-play after 10 seconds of inactivity
-    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slidesData.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   // Keyboard navigation
@@ -149,109 +157,210 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="py-8 md:py-12 px-4 md:px-6">
+    <section className="py-16 md:py-24 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
-        {/* Main Layout - Static Title Left, Dynamic Slider Right */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start min-h-[400px] md:min-h-[450px]">
+        {/* Unified Two-Column Card */}
+        <div 
+          className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           
-          {/* Left Side - Static Title */}
-          <div className="space-y-8 pt-8 lg:pt-0">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 bg-gradient-to-r from-[#4cc9f0] via-[#60a5fa] to-[#fbbf24] bg-clip-text text-transparent leading-tight">
-                There is<br />Only Hockey!
-              </h1>
-              <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Where your ❤️ love for the game is all you need.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side - Dynamic Slider Content */}
-          <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[450px]">
-            {/* Mobile Navigation Arrows */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-[#4cc9f0]/80 hover:bg-[#4cc9f0] text-[#0a0e1a] w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 md:hidden shadow-lg"
-              aria-label="Previous slide"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-[#4cc9f0]/80 hover:bg-[#4cc9f0] text-[#0a0e1a] w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 md:hidden shadow-lg"
-              aria-label="Next slide"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <div 
-              className="space-y-6 text-center w-full"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              
-              {/* 1. Title (Headline) */}
-              <header>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
-                  {currentSlideData.title}
-                </h2>
-              </header>
-              
-              {/* 2. Subtitle (Body Text) */}
-              <div className="mb-4">
-                <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto">
-                  {currentSlideData.description}
-                </p>
+          {/* Conditional Layout Based on Slide Type */}
+          {currentSlideData.id.startsWith('prime-') ? (
+            /* PRIME VIDEO STYLE LAYOUT */
+            <>
+              {/* Left Column - Prime Style Text */}
+              <div className="space-y-6 z-10 relative">
+                {/* Small Brand/Category Label */}
+                <div className="flex items-center space-x-2 text-sm font-semibold text-[#4cc9f0] uppercase tracking-wider">
+                  <span>OnlyHockey</span>
+                  <span className="text-[#a0aec0]">•</span>
+                  <span className="text-[#a0aec0]">Original Series</span>
+                </div>
+                
+                {/* Large Main Title */}
+                <header>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-none tracking-tight">
+                    {currentSlideData.title}
+                  </h1>
+                </header>
+                
+                {/* Description with bullet points */}
+                <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
+                  {currentSlideData.description.split(' • ').map((point, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {index === 0 ? (
+                        <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
+                          {point}
+                        </span>
+                      ) : (
+                        <>
+                          <span className="text-[#4cc9f0] mt-2">•</span>
+                          <span>{point}</span>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                
+                {/* CTA Button - Prime Style */}
+                <div className="pt-6">
+                  <Link
+                    href={currentSlideData.ctaUrl}
+                    className="inline-flex items-center bg-[#232f3e] hover:bg-[#37475a] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-xl border border-[#4cc9f0]/30 hover:border-[#4cc9f0]"
+                  >
+                    <span className="mr-2">{currentSlideData.ctaText}</span>
+                    <span className="text-[#4cc9f0]">{currentSlideData.emoji}</span>
+                  </Link>
+                </div>
               </div>
-              
-              {/* 3. Image (Badge/Visual) */}
-              <div className="flex justify-center py-2">
-                <div className="relative">
+
+              {/* Right Column - Prime Style Visual */}
+              <div className="relative">
+                {/* Background Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/20 to-[#0a0e1a]/80 z-10 rounded-2xl"></div>
+                
+                {currentSlideData.image.endsWith('.mp4') ? (
+                  <video
+                    src={currentSlideData.image}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
+                  />
+                ) : (
                   <Image
                     src={currentSlideData.image}
                     alt={currentSlideData.title}
-                    width={512}
-                    height={512}
-                    className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain transition-all duration-500"
+                    width={800}
+                    height={600}
+                    className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
                     priority
                   />
+                )}
+              </div>
+            </>
+          ) : (
+            /* ORIGINAL LAYOUT FOR EXISTING SLIDES */
+            <>
+              {/* Left Column - Text Content */}
+              <div className="space-y-8">
+                <header>
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+                    {currentSlideData.title.split(' - ')[0]}
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#4cc9f0] font-semibold mb-8">
+                    {currentSlideData.title.split(' - ')[1]}
+                  </h2>
+                </header>
+                
+                <div className="space-y-6 text-lg md:text-xl text-[#a0aec0] max-w-lg">
+                  {currentSlideData.description.split(': ').map((paragraph, index) => (
+                    <p key={index} className="leading-relaxed">
+                      {paragraph}{index === 0 && currentSlideData.description.includes(':') ? ':' : ''}
+                    </p>
+                  ))}
+                </div>
+                
+                <div className="pt-4">
+                  <Link
+                    href={currentSlideData.ctaUrl}
+                    className="bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+                  >
+                    {currentSlideData.ctaText}
+                  </Link>
                 </div>
               </div>
-              
-              {/* 4. CTA Button (Call to Action) */}
-              <div className="pt-2">
-                <Link
-                  href={currentSlideData.ctaUrl}
-                  className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  {currentSlideData.ctaText}
-                </Link>
+
+              {/* Right Column - Visual Content */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="text-center">
+                  {currentSlideData.image.endsWith('.mp4') ? (
+                    <video
+                      src={currentSlideData.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] object-cover rounded-full transition-all duration-500 shadow-2xl border-4 border-[#4cc9f0]"
+                    />
+                  ) : (
+                    <Image
+                      src={currentSlideData.image}
+                      alt={currentSlideData.title}
+                      width={400}
+                      height={400}
+                      className="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] object-cover rounded-full transition-all duration-500 shadow-2xl border-4 border-[#4cc9f0]"
+                      priority
+                    />
+                  )}
+                  
+                  {/* Character/Content Label */}
+                  <div className="mt-6">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                      {currentSlideData.id === 'hug' ? 'Captain Heart' :
+                       currentSlideData.id === 'support' ? 'Iron Mike' :
+                       currentSlideData.id === 'stories' ? 'Broadcaster Mike' :
+                       currentSlideData.id === 'crew' ? 'The Crew' :
+                       'Samantha'}
+                    </h3>
+                    <p className="text-[#4cc9f0] font-semibold text-lg">
+                      {currentSlideData.id === 'hug' ? 'Community Leader' :
+                       currentSlideData.id === 'support' ? 'Motivational Coach' :
+                       currentSlideData.id === 'stories' ? 'Hockey Storyteller' :
+                       currentSlideData.id === 'crew' ? 'Your Hockey Guides' :
+                       'Trivia Master'}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>
+          )}
         </div>
 
-        {/* Manual Navigation Dots */}
-        <div className="flex justify-center mt-6 space-x-3">
-          {slidesData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-[#4cc9f0] scale-125'
-                  : 'bg-[#2d3748] hover:bg-[#4a5568]'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        {/* Manual Navigation - Arrows and Dots */}
+        <div className="flex justify-center items-center mt-6 space-x-6">
+          {/* Previous Arrow */}
+          <button
+            onClick={prevSlide}
+            className="bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] text-[#0a0e1a] w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+            aria-label="Previous slide"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Dots */}
+          <div className="flex space-x-3">
+            {slidesData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide
+                    ? 'bg-[#4cc9f0] scale-125'
+                    : 'bg-[#2d3748] hover:bg-[#4a5568]'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          {/* Next Arrow */}
+          <button
+            onClick={nextSlide}
+            className="bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] text-[#0a0e1a] w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
+            aria-label="Next slide"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
