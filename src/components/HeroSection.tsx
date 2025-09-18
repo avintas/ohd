@@ -15,80 +15,52 @@ interface SlideData {
   emoji: string;
 }
 
-// Slide data array - 5 unified slides with complete content
+// Slide data array - All slides in Prime Video style
 const slidesData: SlideData[] = [
   {
     id: 'trivia',
-    title: 'There is Only Hockey - Where Your Knowledge Becomes Legend',
-    description: 'Master Hockey Trivia: Challenge yourself with our exciting hockey trivia games. From Original Six history to modern NHL stats, test your knowledge and become a true hockey legend.',
-    image: '/gims/gim-00009.webp',
-    ctaText: 'Play Trivia',
-    ctaUrl: '/trivia-zone',
-    emoji: '🧠'
-  },
-  {
-    id: 'hug',
-    title: 'There is Only Hockey - Where Your Love Connects Us All',
-    description: 'Share the Hockey Love: Send a Hockey Universal Greeting (H.U.G.) to someone special with Captain Heart. Spread positivity and show your support by sending 💙 digital H.U.G.s to fellow hockey fans around the world.',
-    image: '/pims/pim-1009.webp',
-    ctaText: 'Send a H.U.G.',
-    ctaUrl: '/captain-heart',
-    emoji: '❤️'
-  },
-  {
-    id: 'support',
-    title: 'There is Only Hockey - Where Your Passion Ignites',
-    description: 'Show Support: Fuel your passion with inspiring hockey quotes and motivational content. Let Iron Mike pump you up for your next game or challenge.',
-    image: '/video/gim-supporter-01.mp4',
-    ctaText: 'Get Pumped',
-    ctaUrl: '/iron-mike',
-    emoji: '💪'
-  },
-  {
-    id: 'stories',
-    title: 'There is Only Hockey - Where Your Stories Live Forever',
-    description: 'Discover Hockey Stories: Dive into fascinating hockey tales, behind-the-scenes stories, and legendary moments that shaped the game we all love.',
-    image: '/gims/gim-00013.webp',
-    ctaText: 'Read Stories',
-    ctaUrl: '/broadcaster-mike',
-    emoji: '📚'
-  },
-  {
-    id: 'crew',
-    title: 'There is Only Hockey - Where Your Guides Await',
-    description: 'Meet The Crew: Connect with your hockey guides and discover the personalities behind OnlyHockey. Our crew of friendly experts is here to help you learn, play safer, and have more fun with the greatest game on ice.',
-    image: '/gims/gim-00021.webp',
-    ctaText: 'Meet The Crew',
-    ctaUrl: '#crew-section',
-    emoji: '👥'
-  },
-  // NEW PRIME VIDEO STYLE SLIDES
-  {
-    id: 'prime-trivia',
     title: 'HOCKEY TRIVIA ZONE',
-    description: 'ORIGINAL SIX TO MODERN NHL • Test your knowledge with Samantha • Challenge friends and climb the leaderboard',
+    description: 'ORIGINAL SIX TO MODERN NHL • Test your knowledge with Samantha • Challenge friends and climb the leaderboard • Become a true hockey legend',
     image: '/gims/gim-00009.webp',
     ctaText: 'Start Playing',
     ctaUrl: '/trivia-zone',
     emoji: '🎯'
   },
   {
-    id: 'prime-hug',
+    id: 'hug',
     title: 'HOCKEY UNIVERSAL GREETINGS',
-    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and the hockey community',
+    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and the hockey community • Show your support for fellow fans',
     image: '/pims/pim-1009.webp',
     ctaText: 'Send a H.U.G.',
     ctaUrl: '/captain-heart',
     emoji: '💙'
   },
   {
-    id: 'prime-motivation',
+    id: 'support',
     title: 'IRON MIKE MOTIVATION',
-    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game on ice',
+    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game on ice • Let Iron Mike motivate you',
     image: '/video/gim-supporter-01.mp4',
     ctaText: 'Get Motivated',
     ctaUrl: '/iron-mike',
     emoji: '🔥'
+  },
+  {
+    id: 'stories',
+    title: 'HOCKEY STORIES & LEGENDS',
+    description: 'BEHIND THE SCENES • Fascinating hockey tales and legendary moments • Stories that shaped the game we love • Discover hockey history',
+    image: '/gims/gim-00013.webp',
+    ctaText: 'Read Stories',
+    ctaUrl: '/broadcaster-mike',
+    emoji: '📖'
+  },
+  {
+    id: 'crew',
+    title: 'MEET THE CREW',
+    description: 'YOUR HOCKEY GUIDES • Expert personalities behind OnlyHockey • Learn, play safer, and have more fun • Connect with your guides',
+    image: '/gims/gim-00021.webp',
+    ctaText: 'Meet The Crew',
+    ctaUrl: '#crew-section',
+    emoji: '👥'
   }
 ];
 
@@ -168,8 +140,8 @@ export function HeroSection() {
           onTouchEnd={handleTouchEnd}
         >
           
-          {/* Conditional Layout Based on Slide Type */}
-          {currentSlideData.id.startsWith('prime-') ? (
+          {/* Prime Video Style Layout for All Slides */}
+          {(
             /* PRIME VIDEO STYLE LAYOUT */
             <>
               {/* Left Column - Prime Style Text */}
@@ -220,8 +192,8 @@ export function HeroSection() {
 
               {/* Right Column - Prime Style Visual */}
               <div className="relative">
-                {/* Background Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/20 to-[#0a0e1a]/80 z-10 rounded-2xl"></div>
+                {/* Light Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/5 to-[#0a0e1a]/25 z-10 rounded-2xl"></div>
                 
                 {currentSlideData.image.endsWith('.mp4') ? (
                   <video
@@ -238,85 +210,12 @@ export function HeroSection() {
                     alt={currentSlideData.title}
                     width={800}
                     height={600}
-                    className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
+                    className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl ${
+                      currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
+                    }`}
                     priority
                   />
                 )}
-              </div>
-            </>
-          ) : (
-            /* ORIGINAL LAYOUT FOR EXISTING SLIDES */
-            <>
-              {/* Left Column - Text Content */}
-              <div className="space-y-8">
-                <header>
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-                    {currentSlideData.title.split(' - ')[0]}
-                  </h1>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl text-[#4cc9f0] font-semibold mb-8">
-                    {currentSlideData.title.split(' - ')[1]}
-                  </h2>
-                </header>
-                
-                <div className="space-y-6 text-lg md:text-xl text-[#a0aec0] max-w-lg">
-                  {currentSlideData.description.split(': ').map((paragraph, index) => (
-                    <p key={index} className="leading-relaxed">
-                      {paragraph}{index === 0 && currentSlideData.description.includes(':') ? ':' : ''}
-                    </p>
-                  ))}
-                </div>
-                
-                <div className="pt-4">
-                  <Link
-                    href={currentSlideData.ctaUrl}
-                    className="bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none"
-                  >
-                    {currentSlideData.ctaText}
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right Column - Visual Content */}
-              <div className="flex justify-center lg:justify-end">
-                <div className="text-center">
-                  {currentSlideData.image.endsWith('.mp4') ? (
-                    <video
-                      src={currentSlideData.image}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] object-cover rounded-full transition-all duration-500 shadow-2xl border-4 border-[#4cc9f0]"
-                    />
-                  ) : (
-                    <Image
-                      src={currentSlideData.image}
-                      alt={currentSlideData.title}
-                      width={400}
-                      height={400}
-                      className="w-80 h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px] object-cover rounded-full transition-all duration-500 shadow-2xl border-4 border-[#4cc9f0]"
-                      priority
-                    />
-                  )}
-                  
-                  {/* Character/Content Label */}
-                  <div className="mt-6">
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">
-                      {currentSlideData.id === 'hug' ? 'Captain Heart' :
-                       currentSlideData.id === 'support' ? 'Iron Mike' :
-                       currentSlideData.id === 'stories' ? 'Broadcaster Mike' :
-                       currentSlideData.id === 'crew' ? 'The Crew' :
-                       'Samantha'}
-                    </h3>
-                    <p className="text-[#4cc9f0] font-semibold text-lg">
-                      {currentSlideData.id === 'hug' ? 'Community Leader' :
-                       currentSlideData.id === 'support' ? 'Motivational Coach' :
-                       currentSlideData.id === 'stories' ? 'Hockey Storyteller' :
-                       currentSlideData.id === 'crew' ? 'Your Hockey Guides' :
-                       'Trivia Master'}
-                    </p>
-                  </div>
-                </div>
               </div>
             </>
           )}

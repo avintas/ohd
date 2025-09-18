@@ -18,17 +18,19 @@ export function FeaturesSection() {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           
           {/* Test Your Hockey IQ */}
-          <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
+          <div className="text-center group h-full">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50 h-full flex flex-col">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 🧠
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#4cc9f0] transition-colors">
                 Test Your Hockey IQ
               </h3>
-              <p className="text-[#a0aec0] leading-relaxed mb-6">
-                Challenge yourself with exciting trivia games covering everything from Original Six history to modern NHL stats. Learn fascinating facts while testing your hockey knowledge.
-              </p>
+              <div className="flex-grow">
+                <p className="text-[#a0aec0] leading-relaxed mb-6">
+                  Challenge yourself with exciting trivia games covering everything from Original Six history to modern NHL stats. Learn fascinating facts while testing your hockey knowledge.
+                </p>
+              </div>
               <Link 
                 href="/trivia-zone"
                 className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
@@ -39,17 +41,19 @@ export function FeaturesSection() {
           </div>
 
           {/* Heart & Share */}
-          <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
+          <div className="text-center group h-full">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50 h-full flex flex-col">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                ❤️
+                💙
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#4cc9f0] transition-colors">
                 Heart & Share
               </h3>
-              <p className="text-[#a0aec0] leading-relaxed mb-6">
-                Send Hockey Universal Greetings (H.U.G.s) to fellow fans around the world. Spread positivity and show your support for the hockey community with Captain Heart.
-              </p>
+              <div className="flex-grow">
+                <p className="text-[#a0aec0] leading-relaxed mb-6">
+                  Send Hockey Universal Greetings (H.U.G.s) to fellow fans around the world. Spread positivity and show your support for the hockey community with Captain Heart.
+                </p>
+              </div>
               <Link 
                 href="/captain-heart"
                 className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
@@ -60,17 +64,19 @@ export function FeaturesSection() {
           </div>
 
           {/* Hockey Wisdom & Motivation */}
-          <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
+          <div className="text-center group h-full">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50 h-full flex flex-col">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 💪
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#4cc9f0] transition-colors">
                 Hockey Wisdom & Motivation
               </h3>
-              <p className="text-[#a0aec0] leading-relaxed mb-6">
-                Get pumped up with inspiring quotes, motivational content, and fascinating hockey stories. Let Iron Mike and Broadcaster Mike fuel your passion for the game.
-              </p>
+              <div className="flex-grow">
+                <p className="text-[#a0aec0] leading-relaxed mb-6">
+                  Get pumped up with inspiring quotes, motivational content, and fascinating hockey stories. Let Iron Mike and Broadcaster Mike fuel your passion for the game.
+                </p>
+              </div>
               <Link 
                 href="/iron-mike"
                 className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
