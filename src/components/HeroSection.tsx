@@ -149,16 +149,16 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="py-12 md:py-16 px-4 md:px-6">
+    <section className="py-8 md:py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Main Layout - Static Title Left, Dynamic Slider Right */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start min-h-[500px] md:min-h-[550px]">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start min-h-[400px] md:min-h-[450px]">
           
           {/* Left Side - Static Title */}
           <div className="space-y-8 pt-8 lg:pt-0">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-[#4cc9f0] via-[#60a5fa] to-[#fbbf24] bg-clip-text text-transparent leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 bg-gradient-to-r from-[#4cc9f0] via-[#60a5fa] to-[#fbbf24] bg-clip-text text-transparent leading-tight">
                 There is<br />Only Hockey!
               </h1>
               <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto lg:mx-0">
@@ -168,7 +168,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Side - Dynamic Slider Content */}
-          <div className="relative flex items-center justify-center min-h-[500px] md:min-h-[550px]">
+          <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[450px]">
             {/* Mobile Navigation Arrows */}
             <button
               onClick={prevSlide}
@@ -191,52 +191,55 @@ export function HeroSection() {
             </button>
 
             <div 
-              className="space-y-8 text-center w-full"
+              className="space-y-6 text-center w-full"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
               
-              {/* Dynamic Image */}
-              <div className="flex justify-center">
+              {/* 1. Title (Headline) */}
+              <header>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
+                  {currentSlideData.title}
+                </h2>
+              </header>
+              
+              {/* 2. Subtitle (Body Text) */}
+              <div className="mb-4">
+                <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto">
+                  {currentSlideData.description}
+                </p>
+              </div>
+              
+              {/* 3. Image (Badge/Visual) */}
+              <div className="flex justify-center py-2">
                 <div className="relative">
                   <Image
                     src={currentSlideData.image}
                     alt={currentSlideData.title}
                     width={512}
                     height={512}
-                    className="w-56 h-56 md:w-72 md:h-72 lg:w-88 lg:h-88 object-contain transition-all duration-500"
+                    className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain transition-all duration-500"
                     priority
                   />
                 </div>
               </div>
               
-              {/* Dynamic Content Below Image */}
-              <div className="space-y-6">
-                <header>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                    {currentSlideData.title}
-                  </h2>
-                  <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto">
-                    {currentSlideData.description}
-                  </p>
-                </header>
-                
-                <div className="pt-4">
-                  <Link
-                    href={currentSlideData.ctaUrl}
-                    className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                  >
-                    {currentSlideData.ctaText} {currentSlideData.emoji}
-                  </Link>
-                </div>
+              {/* 4. CTA Button (Call to Action) */}
+              <div className="pt-2">
+                <Link
+                  href={currentSlideData.ctaUrl}
+                  className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  {currentSlideData.ctaText}
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
         {/* Manual Navigation Dots */}
-        <div className="flex justify-center mt-10 space-x-3">
+        <div className="flex justify-center mt-6 space-x-3">
           {slidesData.map((_, index) => (
             <button
               key={index}

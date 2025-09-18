@@ -19,7 +19,7 @@ export function FeaturesSection() {
           
           {/* Test Your Hockey IQ */}
           <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 🧠
               </div>
@@ -31,7 +31,7 @@ export function FeaturesSection() {
               </p>
               <Link 
                 href="/trivia-zone"
-                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105"
+                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
               >
                 Start Playing 🎯
               </Link>
@@ -40,7 +40,7 @@ export function FeaturesSection() {
 
           {/* Heart & Share */}
           <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 ❤️
               </div>
@@ -52,7 +52,7 @@ export function FeaturesSection() {
               </p>
               <Link 
                 href="/captain-heart"
-                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105"
+                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
               >
                 Send a H.U.G. 💙
               </Link>
@@ -61,7 +61,7 @@ export function FeaturesSection() {
 
           {/* Hockey Wisdom & Motivation */}
           <div className="text-center group">
-            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 💪
               </div>
@@ -73,7 +73,7 @@ export function FeaturesSection() {
               </p>
               <Link 
                 href="/iron-mike"
-                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105"
+                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
               >
                 Get Motivated 🔥
               </Link>
