@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export function TheCrew() {
   return (
-<section className="py-8 md:py-12 px-4 md:px-6 bg-[#0a0e1a] border-4 border-blue-900">
-      <div className="max-w-4xl mx-auto text-center border-2 border-purple-900">
+<section className="py-8 md:py-12 px-4 md:px-6 bg-[#0a0e1a]">
+      <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
           The Crew
         </h2>
@@ -15,7 +15,7 @@ export function TheCrew() {
         </p>
         
         {/* Crew Avatar Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto border-2 border-yellow-900">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {/* Samantha - Trivia Master */}
           <Link href="/trivia-zone" className="text-center group block">
             <div className="relative mb-3">

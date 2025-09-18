@@ -149,26 +149,26 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6 border-4 border-red-500">
-      <div className="max-w-7xl mx-auto border-2 border-blue-500">
+    <section className="py-16 md:py-24 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
         
         {/* Main Layout - Static Title Left, Dynamic Slider Right */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start min-h-[600px] border-2 border-green-500">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start min-h-[600px]">
           
           {/* Left Side - Static Title */}
-          <div className="space-y-8 pt-8 lg:pt-0 border-2 border-yellow-500">
-            <div className="text-center lg:text-left border-2 border-purple-500">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-[#4cc9f0] via-[#60a5fa] to-[#fbbf24] bg-clip-text text-transparent leading-tight border-2 border-pink-500">
+          <div className="space-y-8 pt-8 lg:pt-0">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-[#4cc9f0] via-[#60a5fa] to-[#fbbf24] bg-clip-text text-transparent leading-tight">
                 There is<br />Only Hockey!
               </h1>
-              <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto lg:mx-0 border-2 border-orange-500">
+              <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Where your ❤️ love for the game is all you need.
               </p>
             </div>
           </div>
 
           {/* Right Side - Dynamic Slider Content */}
-          <div className="relative border-2 border-cyan-500 flex items-center justify-center min-h-[600px]">
+          <div className="relative flex items-center justify-center min-h-[600px]">
             {/* Mobile Navigation Arrows */}
             <button
               onClick={prevSlide}
@@ -191,41 +191,41 @@ export function HeroSection() {
             </button>
 
             <div 
-              className="space-y-8 text-center border-2 border-indigo-500 w-full"
+              className="space-y-8 text-center w-full"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
               
               {/* Dynamic Image */}
-              <div className="flex justify-center border-2 border-lime-500">
-                <div className="relative border-2 border-amber-500">
+              <div className="flex justify-center">
+                <div className="relative">
                   <Image
                     src={currentSlideData.image}
                     alt={currentSlideData.title}
                     width={512}
                     height={512}
-                    className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain transition-all duration-500 border-2 border-emerald-500"
+                    className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain transition-all duration-500"
                     priority
                   />
                 </div>
               </div>
               
               {/* Dynamic Content Below Image */}
-              <div className="space-y-6 border-2 border-rose-500">
-                <header className="border-2 border-teal-500">
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 border-2 border-violet-500">
+              <div className="space-y-6">
+                <header>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                     {currentSlideData.title}
                   </h2>
-                  <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto border-2 border-sky-500">
+                  <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-lg mx-auto">
                     {currentSlideData.description}
                   </p>
                 </header>
                 
-                <div className="pt-4 border-2 border-stone-500">
+                <div className="pt-4">
                   <Link
                     href={currentSlideData.ctaUrl}
-                    className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg border-2 border-red-300"
+                    className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                   >
                     {currentSlideData.ctaText} {currentSlideData.emoji}
                   </Link>
@@ -236,12 +236,12 @@ export function HeroSection() {
         </div>
 
         {/* Manual Navigation Dots */}
-        <div className="flex justify-center mt-12 space-x-3 border-2 border-gray-500">
+        <div className="flex justify-center mt-12 space-x-3">
           {slidesData.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 border border-white ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide
                   ? 'bg-[#4cc9f0] scale-125'
                   : 'bg-[#2d3748] hover:bg-[#4a5568]'
