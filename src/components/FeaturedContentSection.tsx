@@ -73,9 +73,9 @@ export function FeaturedContentSection() {
               
               <div className="bg-[#0a0e1a] rounded-lg p-4 mb-4">
                 <p className="text-[#a0aec0] text-center leading-relaxed">
-                  "Hey there, hockey friend! 🏒 Just wanted to send some positive vibes your way. 
-                  Whether your team won or lost last night, remember that we're all united by our 
-                  love for the greatest game on ice! Keep your stick on the ice! 💙"
+                  &quot;Hey there, hockey friend! 🏒 Just wanted to send some positive vibes your way. 
+                  Whether your team won or lost last night, remember that we&apos;re all united by our 
+                  love for the greatest game on ice! Keep your stick on the ice! 💙&quot;
                 </p>
               </div>
               
