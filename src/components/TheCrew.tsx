@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function TheCrew() {
   return (
-<section className="py-8 md:py-12 px-4 md:px-6 bg-[#0a0e1a]">
+<section id="crew-section" className="py-8 md:py-12 px-4 md:px-6 bg-[#0a0e1a]">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
           The Crew

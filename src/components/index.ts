@@ -6,8 +6,13 @@ export { Footer } from './Footer';
 export { PageLayout } from './PageLayout';
 export { HeroSection } from './HeroSection';
 
-// Page sections
-export { ActionSection } from './ActionSection';
+// Landing page sections
+export { FeaturesSection } from './FeaturesSection';
+export { SocialProofSection } from './SocialProofSection';
+export { FeaturedContentSection } from './FeaturedContentSection';
 export { TheCrew } from './TheCrew';
 export { FinalWelcome } from './FinalWelcome';
+
+// Other sections
+export { ActionSection } from './ActionSection';
 export { QuickActions } from './QuickActions';

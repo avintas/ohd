@@ -29,8 +29,8 @@ const slidesData: SlideData[] = [
   {
     id: 'hug',
     title: 'Share the Hockey Love',
-    description: 'Send a Hockey Universal Greeting (H.U.G.) to someone special. Spread positivity and show your support for fellow hockey fans around the world.',
-    image: '/gims/gim-00008.webp',
+    description: 'Send a Hockey Universal Greeting (H.U.G.) to someone special with Captain Heart. Spread positivity and show your support by sending 💙 digital H.U.G.s to fellow hockey fans around the world.',
+    image: '/pims/pim-1009.webp',
     ctaText: 'Send a H.U.G.',
     ctaUrl: '/captain-heart',
     emoji: '❤️'
@@ -54,13 +54,13 @@ const slidesData: SlideData[] = [
     emoji: '📚'
   },
   {
-    id: 'community',
-    title: 'Join the Community',
-    description: 'Connect with fellow hockey enthusiasts, share your passion, and be part of the OnlyHockey family. There is only hockey, and we are all in this together.',
-    image: '/gims/gim-00026.webp',
-    ctaText: 'Explore More',
-    ctaUrl: '/about',
-    emoji: '🏒'
+    id: 'crew',
+    title: 'Meet The Crew',
+    description: 'Connect with your hockey guides and discover the personalities behind OnlyHockey. Our crew of friendly experts is here to help you learn, play safer, and have more fun with the greatest game on ice.',
+    image: '/gims/gim-00021.webp',
+    ctaText: 'Meet The Crew',
+    ctaUrl: '#crew-section',
+    emoji: '👥'
   }
 ];
 
@@ -149,11 +149,11 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6">
+    <section className="py-12 md:py-16 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Main Layout - Static Title Left, Dynamic Slider Right */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start min-h-[600px]">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start min-h-[500px] md:min-h-[550px]">
           
           {/* Left Side - Static Title */}
           <div className="space-y-8 pt-8 lg:pt-0">
@@ -168,7 +168,7 @@ export function HeroSection() {
           </div>
 
           {/* Right Side - Dynamic Slider Content */}
-          <div className="relative flex items-center justify-center min-h-[600px]">
+          <div className="relative flex items-center justify-center min-h-[500px] md:min-h-[550px]">
             {/* Mobile Navigation Arrows */}
             <button
               onClick={prevSlide}
@@ -205,7 +205,7 @@ export function HeroSection() {
                     alt={currentSlideData.title}
                     width={512}
                     height={512}
-                    className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain transition-all duration-500"
+                    className="w-56 h-56 md:w-72 md:h-72 lg:w-88 lg:h-88 object-contain transition-all duration-500"
                     priority
                   />
                 </div>
@@ -236,7 +236,7 @@ export function HeroSection() {
         </div>
 
         {/* Manual Navigation Dots */}
-        <div className="flex justify-center mt-12 space-x-3">
+        <div className="flex justify-center mt-10 space-x-3">
           {slidesData.map((_, index) => (
             <button
               key={index}
