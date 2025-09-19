@@ -18,6 +18,15 @@ interface SlideData {
 // Slide data array - All slides in Prime Video style
 const slidesData: SlideData[] = [
   {
+    id: 'welcome',
+    title: 'THERE IS ONLY HOCKEY!',
+    description: 'WHERE YOUR LOVE FOR THE GAME IS ALL YOU NEED • Share the good stuff you discover • Get motivated with legendary quotes • Challenge yourself with Hockey Trivia • Connect with heartfelt H.U.G.s • Discover what makes our community special',
+    image: '/gims/gim-00026.webp',
+    ctaText: 'Join the Community',
+    ctaUrl: '#features',
+    emoji: '🏒'
+  },
+  {
     id: 'trivia',
     title: 'HOCKEY TRIVIA ZONE',
     description: 'ORIGINAL SIX TO MODERN NHL • Test your knowledge with Samantha • Challenge friends and climb the leaderboard • Become a true hockey legend',
@@ -134,18 +143,29 @@ export function HeroSection() {
         
         {/* Unified Two-Column Card */}
         <div 
-          className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]"
+          className={`grid lg:grid-cols-2 gap-12 items-center min-h-[600px] relative overflow-hidden rounded-2xl ${
+            currentSlideData.id === 'welcome' ? 'bg-cover bg-center' : ''
+          }`}
+          style={currentSlideData.id === 'welcome' ? {
+            backgroundImage: 'url(/gims/icerink.JPG)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          } : {}}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
+          {/* Dark overlay for welcome slide only */}
+          {currentSlideData.id === 'welcome' && (
+            <div className="absolute inset-0 bg-[#0a0e1a]/75 rounded-2xl"></div>
+          )}
           
           {/* Prime Video Style Layout for All Slides */}
           {(
             /* PRIME VIDEO STYLE LAYOUT */
             <>
               {/* Left Column - Prime Style Text */}
-              <div className="space-y-6 z-10 relative">
+              <div className="space-y-6 z-20 relative">
                 {/* Small Brand/Category Label */}
                 <div className="flex items-center space-x-2 text-sm font-semibold text-[#4cc9f0] uppercase tracking-wider">
                   <span>OnlyHockey</span>
@@ -190,33 +210,37 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Right Column - Prime Style Visual */}
-              <div className="relative">
-                {/* Light Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/5 to-[#0a0e1a]/25 z-10 rounded-2xl"></div>
-                
-                {currentSlideData.image.endsWith('.mp4') ? (
-                  <video
-                    src={currentSlideData.image}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl"
-                  />
-                ) : (
-                  <Image
-                    src={currentSlideData.image}
-                    alt={currentSlideData.title}
-                    width={800}
-                    height={600}
-                    className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl ${
-                      currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
-                    }`}
-                    priority
-                  />
-                )}
-              </div>
+              {/* Right Column - Prime Style Visual (hide for welcome slide) */}
+              {currentSlideData.id !== 'welcome' && (
+                <div className="relative z-20">
+                  {/* Light Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/5 to-[#0a0e1a]/25 z-10 rounded-2xl"></div>
+                  
+                  {currentSlideData.image.endsWith('.mp4') ? (
+                    <video
+                      src={currentSlideData.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain rounded-2xl shadow-2xl"
+                    />
+                  ) : (
+                    <Image
+                      src={currentSlideData.image}
+                      alt={currentSlideData.title}
+                      width={800}
+                      height={600}
+                      className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain rounded-2xl shadow-2xl ${
+                        currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
+                      } ${
+                        currentSlideData.id === 'trivia' ? 'scale-[0.8]' : ''
+                      }`}
+                      priority
+                    />
+                  )}
+                </div>
+              )}
             </>
           )}
         </div>
