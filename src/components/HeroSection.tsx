@@ -143,22 +143,11 @@ export function HeroSection() {
         
         {/* Unified Two-Column Card */}
         <div 
-          className={`grid lg:grid-cols-2 gap-12 items-center min-h-[600px] relative overflow-hidden rounded-2xl ${
-            currentSlideData.id === 'welcome' ? 'bg-cover bg-center' : ''
-          }`}
-          style={currentSlideData.id === 'welcome' ? {
-            backgroundImage: 'url(/gims/icerink.JPG)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          } : {}}
+          className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Dark overlay for welcome slide only */}
-          {currentSlideData.id === 'welcome' && (
-            <div className="absolute inset-0 bg-[#0a0e1a]/75 rounded-2xl"></div>
-          )}
           
           {/* Prime Video Style Layout for All Slides */}
           {(
@@ -226,18 +215,36 @@ export function HeroSection() {
                       className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain rounded-2xl shadow-2xl"
                     />
                   ) : (
-                    <Image
-                      src={currentSlideData.image}
-                      alt={currentSlideData.title}
-                      width={800}
-                      height={600}
-                      className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain rounded-2xl shadow-2xl ${
-                        currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
-                      } ${
-                        currentSlideData.id === 'trivia' ? 'scale-[0.8]' : ''
-                      }`}
-                      priority
-                    />
+                      <div className={currentSlideData.id === 'trivia' ? 'relative' : ''}>
+                        <Image
+                          src={currentSlideData.id === 'trivia' ? '/gims/icerink.JPG' : currentSlideData.image}
+                          alt={currentSlideData.title}
+                          width={800}
+                          height={600}
+                          className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl ${
+                            currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
+                          } ${
+                            currentSlideData.id === 'trivia' ? 'scale-[0.8]' : ''
+                          }`}
+                          style={currentSlideData.id === 'trivia' ? {
+                            clipPath: 'circle(40% at 50% 50%)'
+                          } : {}}
+                          priority
+                        />
+                        {currentSlideData.id === 'trivia' && (
+                          <div 
+                            className="absolute inset-0 pointer-events-none"
+                            style={{
+                              border: '4px solid red',
+                              borderRadius: '50%',
+                              width: '80%',
+                              height: '80%',
+                              top: '10%',
+                              left: '10%'
+                            }}
+                          ></div>
+                        )}
+                      </div>
                   )}
                 </div>
               )}
