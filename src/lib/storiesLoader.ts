@@ -180,3 +180,8 @@ export function getCurrentLayoutInfo(): { name: string; description: string; the
     theme: layout.theme
   };
 }
+
+// Get all stories for the Hockey Lore page
+export function getStoriesData(): StoryMessage[] {
+  return getAllStoryMessages();
+}

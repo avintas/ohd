@@ -10,12 +10,12 @@ export function FeaturesSection() {
             How It Works
           </h2>
           <p className="text-lg md:text-xl text-[#a0aec0] leading-relaxed max-w-3xl mx-auto">
-            Discover the three core pillars that make OnlyHockey your ultimate hockey companion
+            Discover the four core pillars that make OnlyHockey your ultimate hockey companion
           </p>
         </div>
 
-        {/* Three Core Pillars */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        {/* Four Core Pillars */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
           {/* Test Your Hockey IQ */}
           <div className="text-center group h-full">
@@ -85,6 +85,30 @@ export function FeaturesSection() {
               </Link>
             </div>
           </div>
+
+          {/* Hockey Lore */}
+          <div className="text-center group h-full">
+            <div className="bg-[#16213e] rounded-2xl p-8 hover:bg-[#1e2a4a] transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-[#4cc9f0]/20 border border-[#2d3748] hover:border-[#4cc9f0]/50 h-full flex flex-col">
+              <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                📖
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#4cc9f0] transition-colors">
+                Hockey Lore
+              </h3>
+              <div className="flex-grow">
+                <p className="text-[#a0aec0] leading-relaxed mb-6">
+                  Discover fascinating hockey tales, behind-the-scenes moments, anecdotes from legends, and stories that shaped the game we love.
+                </p>
+              </div>
+              <Link 
+                href="/stories"
+                className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
+              >
+                Read Stories 📖
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -27,24 +27,6 @@ const slidesData: SlideData[] = [
     emoji: '🏒'
   },
   {
-    id: 'stories',
-    title: 'STORIES WORTH SHARING',
-    description: 'BEHIND THE SCENES • Fascinating hockey tales and moments • Stories that shaped the game we love • Discover rich hockey history',
-    image: '/gims/gim-00013.webp',
-    ctaText: 'Jump to Stories',
-    ctaUrl: '/broadcaster-mike',
-    emoji: '📖'
-  },
-  {
-    id: 'trivia',
-    title: 'HOCKEY TRIVIA ZONE',
-    description: 'ORIGINAL SIX TO MODERN NHL • Test your knowledge with Samantha • Challenge friends and climb the leaderboard • Become a true hockey legend',
-    image: '/gims/gim-00009.webp',
-    ctaText: 'Start Playing',
-    ctaUrl: '/trivia-zone',
-    emoji: '🎯'
-  },
-  {
     id: 'hug',
     title: 'HOCKEY UNIVERSAL GREETINGS',
     description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and community • Show your support for fellow fans',
@@ -138,7 +120,7 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
+    <section className="py-16 md:py-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Unified Two-Column Card */}
@@ -154,7 +136,7 @@ export function HeroSection() {
             /* PRIME VIDEO STYLE LAYOUT */
             <>
               {/* Left Column - Prime Style Text */}
-              <div className="space-y-6 z-20 relative">
+              <div className="space-y-6 z-20 relative text-center lg:text-left">
                 
                 {/* Large Main Title */}
                 <header>
@@ -166,7 +148,7 @@ export function HeroSection() {
                 {/* Description with bullet points */}
                 <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
                   {currentSlideData.description.split(' • ').map((point, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                    <div key={index} className={`flex items-start space-x-3 ${index === 0 ? 'justify-center lg:justify-start' : 'justify-center lg:justify-start'}`}>
                       {index === 0 ? (
                         <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
                           {point}
