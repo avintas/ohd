@@ -29,10 +29,10 @@ export function Header() {
         {/* Logo - Left aligned */}
         <Link 
           href="/" 
-          className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-blue-600 rounded-full text-white font-bold text-lg md:text-xl hover:bg-blue-700 transition-colors duration-200 border-2 border-[#4cc9f0] z-50 relative"
+          className="flex items-center justify-center px-4 py-2 md:px-6 md:py-3 bg-blue-600 rounded-full text-white font-bold text-sm md:text-base hover:bg-blue-700 transition-colors duration-200 border-2 border-[#4cc9f0] z-50 relative whitespace-nowrap"
           aria-label="OnlyHockey home"
         >
-          OH
+          Only Hockey
         </Link>
         
         {/* Desktop Navigation - Right aligned */}

@@ -20,11 +20,20 @@ const slidesData: SlideData[] = [
   {
     id: 'welcome',
     title: 'THERE IS ONLY HOCKEY!',
-    description: 'WHERE YOUR LOVE FOR THE GAME IS ALL YOU NEED • Share the good stuff you discover • Get motivated with legendary quotes • Challenge yourself with Hockey Trivia • Connect with heartfelt H.U.G.s • Discover what makes our community special',
+    description: 'WHERE YOUR ❤️ LOVE FOR THE GAME IS ALL YOU NEED • 🔗 Share - "Hockey facts worth sharing" • 🔥 Motivate - "Quotes that inspire greatness" • 🧠 Challenge - "Trivia for true fans" • 💙 Support - "Encouragement for players"',
     image: '/gims/gim-00026.webp',
-    ctaText: 'Join the Community',
-    ctaUrl: '#features',
+    ctaText: 'Try Out',
+    ctaUrl: '#how-it-works',
     emoji: '🏒'
+  },
+  {
+    id: 'stories',
+    title: 'STORIES WORTH SHARING',
+    description: 'BEHIND THE SCENES • Fascinating hockey tales and moments • Stories that shaped the game we love • Discover rich hockey history',
+    image: '/gims/gim-00013.webp',
+    ctaText: 'Jump to Stories',
+    ctaUrl: '/broadcaster-mike',
+    emoji: '📖'
   },
   {
     id: 'trivia',
@@ -38,7 +47,7 @@ const slidesData: SlideData[] = [
   {
     id: 'hug',
     title: 'HOCKEY UNIVERSAL GREETINGS',
-    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and the hockey community • Show your support for fellow fans',
+    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and community • Show your support for fellow fans',
     image: '/pims/pim-1009.webp',
     ctaText: 'Send a H.U.G.',
     ctaUrl: '/captain-heart',
@@ -47,25 +56,16 @@ const slidesData: SlideData[] = [
   {
     id: 'support',
     title: 'IRON MIKE MOTIVATION',
-    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game on ice • Let Iron Mike motivate you',
+    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game • Build championship mindset',
     image: '/video/gim-supporter-01.mp4',
     ctaText: 'Get Motivated',
     ctaUrl: '/iron-mike',
     emoji: '🔥'
   },
   {
-    id: 'stories',
-    title: 'HOCKEY STORIES & LEGENDS',
-    description: 'BEHIND THE SCENES • Fascinating hockey tales and legendary moments • Stories that shaped the game we love • Discover hockey history',
-    image: '/gims/gim-00013.webp',
-    ctaText: 'Read Stories',
-    ctaUrl: '/broadcaster-mike',
-    emoji: '📖'
-  },
-  {
     id: 'crew',
     title: 'MEET THE CREW',
-    description: 'YOUR HOCKEY GUIDES • Expert personalities behind OnlyHockey • Learn, play safer, and have more fun • Connect with your guides',
+    description: 'YOUR HOCKEY GUIDES • Expert personalities behind OnlyHockey • Learn, play safer, and have more fun • Connect with your personal guides',
     image: '/gims/gim-00021.webp',
     ctaText: 'Meet The Crew',
     ctaUrl: '#crew-section',
@@ -138,12 +138,12 @@ export function HeroSection() {
   const currentSlideData = slidesData[currentSlide];
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-6">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         
         {/* Unified Two-Column Card */}
         <div 
-          className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px]"
+          className="grid lg:grid-cols-2 gap-12 items-start min-h-[600px]"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -155,12 +155,6 @@ export function HeroSection() {
             <>
               {/* Left Column - Prime Style Text */}
               <div className="space-y-6 z-20 relative">
-                {/* Small Brand/Category Label */}
-                <div className="flex items-center space-x-2 text-sm font-semibold text-[#4cc9f0] uppercase tracking-wider">
-                  <span>OnlyHockey</span>
-                  <span className="text-[#a0aec0]">•</span>
-                  <span className="text-[#a0aec0]">Original Series</span>
-                </div>
                 
                 {/* Large Main Title */}
                 <header>
@@ -180,7 +174,7 @@ export function HeroSection() {
                       ) : (
                         <>
                           <span className="text-[#4cc9f0] mt-2">•</span>
-                          <span>{point}</span>
+                          <span className="whitespace-nowrap">{point}</span>
                         </>
                       )}
                     </div>
@@ -193,61 +187,19 @@ export function HeroSection() {
                     href={currentSlideData.ctaUrl}
                     className="inline-flex items-center bg-[#232f3e] hover:bg-[#37475a] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-xl border border-[#4cc9f0]/30 hover:border-[#4cc9f0]"
                   >
-                    <span className="mr-2">{currentSlideData.ctaText}</span>
-                    <span className="text-[#4cc9f0]">{currentSlideData.emoji}</span>
+                    <span className="text-[#4cc9f0] mr-2">{currentSlideData.emoji}</span>
+                    <span>{currentSlideData.ctaText}</span>
                   </Link>
                 </div>
               </div>
 
-              {/* Right Column - Prime Style Visual (hide for welcome slide) */}
-              {currentSlideData.id !== 'welcome' && (
-                <div className="relative z-20">
-                  {/* Light Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#0a0e1a]/5 to-[#0a0e1a]/25 z-10 rounded-2xl"></div>
-                  
-                  {currentSlideData.image.endsWith('.mp4') ? (
-                    <video
-                      src={currentSlideData.image}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain rounded-2xl shadow-2xl"
-                    />
-                  ) : (
-                      <div className={currentSlideData.id === 'trivia' ? 'relative' : ''}>
-                        <Image
-                          src={currentSlideData.id === 'trivia' ? '/gims/icerink.JPG' : currentSlideData.image}
-                          alt={currentSlideData.title}
-                          width={800}
-                          height={600}
-                          className={`w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-2xl shadow-2xl ${
-                            currentSlideData.id === 'hug' ? 'scale-x-[-1]' : ''
-                          } ${
-                            currentSlideData.id === 'trivia' ? 'scale-[0.8]' : ''
-                          }`}
-                          style={currentSlideData.id === 'trivia' ? {
-                            clipPath: 'circle(40% at 50% 50%)'
-                          } : {}}
-                          priority
-                        />
-                        {currentSlideData.id === 'trivia' && (
-                          <div 
-                            className="absolute inset-0 pointer-events-none"
-                            style={{
-                              border: '4px solid red',
-                              borderRadius: '50%',
-                              width: '80%',
-                              height: '80%',
-                              top: '10%',
-                              left: '10%'
-                            }}
-                          ></div>
-                        )}
-                      </div>
-                  )}
+              {/* Right Column - Empty placeholder for future images */}
+              <div className="relative z-20">
+                <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#1a1f2e] rounded-2xl shadow-2xl border border-[#2d3748]">
+                  {/* Empty placeholder - same size for all slides */}
                 </div>
-              )}
+              </div>
+
             </>
           )}
         </div>

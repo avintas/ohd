@@ -18,6 +18,13 @@ export default function AboutPage() {
           {/* Content - Clean Format */}
           <div className="space-y-12">
             
+            {/* Introduction */}
+            <div>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">
+                We built Onlyhockey as fans for fans. <span className="font-semibold text-[#4cc9f0]">Share</span> 🔗 the good stuff you discover, charge your batteries with <span className="font-semibold text-[#4cc9f0]">motivational</span> 🔥 quotes from legendary players and epic coaches, challenge yourself and your friends with <span className="font-semibold text-[#4cc9f0]">Hockey Trivia</span> and support people you know with heartfelt <span className="font-semibold text-[#4cc9f0]">h.u.g.s</span>. Hang out with fans who truly get it, who know, love, play the game and celebrate the moments that matter, and <span className="font-semibold text-[#4cc9f0]">discover</span> what makes our hockey community so special. Whether you&apos;re here for the stories, the stats, or the pure joy of the game, you belong here. 🏠✨
+              </p>
+            </div>
+            
             {/* Our Mission */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
