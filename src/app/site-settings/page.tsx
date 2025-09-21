@@ -262,11 +262,10 @@ export default function SiteSettingsPage() {
                   <h3 className="text-lg font-semibold text-white mb-3">Default Landing Page</h3>
                   <select className="w-full md:w-64 bg-[#1a1f2e] border border-[#4cc9f0]/20 rounded-lg px-4 py-2 text-white focus:border-[#4cc9f0] focus:outline-none">
                     <option value="home">Home</option>
-                    <option value="extras">Extras Dashboard</option>
-                    <option value="samantha">Samantha (Trivia)</option>
-                    <option value="iron-mike">Iron Mike (Motivator)</option>
-                    <option value="broadcaster-mike">Broadcaster Mike (Stories)</option>
-                    <option value="captain-heart">Captain Heart (Community)</option>
+                    <option value="trivia-zone">Trivia Zone</option>
+                    <option value="stories">Hockey Lore</option>
+                    <option value="captain-heart">Heart & Share</option>
+                    <option value="shop">Shop</option>
                   </select>
                 </div>
 
