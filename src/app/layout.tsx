@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://onlyhockey.com' : 'http://localhost:3000'),
   title: "OnlyHockey.com",
   description: "OnlyHockey.com App - Your ultimate hockey companion",
   openGraph: {
@@ -21,11 +22,17 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pims/pim-1008.webp",
-        width: 26,
-        height: 26,
+        width: 512,
+        height: 512,
         alt: "Samantha - Hockey Trivia Master",
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OnlyHockey.com - Hockey Trivia with Samantha',
+    description: 'Test your hockey knowledge with Samantha, your trivia master',
+    images: ['/pims/pim-1008.webp'],
   },
 };
 

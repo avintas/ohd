@@ -49,7 +49,7 @@ export function TheCrew() {
           </Link>
 
           {/* Coach Fuel - Nutritionist */}
-          <Link href="/coach-fuel" className="text-center group block">
+          <Link href="/fuel-station" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1010.webp"
@@ -79,7 +79,7 @@ export function TheCrew() {
           </Link>
 
           {/* Referee Riley - Rules Expert */}
-          <Link href="/referee-riley" className="text-center group block">
+          <Link href="/rule-book" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1007.webp"
