@@ -27,7 +27,7 @@ export function getAllFuelMessages(): FuelMessage[] {
 
     const filePath = path.join(fuelDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { content } = matter(fileContents);
 
     // Extract metadata from the markdown content
     const lines = content.split('\n');

@@ -20,7 +20,7 @@ export default function StoriesClient({ stories }: StoriesClientProps) {
   const [shareMessage, setShareMessage] = useState('');
 
   const handleShare = async (content: string, title: string) => {
-    const shareText = `🏒 Hockey Lore from OnlyHockey.com:\n\n"${content}"\n\nDiscover more hockey stories and legends!`;
+    const shareText = `🏒 Hockey Lore from OnlyHockey.com:\n\n&quot;${content}&quot;\n\nDiscover more hockey stories and legends!`;
     const shareUrl = `${window.location.origin}/stories`;
     
     if (navigator.share) {
@@ -31,16 +31,16 @@ export default function StoriesClient({ stories }: StoriesClientProps) {
           url: shareUrl,
         });
       } catch {
-        console.log('Share cancelled');
+        console.log(&apos;Share cancelled&apos;);
       }
     } else {
       try {
         const textWithUrl = `${shareText}\n\n${shareUrl}`;
         await navigator.clipboard.writeText(textWithUrl);
-        setShareMessage('Copied to clipboard!');
-        setTimeout(() => setShareMessage(''), 2000);
+        setShareMessage(&apos;Copied to clipboard!&apos;);
+        setTimeout(() => setShareMessage(&apos;&apos;), 2000);
       } catch {
-        console.error('Failed to copy');
+        console.error(&apos;Failed to copy&apos;);
       }
     }
   };
@@ -94,9 +94,9 @@ export default function StoriesClient({ stories }: StoriesClientProps) {
               <div className="pt-6">
                 <button
                   onClick={() => {
-                    document.getElementById('stories-grid')?.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start'
+                    document.getElementById(&apos;stories-grid&apos;)?.scrollIntoView({ 
+                      behavior: &apos;smooth&apos;,
+                      block: &apos;start&apos;
                     });
                   }}
                   className="inline-flex items-center bg-[#232f3e] hover:bg-[#37475a] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-xl border border-[#4cc9f0]/30 hover:border-[#4cc9f0]"

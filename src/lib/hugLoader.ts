@@ -27,7 +27,7 @@ export function getAllHugMessages(): HugMessage[] {
 
     const filePath = path.join(hugDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { content } = matter(fileContents);
 
     // Extract metadata from the markdown content
     const lines = content.split('\n');

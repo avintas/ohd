@@ -52,7 +52,7 @@ export function getAllStoryMessages(): StoryMessage[] {
 
     const filePath = path.join(storiesDirectory, filename);
     const fileContents = fs.readFileSync(filePath, 'utf8');
-    const { data, content } = matter(fileContents);
+    const { content } = matter(fileContents);
 
     // Extract metadata from the markdown content
     const lines = content.split('\n');
