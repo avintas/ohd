@@ -10,9 +10,8 @@ export function Header() {
 
   const menuItems = [
     { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
     { href: '/shop', label: 'Shop' },
-    { href: '/academy', label: 'Academy' },
-    { href: '/extras', label: 'Extras' },
     { href: '/faq', label: 'FAQ' },
   ];
 
