@@ -1,7 +1,6 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import Image from 'next/image';
 import { useState } from 'react';
 import type { MotivateMessage } from '@/lib/motivateLoader';
 
@@ -66,7 +65,7 @@ export default function IronMikeClient({ motivateMessages }: IronMikeClientProps
               <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
                 <div className="flex items-start space-x-3 justify-center lg:justify-start">
                   <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
-                    COACH'S CORNER
+                    COACH&apos;S CORNER
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 justify-center lg:justify-start">
@@ -116,7 +115,7 @@ export default function IronMikeClient({ motivateMessages }: IronMikeClientProps
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              💪 Coach's Corner
+              💪 Coach&apos;s Corner
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
               Championship-level wisdom and motivation to elevate your game and build mental toughness

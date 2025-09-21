@@ -1,8 +1,6 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import Link from 'next/link';
-import { useState } from 'react';
 
 interface Story {
   id: string;
@@ -17,42 +15,9 @@ interface StoriesClientProps {
 }
 
 export default function StoriesClient({ stories }: StoriesClientProps) {
-  const [shareMessage, setShareMessage] = useState('');
-
-  const handleShare = async (content: string, title: string) => {
-    const shareText = `🏒 Hockey Lore from OnlyHockey.com:\n\n"${content}"\n\nDiscover more hockey stories and legends!`;
-    const shareUrl = `${window.location.origin}/stories`;
-    
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: `${title} | Hockey Lore`,
-          text: shareText,
-          url: shareUrl,
-        });
-      } catch {
-        console.log('Share cancelled');
-      }
-    } else {
-      try {
-        const textWithUrl = `${shareText}\n\n${shareUrl}`;
-        await navigator.clipboard.writeText(textWithUrl);
-        setShareMessage('Copied to clipboard!');
-        setTimeout(() => setShareMessage(''), 2000);
-      } catch {
-        console.error('Failed to copy');
-      }
-    }
-  };
 
   return (
     <PageLayout>
-      {/* Share Message */}
-      {shareMessage && (
-        <div className="fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg z-50">
-          {shareMessage}
-        </div>
-      )}
 
       {/* Hero Section - From Slide #2 */}
       <section className="py-16 md:py-20 px-4 md:px-6">
