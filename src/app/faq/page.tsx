@@ -21,16 +21,11 @@ export default function FAQPage() {
             <div>
               <h2 className="text-xl font-bold text-white mb-3">What is OnlyHockey.com?</h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com is a platform dedicated to creating shareable hockey content including factoids, motivational quotes, and statistics that enhance the fan experience and spark conversation among hockey enthusiasts.
+                OnlyHockey.com is hosts shareable hockey content including factoids and trivia, motivational quotes, and stats.
               </p>
             </div>
 
-            <div>
-              <h2 className="text-xl font-bold text-white mb-3">Who are the crew members?</h2>
-              <p className="text-[#a0aec0] leading-relaxed">
-                Our crew consists of hockey personalities each with their own expertise: Broadcaster Mike (stories and history), Samantha (trivia and brain training), Iron Mike (motivation and coaching), and Captain Heart (community and support).
-              </p>
-            </div>
+
 
             <div>
               <h2 className="text-xl font-bold text-white mb-3">How can I share content from the site?</h2>

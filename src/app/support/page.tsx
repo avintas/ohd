@@ -20,48 +20,10 @@ export default function SupportPage() {
             
             {/* Copyright Notice */}
             <div>
-              <h2 className="text-3xl font-bold text-white mb-8">Copyright Notice</h2>
               <div className="space-y-8">
                 <p className="text-sm text-[#4cc9f0]">
                   Effective Date: September 09, 2025
                 </p>
-
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Our Content</h3>
-                  <p className="text-[#a0aec0] leading-relaxed mb-4">
-                    All content on OnlyHockey, including but not limited to:
-                  </p>
-                  <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
-                    <li>Text, graphics, logos, and images</li>
-                    <li>Factoids, statoids, and motivoids</li>
-                    <li>Character illustrations and designs</li>
-                    <li>Software and website functionality</li>
-                  </ul>
-                  <p className="text-[#a0aec0] leading-relaxed mt-4">
-                    Is protected by copyright law and owned by OnlyHockey or used with permission.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Fair Use</h3>
-                  <p className="text-[#a0aec0] leading-relaxed mb-4">You may:</p>
-                  <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
-                    <li>Share our content on social media with proper attribution</li>
-                    <li>Use small excerpts for educational or commentary purposes</li>
-                    <li>Link to our content from other websites</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Prohibited Uses</h3>
-                  <p className="text-[#a0aec0] leading-relaxed mb-4">You may not:</p>
-                  <ul className="text-[#a0aec0] leading-relaxed space-y-2 list-disc list-inside">
-                    <li>Copy large portions of our content without permission</li>
-                    <li>Use our content for commercial purposes without licensing</li>
-                    <li>Remove copyright notices or attribution</li>
-                    <li>Create derivative works based on our content</li>
-                  </ul>
-                </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-white mb-4">Reporting Copyright Infringement</h3>
@@ -82,25 +44,16 @@ export default function SupportPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
               <div className="space-y-6">
-                <h3 className="text-xl font-bold text-[#4cc9f0]">OnlyHockey Support</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                 <div>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-3">Email Support</h4>
                     <p className="text-[#a0aec0]">
-                      <strong className="text-white">General:</strong> <a href="mailto:team@onlyhockey.com" className="text-[#4cc9f0] hover:text-white transition-colors">team@onlyhockey.com</a>
+                     <a href="mailto:team@onlyhockey.com" className="text-[#4cc9f0] hover:text-white transition-colors">team@onlyhockey.com</a>
                     </p>
                   </div>
-                  
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Business Hours</h4>
+                    <h4 className="text-lg font-semibold text-white mt-3 mb-3">Business Hours</h4>
                     <p className="text-[#a0aec0] mb-6">Monday-Friday, 9 AM - 5 PM PST</p>
-                    
-                    <h4 className="text-lg font-semibold text-white mb-3">Mailing Address</h4>
-                    <div className="text-[#a0aec0] space-y-1">
-                      <p>OnlyHockey.com</p>
-                      <p>TBD</p>
-                    </div>
                   </div>
                 </div>
 

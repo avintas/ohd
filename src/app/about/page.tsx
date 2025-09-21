@@ -8,11 +8,9 @@ export default function AboutPage() {
           {/* Page Title */}
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About
+              About Onlyhockey
             </h1>
-            <p className="text-xl text-[#a0aec0] leading-relaxed">
-              OnlyHockey is a platform built for passionate hockey fans who want more than just highlights and basic news.
-            </p>
+
           </div>
 
           {/* Content - Clean Format */}
@@ -21,8 +19,7 @@ export default function AboutPage() {
             {/* Introduction */}
             <div>
               <p className="text-lg text-[#a0aec0] leading-relaxed">
-                We built Onlyhockey as fans for fans. <span className="font-semibold text-[#4cc9f0]">Share</span> 🔗 the good stuff you discover, charge your batteries with <span className="font-semibold text-[#4cc9f0]">motivational</span> 🔥 quotes from legendary players and epic coaches, challenge yourself and your friends with <span className="font-semibold text-[#4cc9f0]">Hockey Trivia</span> and support people you know with heartfelt <span className="font-semibold text-[#4cc9f0]">h.u.g.s</span>. Hang out with fans who truly get it, who know, love, play the game and celebrate the moments that matter, and <span className="font-semibold text-[#4cc9f0]">discover</span> what makes our hockey community so special. Whether you&apos;re here for the stories, the stats, or the pure joy of the game, you belong here. 🏠✨
-              </p>
+              We launched Onlyhockey as a tribute to the great Game of Hockey. You can challenge yourself and your friends with hockey trivia games, support people you care about with H.U.G.s You can find and share motivational quotes from legendary players and epic coaches as well as interesting facts, anecdotes, curiosities of hockey culture, all that we call hockey lore. We hope you will discover what makes our hockey community so special. Whether you are here for the stories, the stats, or the pure joy of the game, you belong here. 🏠✨</p>
             </div>
             
             {/* Our Mission */}
@@ -31,7 +28,7 @@ export default function AboutPage() {
                 Our Mission
               </h2>
               <p className="text-lg text-[#a0aec0] leading-relaxed">
-                OnlyHockey is a platform built for passionate hockey fans who want more than just highlights and basic news. We create bite-sized, shareable hockey content that goes beyond the surface—content that educates, motivates, and connects fans to the deeper stories of the game they love.
+              To create a fun, engaging, and safe community where players, fans, and parents can learn, play, and connect. 
               </p>
             </div>
 
@@ -41,12 +38,7 @@ export default function AboutPage() {
                 What We Do
               </h2>
               <div className="space-y-4">
-                <p className="text-lg text-[#a0aec0] leading-relaxed">
-                  We solve a simple problem: hockey content is scattered across platforms and often too lengthy for quick consumption and sharing. OnlyHockey brings you engaging, easily shareable content in formats perfect for social media and fan conversations.
-                </p>
-                <p className="text-lg text-[#a0aec0] leading-relaxed">
-                  Whether you&apos;re looking for fascinating hockey facts to share with fellow fans, motivational content to encourage the hockey players in your life, or insider insights that make you appreciate the sport even more, we&apos;re your one-stop destination for hockey content that sparks conversation and builds community.
-                </p>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">We operate hockey themed trivia games site, where fans can enjoy bite-sized, shareable hockey themed safe content. We want to bring you engaging, easily shareable content in formats perfect for social media and fan conversations.</p>
               </div>
             </div>
 
@@ -55,9 +47,7 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Who We Serve
               </h2>
-              <p className="text-lg text-[#a0aec0] leading-relaxed">
-                We&apos;re here for hockey fans who are active on social media and love sharing their passion for the game. We&apos;re also here for the parents, grandparents, and family members who want to support and motivate their hockey-playing loved ones with content that celebrates the values and spirit of hockey.
-              </p>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">We serve passionate hockey fans, the families who support them, and players at every level of the game. Whether you're a young Mini Mite, a Tier 1 (AAA) standout, a high school player, or a "beer leaguer" who just loves the sport, our community is for you. We also welcome the parents, grandparents, and family members who want to support and motivate their loved ones with content that celebrates the values and spirit of hockey.</p>
             </div>
 
             {/* Our Vision */}
