@@ -27,24 +27,6 @@ const slidesData: SlideData[] = [
     emoji: '🏒'
   },
   {
-    id: 'hug',
-    title: 'HOCKEY UNIVERSAL GREETINGS',
-    description: 'SPREAD THE LOVE • Send digital H.U.G.s worldwide • Connect with Captain Heart and community • Show your support for fellow fans',
-    image: '/pims/pim-1009.webp',
-    ctaText: 'Send a H.U.G.',
-    ctaUrl: '/captain-heart',
-    emoji: '💙'
-  },
-  {
-    id: 'support',
-    title: 'IRON MIKE MOTIVATION',
-    description: 'GET PUMPED UP • Inspiring quotes and hockey wisdom • Fuel your passion for the greatest game • Build championship mindset',
-    image: '/video/gim-supporter-01.mp4',
-    ctaText: 'Get Motivated',
-    ctaUrl: '/iron-mike',
-    emoji: '🔥'
-  },
-  {
     id: 'crew',
     title: 'MEET THE CREW',
     description: 'YOUR HOCKEY GUIDES • Expert personalities behind OnlyHockey • Learn, play safer, and have more fun • Connect with your personal guides',

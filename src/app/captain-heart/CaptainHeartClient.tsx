@@ -13,13 +13,13 @@ export default function CaptainHeartClient({ hugMessages }: CaptainHeartClientPr
   const [shareMessage, setShareMessage] = useState('');
 
   const handleShare = async (content: string, title: string) => {
-    const shareText = `🏒 Hockey community message from Captain Heart - OnlyHockey.com:\n\n"${content}"\n\nHeart's Hub - Building the Hockey Family!`;
+    const shareText = `💙 Heart & Share from OnlyHockey.com:\n\n"${content}"\n\nSpread hockey love with Captain Heart!`;
     const shareUrl = `${window.location.origin}/captain-heart`;
     
     if (navigator.share) {
       try {
         await navigator.share({
-          title: `${title} | Captain Heart - Heart's Hub`,
+          title: `${title} | Heart & Share`,
           text: shareText,
           url: shareUrl,
         });
@@ -47,64 +47,90 @@ export default function CaptainHeartClient({ hugMessages }: CaptainHeartClientPr
         </div>
       )}
 
-      {/* Hero Section */}
-      <div className="py-16 md:py-24 px-4 md:px-6">
+      {/* Hero Section - From Slide #2 */}
+      <section className="py-16 md:py-20 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Content */}
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start min-h-[500px]">
+            
+            {/* Left Column - Content */}
+            <div className="space-y-6 z-20 relative text-center lg:text-left">
+              
+              {/* Large Main Title */}
               <header>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-                  Captain Heart&apos;s Hub
+                <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-none tracking-tight">
+                  HEART & SHARE
                 </h1>
-                <div className="space-y-4 text-lg md:text-xl text-[#a0aec0] max-w-lg">
-                  <p>Where the hockey family comes together! Celebrate achievements, support each other, and build the amazing community that makes hockey special.</p>
-                  <p>Join Captain Heart in spreading positivity, encouragement, and the true spirit of hockey throughout our community.</p>
-                  <p>Together, we make hockey better for everyone!</p>
-                </div>
               </header>
               
-              <div className="pt-4 flex justify-center lg:justify-start">
-                <button 
+              {/* Description with bullet points */}
+              <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
+                <div className="flex items-start space-x-3 justify-center lg:justify-start">
+                  <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
+                    HOCKEY UNIVERSAL GREETINGS
+                  </span>
+                </div>
+                <div className="flex items-start space-x-3 justify-center lg:justify-start">
+                  <span className="text-[#4cc9f0] mt-2">•</span>
+                  <span className="whitespace-nowrap">Send H.U.G.s to fellow hockey fans</span>
+                </div>
+                <div className="flex items-start space-x-3 justify-center lg:justify-start">
+                  <span className="text-[#4cc9f0] mt-2">•</span>
+                  <span className="whitespace-nowrap">Build the amazing hockey community</span>
+                </div>
+                <div className="flex items-start space-x-3 justify-center lg:justify-start">
+                  <span className="text-[#4cc9f0] mt-2">•</span>
+                  <span className="whitespace-nowrap">Spread positivity with Captain Heart</span>
+                </div>
+              </div>
+              
+              {/* CTA Button */}
+              <div className="pt-6">
+                <button
                   onClick={() => {
                     document.getElementById('hugs-section')?.scrollIntoView({ 
                       behavior: 'smooth',
                       block: 'start'
                     });
                   }}
-                  className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-flex items-center bg-[#232f3e] hover:bg-[#37475a] text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105 shadow-xl border border-[#4cc9f0]/30 hover:border-[#4cc9f0]"
                 >
-                  Share a HUG
+                  <span className="text-[#4cc9f0] mr-2">💙</span>
+                  <span>Send a H.U.G.</span>
                 </button>
               </div>
             </div>
 
-            {/* Right Side - Character */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <Image
-                  src="/pims/pim-1009.webp"
-                  alt="Captain Heart - Community Leader"
-                  width={512}
-                  height={512}
-                  className="w-80 h-80 md:w-[32rem] md:h-[32rem] object-contain scale-x-[-1]"
-                  priority
-                />
+            {/* Right Column - Huggster Character */}
+            <div className="relative z-20">
+              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#1a1f2e] rounded-2xl shadow-2xl border border-[#2d3748] flex items-center justify-center overflow-hidden">
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-black border-4 border-gray-600 shadow-2xl relative">
+                  {/* Hockey puck edge highlight */}
+                  <div className="absolute inset-2 rounded-full border-2 border-gray-400/30"></div>
+                  <Image
+                    src="/gims/huggster.png"
+                    alt="Huggster - Heart & Share Mascot on Hockey Puck"
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover scale-x-[-1]"
+                    priority
+                  />
+                </div>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Hub Activities Grid */}
       <div id="hugs-section" className="py-16 px-4 md:px-6 bg-[#16213e]/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Heart&apos;s Hub HUGS
+              💙 Hockey Universal Greetings
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Share these Hockey Universal Greetings with your loved ones to spread positivity and build our hockey family
+              Share these heartfelt H.U.G.s with fellow hockey fans to spread positivity and build our amazing community
             </p>
           </div>
           
