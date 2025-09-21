@@ -47,7 +47,7 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Who We Serve
               </h2>
-              <p className="text-lg text-[#a0aec0] leading-relaxed">We serve passionate hockey fans, the families who support them, and players at every level of the game. Whether you're a young Mini Mite, a Tier 1 (AAA) standout, a high school player, or a "beer leaguer" who just loves the sport, our community is for you. We also welcome the parents, grandparents, and family members who want to support and motivate their loved ones with content that celebrates the values and spirit of hockey.</p>
+              <p className="text-lg text-[#a0aec0] leading-relaxed">We serve passionate hockey fans, the families who support them, and players at every level of the game. Whether you&apos;re a young Mini Mite, a Tier 1 (AAA) standout, a high school player, or a &quot;beer leaguer&quot; who just loves the sport, our community is for you. We also welcome the parents, grandparents, and family members who want to support and motivate their loved ones with content that celebrates the values and spirit of hockey.</p>
             </div>
 
             {/* Our Vision */}

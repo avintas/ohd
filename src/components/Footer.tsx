@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0e1a] border-t border-[#2d3748] py-6 md:py-12 px-4 md:px-6 2xl:px-8">
+    <footer className="bg-[#0a0e1a] py-6 md:py-12 px-4 md:px-6 2xl:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Main Footer Links */}
         <nav className="flex justify-center items-center gap-6 mb-4 md:mb-8" aria-label="Main footer navigation">
