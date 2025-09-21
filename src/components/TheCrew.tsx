@@ -34,7 +34,7 @@ export function TheCrew() {
           </Link>
 
           {/* Iron Mike - Coach */}
-          <Link href="/iron-mike" className="text-center group block">
+          <Link href="/stories" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1001.webp"
@@ -64,7 +64,7 @@ export function TheCrew() {
           </Link>
 
           {/* Don The Mic - Hockey Storyteller */}
-          <Link href="/behind-the-mic" className="text-center group block">
+          <Link href="/stories" className="text-center group block">
             <div className="relative mb-3">
               <Image
                 src="/pims/pim-1011.webp"
