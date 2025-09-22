@@ -1,20 +1,38 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // Single slide data - Welcome slide only
 const slideData = {
   id: 'welcome',
   title: 'THERE IS ONLY HOCKEY!',
-  description: 'WHERE YOUR ❤️ LOVE FOR THE GAME IS ALL YOU NEED • 🔗 Share - "Hockey facts worth sharing" • 🔥 Motivate - "Quotes that inspire greatness" • 🧠 Challenge - "Trivia for true fans" • 💙 Support - "Encouragement for players"',
+  description: 'WHERE YOUR ❤️ LOVE FOR THE GAME IS ALL YOU NEED TO HAVE FUN • 🔗 Share - &quot;Hockey facts worth sharing&quot; • 🔥 Motivate - &quot;Quotes that inspire greatness&quot; • 🧠 Challenge - &quot;Trivia for true fans&quot; • 💙 Support - &quot;Encouragement for players&quot;',
   image: '/gims/gim-00026.webp',
   ctaText: 'Try Out',
   ctaUrl: '#how-it-works',
   emoji: '🏒'
 };
 
+// Animated emoji sequence
+const emojiSequence = [
+  { emoji: '🔗', label: 'Share' },
+  { emoji: '🔥', label: 'Motivate' }, 
+  { emoji: '🧠', label: 'Challenge' },
+  { emoji: '💙', label: 'Support' }
+];
+
 export function HeroSection() {
+  const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
+
+  // Rotate emojis every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentEmojiIndex((prev) => (prev + 1) % emojiSequence.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-6">
@@ -33,22 +51,34 @@ export function HeroSection() {
               </h1>
             </header>
             
-            {/* Description with bullet points */}
-            <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
-              {slideData.description.split(' • ').map((point, index) => (
-                <div key={index} className={`flex items-start space-x-3 ${index === 0 ? 'justify-center lg:justify-start' : 'justify-center lg:justify-start'}`}>
-                  {index === 0 ? (
-                    <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
+            {/* Subtitle */}
+            <div className="text-lg md:text-xl text-[#a0aec0] max-w-lg">
+              <div className="flex justify-center lg:justify-start">
+                <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider">
+                  ❤️ LOVE FOR THE GAME IS ALL YOU NEED TO HAVE FUN
+                </span>
+              </div>
+            </div>
+
+            {/* Function List - No Bullets */}
+            <div className="space-y-4 text-lg md:text-xl text-[#a0aec0] max-w-lg pt-6">
+              {[
+                '🔗 Share - "Hockey facts worth sharing"',
+                '🔥 Motivate - "Quotes that inspire greatness"',
+                '🧠 Challenge - "Trivia for true fans"',
+                '💙 Support - "Encouragement for players"'
+              ].map((point, index) => {
+                // Check if this function matches the current emoji
+                const isActive = index === currentEmojiIndex;
+                
+                return (
+                  <div key={index} className="flex justify-center lg:justify-start transition-all duration-500">
+                    <span className={`transition-all duration-500 ${isActive ? 'text-white font-semibold transform scale-105' : ''}`}>
                       {point}
                     </span>
-                  ) : (
-                    <>
-                      <span className="text-[#4cc9f0] mt-2">•</span>
-                      <span className="whitespace-nowrap">{point}</span>
-                    </>
-                  )}
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
             
             {/* CTA Button */}
@@ -63,10 +93,20 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Empty placeholder */}
+          {/* Right Column - Animated Emoji Carousel */}
           <div className="relative z-20">
-            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#1a1f2e] rounded-2xl shadow-2xl border border-[#2d3748]">
-              {/* Empty placeholder - consistent with other pages */}
+            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center">
+              <div className="text-center">
+                {/* Giant Rotating Emoji */}
+                <div className="text-8xl md:text-9xl lg:text-[12rem] mb-4 transition-all duration-300 transform hover:scale-110">
+                  {emojiSequence[currentEmojiIndex].emoji}
+                </div>
+                
+                {/* Optional Label */}
+                <div className="text-xl md:text-2xl text-[#a0aec0] font-semibold opacity-60">
+                  {emojiSequence[currentEmojiIndex].label}
+                </div>
+              </div>
             </div>
           </div>
 
