@@ -9,7 +9,7 @@ const slideData = {
   title: 'THERE IS ONLY HOCKEY!',
   description: 'WHERE YOUR ❤️ LOVE FOR THE GAME IS ALL YOU NEED TO HAVE FUN • 🔗 Share - &quot;Hockey facts worth sharing&quot; • 🔥 Motivate - &quot;Quotes that inspire greatness&quot; • 🧠 Challenge - &quot;Trivia for true fans&quot; • 💙 Support - &quot;Encouragement for players&quot;',
   image: '/gims/gim-00026.webp',
-  ctaText: 'Try Out',
+  ctaText: 'Get Started',
   ctaUrl: '#how-it-works',
   emoji: '🏒'
 };
