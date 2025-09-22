@@ -1,6 +1,7 @@
 'use client';
 
 import { PageLayout } from '@/components';
+import Image from 'next/image';
 
 interface Story {
   id: string;
@@ -72,10 +73,17 @@ export default function StoriesClient({ stories }: StoriesClientProps) {
               </div>
             </div>
 
-            {/* Right Column - Empty placeholder for future images */}
+            {/* Right Column - Hockey Puck Character */}
             <div className="relative z-20">
-              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#1a1f2e] rounded-2xl shadow-2xl border border-[#2d3748]">
-                {/* Empty placeholder - same size for consistency */}
+              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
+                <Image
+                  src="/gims/gim-100.jpg"
+                  alt="Hockey storytelling character with puck head"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
 

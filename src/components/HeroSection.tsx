@@ -47,7 +47,7 @@ export function HeroSection() {
             {/* Large Main Title */}
             <header>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-none tracking-tight">
-                {slideData.title}
+                THERE IS<br />ONLY HOCKEY!
               </h1>
             </header>
             
@@ -93,18 +93,33 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column - Animated Emoji Carousel */}
+          {/* Right Column - Video with Emoji Overlay */}
           <div className="relative z-20">
-            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] flex items-center justify-center">
-              <div className="text-center">
-                {/* Giant Rotating Emoji */}
-                <div className="text-8xl md:text-9xl lg:text-[12rem] mb-4 transition-all duration-300 transform hover:scale-110">
-                  {emojiSequence[currentEmojiIndex].emoji}
-                </div>
-                
-                {/* Optional Label */}
-                <div className="text-xl md:text-2xl text-[#a0aec0] font-semibold opacity-60">
-                  {emojiSequence[currentEmojiIndex].label}
+            <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden relative">
+              {/* Background Video */}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/video/vgim-100.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Emoji Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                <div className="text-center">
+                  {/* Giant Rotating Emoji */}
+                  <div className="text-6xl md:text-7xl lg:text-8xl mb-4 transition-all duration-300 transform hover:scale-110 drop-shadow-2xl">
+                    {emojiSequence[currentEmojiIndex].emoji}
+                  </div>
+                  
+                  {/* Optional Label */}
+                  <div className="text-lg md:text-xl text-white font-bold drop-shadow-lg">
+                    {emojiSequence[currentEmojiIndex].label}
+                  </div>
                 </div>
               </div>
             </div>
