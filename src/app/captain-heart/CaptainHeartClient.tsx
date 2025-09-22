@@ -100,21 +100,19 @@ export default function CaptainHeartClient({ hugMessages }: CaptainHeartClientPr
               </div>
             </div>
 
-            {/* Right Column - Huggster Character */}
+            {/* Right Column - Heart & Share Video */}
             <div className="relative z-20">
-              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#1a1f2e] rounded-2xl shadow-2xl border border-[#2d3748] flex items-center justify-center overflow-hidden">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-black border-4 border-gray-600 shadow-2xl relative">
-                  {/* Hockey puck edge highlight */}
-                  <div className="absolute inset-2 rounded-full border-2 border-gray-400/30"></div>
-                  <Image
-                    src="/gims/huggster.png"
-                    alt="Huggster - Heart & Share Mascot on Hockey Puck"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover scale-x-[-1]"
-                    priority
-                  />
-                </div>
+              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src="https://nbrlopkg7zkkwadf.public.blob.vercel-storage.com/vgim-200.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 

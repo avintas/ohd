@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 // Single slide data - Welcome slide only
 const slideData = {
   id: 'welcome',
   title: 'THERE IS ONLY HOCKEY!',
-  description: 'WHERE YOUR ❤️ LOVE FOR THE GAME IS ALL YOU NEED TO HAVE FUN • 🔗 Share - &quot;Hockey facts worth sharing&quot; • 🔥 Motivate - &quot;Quotes that inspire greatness&quot; • 🧠 Challenge - &quot;Trivia for true fans&quot; • 💙 Support - &quot;Encouragement for players&quot;',
+  description: 'L❤️VE FOR THE GAME IS ALL YOU NEED TO HAVE FUN • 🔗 Share - &quot;Hockey facts worth sharing&quot; • 🔥 Motivate - &quot;Quotes that inspire greatness&quot; • 🧠 Challenge - &quot;Trivia for true fans&quot; • 💙 Support - &quot;Encouragement for players&quot;',
   image: '/gims/gim-00026.webp',
-  ctaText: 'Get Started',
+  ctaText: 'GET ON THE ICE',
   ctaUrl: '#how-it-works',
   emoji: '🏒'
 };
@@ -24,6 +24,8 @@ const emojiSequence = [
 
 export function HeroSection() {
   const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Rotate emojis every 3 seconds
   useEffect(() => {
@@ -33,6 +35,18 @@ export function HeroSection() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Toggle video play/pause
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsVideoPlaying(!isVideoPlaying);
+    }
+  };
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-6">
@@ -55,7 +69,7 @@ export function HeroSection() {
             <div className="text-lg md:text-xl text-[#a0aec0] max-w-lg">
               <div className="flex justify-center lg:justify-start">
                 <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider">
-                  ❤️ LOVE FOR THE GAME IS ALL YOU NEED TO HAVE FUN
+                  L❤️VE FOR THE GAME IS ALL YOU NEED TO HAVE FUN
                 </span>
               </div>
             </div>
@@ -98,15 +112,33 @@ export function HeroSection() {
             <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden relative">
               {/* Background Video */}
               <video
+                ref={videoRef}
                 autoPlay
                 muted
                 loop
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/video/vgim-100.mp4" type="video/mp4" />
+                <source src="https://nbrlopkg7zkkwadf.public.blob.vercel-storage.com/vgim-100.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              
+              {/* Play/Pause Button */}
+              <button
+                onClick={toggleVideo}
+                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 z-30"
+                aria-label={isVideoPlaying ? 'Pause video' : 'Play video'}
+              >
+                {isVideoPlaying ? (
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                )}
+              </button>
               
               {/* Emoji Overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/20">
