@@ -69,7 +69,7 @@ export function HeroSection() {
             <div className="text-lg md:text-xl text-[#a0aec0] max-w-lg">
               <div className="flex justify-center lg:justify-start">
                 <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider">
-                  L❤️VE FOR THE GAME IS ALL YOU NEED TO HAVE FUN
+                  L❤️VE FOR THE GAME IS ALL YOU NEED
                 </span>
               </div>
             </div>

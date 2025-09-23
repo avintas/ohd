@@ -78,7 +78,7 @@ export function FeaturesSection() {
                 </p>
               </div>
               <Link 
-                href="/stories"
+                href="/motivate"
                 className="inline-block bg-[#4cc9f0] hover:bg-[#3bb5e0] active:bg-[#2a9cc7] active:scale-95 text-[#0a0e1a] font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 focus:ring-2 focus:ring-[#4cc9f0] focus:outline-none shadow-md hover:shadow-lg"
               >
                 Get Motivated 🔥
