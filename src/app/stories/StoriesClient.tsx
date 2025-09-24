@@ -1,7 +1,6 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import Image from 'next/image';
 
 interface Story {
   id: string;

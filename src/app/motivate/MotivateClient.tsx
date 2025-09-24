@@ -1,7 +1,6 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import Image from 'next/image';
 import { useState } from 'react';
 import type { MotivateMessage } from '@/lib/motivateLoader';
 
@@ -66,7 +65,7 @@ export default function MotivateClient({ motivateMessages }: MotivateClientProps
               <div className="space-y-3 text-lg md:text-xl text-[#a0aec0] max-w-lg">
                 <div className="flex items-start space-x-3 justify-center lg:justify-start">
                   <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider mt-1">
-                    IRON MIKE'S MOTIVATION
+                    IRON MIKE&apos;S MOTIVATION
                   </span>
                 </div>
                 <div className="flex items-start space-x-3 justify-center lg:justify-start">
@@ -128,7 +127,7 @@ export default function MotivateClient({ motivateMessages }: MotivateClientProps
               💪 Hockey Motivation
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Get fired up with Iron Mike's motivational messages to push through tough moments and build a championship mindset
+              Get fired up with Iron Mike&apos;s motivational messages to push through tough moments and build a championship mindset
             </p>
           </div>
           

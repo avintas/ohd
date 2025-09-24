@@ -1,7 +1,6 @@
 'use client';
 
 import { PageLayout } from '@/components';
-import Image from 'next/image';
 import { useState } from 'react';
 import type { HugMessage } from '@/lib/hugLoader';
 

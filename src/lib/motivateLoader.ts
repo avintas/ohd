@@ -36,7 +36,6 @@ export function getAllMotivateMessages(): MotivateMessage[] {
     let shareTitle = '';
     let messageContent = '';
 
-    let contentStartIndex = 0;
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       if (line.startsWith('**Emoji:**')) {
@@ -46,7 +45,6 @@ export function getAllMotivateMessages(): MotivateMessage[] {
       } else if (line.startsWith('**Share Text:**')) {
         shareTitle = line.replace('**Share Text:**', '').trim();
       } else if (line === '## The Motivation') {
-        contentStartIndex = i + 2; // Skip the header and empty line
         break;
       }
     }
