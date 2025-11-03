@@ -20,10 +20,6 @@ interface WisdomResponse {
   error?: string;
 }
 
-// Single navy blue glassy card theme
-const cardTheme =
-  'bg-gradient-to-br from-[#1e3a8a]/20 to-[#1e40af]/10 border border-[#4cc9f0]/30 backdrop-blur-sm bg-[#0f172a]/80';
-
 // Emoji for wisdom messages
 const WISDOM_EMOJI = '💎';
 
@@ -207,109 +203,104 @@ export function HeroSection() {
   };
 
   return (
-    <section className="py-8 md:py-12 px-4 md:px-6">
+    <section className="py-16 md:py-20 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Separated Sections Layout */}
-        <div className="flex flex-col items-center text-center space-y-8">
-          {/* Section 1: Main Title */}
-          <header className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-none tracking-tight">
-              THERE IS
-              <br />
-              ONLY HOCKEY!
-            </h1>
-          </header>
+        <div className="grid lg:grid-cols-2 gap-6 items-start min-h-[500px]">
+          {/* Left Column - Content */}
+          <div className="space-y-6 z-20 relative text-center lg:text-left">
+            {/* Large Main Title */}
+            <header>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-none tracking-tight">
+                THERE IS
+                <br />
+                ONLY HOCKEY!
+              </h1>
+            </header>
 
-          {/* Section 2: Tagline */}
-          <div className="text-lg md:text-xl text-[#a0aec0]">
-            <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider">
-              L❤️VE FOR THE GAME IS ALL YOU NEED
-            </span>
-          </div>
+            {/* Tagline */}
+            <div className="text-lg md:text-xl text-[#a0aec0]">
+              <span className="text-[#fbbf24] font-bold text-sm uppercase tracking-wider">
+                L❤️VE FOR THE GAME IS ALL YOU NEED
+              </span>
+            </div>
 
-          {/* Section 3: Compact Funnel-Shaped Explanation */}
-          <div className="text-base md:text-lg text-[#a0aec0] leading-relaxed">
-            <div className="flex flex-col items-center space-y-2">
-              <div className="text-center max-w-4xl">
+            {/* Funnel-Shaped Explanation */}
+            <div className="text-base md:text-lg text-[#a0aec0] leading-relaxed">
+              <p>
                 We launched 🏒 Onlyhockey as fans for fans to share 📊 the good
                 stuff they discover on this site. Send motivational 🔥 quotes
-                from legendary players and epic coaches,
-              </div>
-              <div className="text-center max-w-3xl">
-                challenge yourself and your friends with hockey 🧠 trivia games,
-                support people you care about with H.U.G.s 💙. Hang out with
-                fans who truly get it,
-              </div>
-              <div className="text-center max-w-2xl">
+                from legendary players and epic coaches, challenge yourself and
+                your friends with hockey 🧠 trivia games, support people you
+                care about with H.U.G.s 💙. Hang out with fans who truly get it,
                 who know, love, play the game and celebrate the moments that
                 matter, and discover 🔍 what makes our hockey community so 🏆
-                special.
-              </div>
-              <div className="text-center max-w-xl">
-                Whether you&apos;re here for the stories, the stats, or the pure
-                joy of the game, you belong here. 🏠✨
-              </div>
+                special. Whether you&apos;re here for the stories, the stats, or
+                the pure joy of the game, you belong here. 🏠✨
+              </p>
             </div>
           </div>
 
-          {/* Section 4: Get in the Game */}
-          <div className="w-full max-w-2xl pt-8">
-            {/* Dynamic Title with Refresh Button */}
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#4cc9f0] text-center">
-                Get in the Game
-              </h3>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  refreshContent();
-                }}
-                disabled={loading}
-                className="bg-[#4cc9f0]/20 hover:bg-[#4cc9f0]/30 text-[#4cc9f0] p-2 rounded-full transition-all duration-300 hover:scale-110 flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-label="Load new content"
-                title="🎲 Show Me More"
-                type="button"
-              >
-                🎲
-              </button>
-            </div>
-
-            {/* Subtitle */}
-            <p className="text-center text-[#a0aec0] text-sm mb-4 opacity-75">
-              Hockey Essentials
-            </p>
-
-            {/* Error State */}
-            {error && (
-              <div className="text-center py-2 mb-4 bg-red-900/20 border border-red-500/30 rounded-lg">
-                <p className="text-red-400 text-xs">⚠️ {error}</p>
-              </div>
-            )}
-
-            {/* Wisdom Messages List - Always show, updates smoothly on refresh */}
-            <div className="w-full">
-              {loading && wisdom.length === 0 ? (
-                <div className="text-center py-8">
-                  <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#4cc9f0]"></div>
-                  <p className="text-[#a0aec0] mt-2">Loading fresh wisdom...</p>
+          {/* Right Column - Wisdom Card */}
+          <div className="relative z-20">
+            <div className="bg-[#16213e] rounded-2xl p-8 shadow-2xl border border-[#2d3748] flex flex-col">
+              {/* Header with Title and Refresh Button */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <span className="text-3xl mr-3">{WISDOM_EMOJI}</span>
+                  <div>
+                    <h3 className="text-lg font-bold text-white">
+                      Get in the Game
+                    </h3>
+                    <p className="text-sm text-[#a0aec0]">Hockey Essentials</p>
+                  </div>
                 </div>
-              ) : (
-                <div
-                  className={`overflow-hidden rounded-md ${cardTheme} shadow-xl`}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    refreshContent();
+                  }}
+                  disabled={loading}
+                  className="bg-[#4cc9f0]/20 hover:bg-[#4cc9f0]/30 text-[#4cc9f0] p-2 rounded-full transition-all duration-300 hover:scale-110 flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                  aria-label="Load new content"
+                  title="🎲 Show Me More"
+                  type="button"
                 >
-                  <ul role="list" className="divide-y divide-[#4cc9f0]/20">
+                  🎲
+                </button>
+              </div>
+
+              {/* Error State */}
+              {error && (
+                <div className="mb-4 bg-red-900/20 border border-red-500/30 rounded-lg p-2">
+                  <p className="text-red-400 text-xs">⚠️ {error}</p>
+                </div>
+              )}
+
+              {/* Wisdom Messages List */}
+              <div>
+                {loading && wisdom.length === 0 ? (
+                  <div className="flex items-center justify-center py-8">
+                    <div className="text-center">
+                      <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-[#4cc9f0]"></div>
+                      <p className="text-[#a0aec0] mt-2 text-sm">
+                        Loading fresh wisdom...
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <ul
+                    role="list"
+                    className="divide-y divide-[#2d3748] space-y-0"
+                  >
                     {wisdom.map((item) => (
                       <li
                         key={item.id}
-                        className="px-6 py-4 transition-all duration-300 hover:bg-[#4cc9f0]/10 flex items-center justify-between"
+                        className="py-4 transition-all duration-300 hover:bg-[#1e2a4a] flex items-start justify-between"
                       >
-                        {/* Left side: Emoji + Content */}
-                        <div className="flex items-start space-x-3 flex-1 min-w-0">
-                          <div className="text-xl flex-shrink-0 mt-0.5">
-                            {WISDOM_EMOJI}
-                          </div>
-                          <div className="text-white text-sm font-medium leading-tight text-left flex-1 min-w-0">
+                        {/* Left side: Content */}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-white text-sm font-medium leading-tight text-left">
                             {item.from_the_box || item.musing}
                           </div>
                         </div>
@@ -317,7 +308,7 @@ export function HeroSection() {
                         {/* Right side: Share Button */}
                         <button
                           onClick={() => handleShare(item)}
-                          className="ml-4 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-lg w-10 h-10 rounded-full flex items-center justify-center shadow-lg flex-shrink-0"
+                          className="ml-3 bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] hover:text-black transition-all cursor-pointer text-base w-8 h-8 rounded-full flex items-center justify-center shadow-lg flex-shrink-0"
                           aria-label={`Share: ${item.from_the_box || item.musing}`}
                           title="Share this wisdom"
                         >
@@ -326,8 +317,8 @@ export function HeroSection() {
                       </li>
                     ))}
                   </ul>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
         </div>
