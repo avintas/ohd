@@ -1,6 +1,5 @@
 import type {
   TangoApiResponse,
-  TangoSingleResponse,
   Stat,
   Wisdom,
   Motivational,
@@ -39,35 +38,6 @@ async function fetchFromTango<T>(
   }
 }
 
-// Generic fetch function for single item responses (random endpoints)
-async function fetchSingleFromTango<T>(
-  endpoint: string
-): Promise<TangoSingleResponse<T>> {
-  try {
-    const response = await fetch(`${TANGO_CMS_URL}${endpoint}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
-    }
-
-    const data: TangoSingleResponse<T> = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Error fetching from Tango CMS (${endpoint}):`, error);
-    return {
-      success: false,
-      data: {} as T,
-      error: error instanceof Error ? error.message : 'Unknown error',
-    };
-  }
-}
-
 // Typed fetch functions for each content type
 export async function fetchStats(
   limit: number = 5
@@ -89,20 +59,8 @@ export async function fetchMotivational(
   );
 }
 
-export async function fetchRandomMotivational(): Promise<
-  TangoSingleResponse<Motivational>
-> {
-  return fetchSingleFromTango<Motivational>('/api/public/motivational/random');
-}
-
 export async function fetchGreeting(
   limit: number = 1
 ): Promise<TangoApiResponse<Greeting>> {
   return fetchFromTango<Greeting>(`/api/public/greetings?limit=${limit}`);
-}
-
-export async function fetchRandomGreeting(): Promise<
-  TangoSingleResponse<Greeting>
-> {
-  return fetchSingleFromTango<Greeting>('/api/public/greetings/random');
 }

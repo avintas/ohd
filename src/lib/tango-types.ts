@@ -6,12 +6,6 @@ export interface TangoApiResponse<T> {
   error?: string;
 }
 
-export interface TangoSingleResponse<T> {
-  success: boolean;
-  data: T;
-  error?: string;
-}
-
 // Content type interfaces
 export interface Stat {
   id: string;

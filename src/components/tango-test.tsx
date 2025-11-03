@@ -1,8 +1,8 @@
 import {
   fetchStats,
   fetchWisdom,
-  fetchRandomMotivational,
-  fetchRandomGreeting,
+  fetchMotivational,
+  fetchGreeting,
 } from '@/lib/tango-api';
 import type { Stat, Wisdom, Motivational, Greeting } from '@/lib/tango-types';
 
@@ -12,18 +12,18 @@ export async function TangoTest() {
     await Promise.all([
       fetchStats(3),
       fetchWisdom(3),
-      fetchRandomMotivational(),
-      fetchRandomGreeting(),
+      fetchMotivational(1),
+      fetchGreeting(1),
     ]);
 
   const stats: Stat[] = statsResult.success ? statsResult.data : [];
   const wisdom: Wisdom[] = wisdomResult.success ? wisdomResult.data : [];
-  const motivational: Motivational | null = motivationalResult.success
+  const motivational: Motivational[] = motivationalResult.success
     ? motivationalResult.data
-    : null;
-  const greeting: Greeting | null = greetingResult.success
+    : [];
+  const greeting: Greeting[] = greetingResult.success
     ? greetingResult.data
-    : null;
+    : [];
 
   return (
     <div className="p-8 space-y-8">
@@ -102,24 +102,28 @@ export async function TangoTest() {
       {/* Motivational Test */}
       <section className="border border-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">Motivational Test</h2>
-        {motivationalResult.success ? (
+        {motivational.length > 0 ? (
           <>
             <p className="text-green-400 mb-4">
-              ✅ Success! Fetched random quote
+              ✅ Success! Fetched {motivational.length} quote
+              {motivational.length !== 1 ? 's' : ''}
             </p>
-            <div className="border-l-4 border-yellow-500 pl-6 py-4">
-              <blockquote className="text-xl italic mb-2">
-                {motivational.quote}
-              </blockquote>
-              {motivational.context && (
-                <p className="text-gray-400 mb-2">{motivational.context}</p>
-              )}
-              {motivational.attribution && (
-                <p className="text-sm text-gray-500">
-                  — {motivational.attribution}
-                </p>
-              )}
-            </div>
+            {motivational.map((item) => (
+              <div
+                key={item.id}
+                className="border-l-4 border-yellow-500 pl-6 py-4 mb-4"
+              >
+                <blockquote className="text-xl italic mb-2">
+                  {item.quote}
+                </blockquote>
+                {item.context && (
+                  <p className="text-gray-400 mb-2">{item.context}</p>
+                )}
+                {item.attribution && (
+                  <p className="text-sm text-gray-500">— {item.attribution}</p>
+                )}
+              </div>
+            ))}
           </>
         ) : (
           <div className="text-red-400">
@@ -131,19 +135,25 @@ export async function TangoTest() {
       {/* Greeting Test */}
       <section className="border border-gray-700 rounded-lg p-6">
         <h2 className="text-2xl font-semibold mb-4">Greeting Test</h2>
-        {greetingResult.success ? (
+        {greeting.length > 0 ? (
           <>
             <p className="text-green-400 mb-4">
-              ✅ Success! Fetched random greeting
+              ✅ Success! Fetched {greeting.length} greeting
+              {greeting.length !== 1 ? 's' : ''}
             </p>
-            <div className="border-l-4 border-green-500 pl-6 py-4">
-              <p className="text-lg">{greeting.greeting_text}</p>
-              {greeting.attribution && (
-                <p className="text-sm text-gray-500 mt-2">
-                  — {greeting.attribution}
-                </p>
-              )}
-            </div>
+            {greeting.map((item) => (
+              <div
+                key={item.id}
+                className="border-l-4 border-green-500 pl-6 py-4 mb-4"
+              >
+                <p className="text-lg">{item.greeting_text}</p>
+                {item.attribution && (
+                  <p className="text-sm text-gray-500 mt-2">
+                    — {item.attribution}
+                  </p>
+                )}
+              </div>
+            ))}
           </>
         ) : (
           <div className="text-red-400">
@@ -161,8 +171,14 @@ export async function TangoTest() {
               TANGO_CMS_URL: process.env.TANGO_CMS_URL || 'NOT SET',
               stats: { success: statsResult.success, count: stats.length },
               wisdom: { success: wisdomResult.success, count: wisdom.length },
-              motivational: { success: motivationalResult.success },
-              greeting: { success: greetingResult.success },
+              motivational: {
+                success: motivationalResult.success,
+                count: motivational.length,
+              },
+              greeting: {
+                success: greetingResult.success,
+                count: greeting.length,
+              },
             },
             null,
             2
