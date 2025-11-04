@@ -4,8 +4,8 @@ import TriviaZoneClient from './TriviaZoneClient';
 
 export default function TriviaZonePage() {
   const games = publishedGames.publishedGames;
-  const featuredGames = games.filter(game => game.featured);
-  const regularGames = games.filter(game => !game.featured);
+  const featuredGames = games.filter((game) => game.featured);
+  const regularGames = games.filter((game) => !game.featured);
   const dailyTrivia = getTodaysDailyTrivia();
 
   // Game type emojis mapping
@@ -19,11 +19,11 @@ export default function TriviaZonePage() {
     'hockey-geography': '🌍',
     'original-six': '🏛️',
     'radio-video': '📻',
-    'stanly-cup': '🏆'
+    'stanly-cup': '🏆',
   };
 
   return (
-    <TriviaZoneClient 
+    <TriviaZoneClient
       featuredGames={featuredGames}
       regularGames={regularGames}
       gameTypeEmojis={gameTypeEmojis}

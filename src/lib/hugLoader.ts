@@ -14,7 +14,7 @@ export interface HugMessage {
 
 export function getAllHugMessages(): HugMessage[] {
   const hugDirectory = path.join(process.cwd(), 'content_hugs');
-  
+
   if (!fs.existsSync(hugDirectory)) {
     return [];
   }
@@ -55,7 +55,8 @@ export function getAllHugMessages(): HugMessage[] {
     messageContent = lines.slice(contentStartIndex).join('\n').trim();
 
     // Extract title from the first line (# Title)
-    const title = lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
+    const title =
+      lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
 
     hugMessages.push({
       id: filename.replace('.md', ''),
@@ -64,7 +65,7 @@ export function getAllHugMessages(): HugMessage[] {
       category,
       shareTitle,
       content: messageContent,
-      filename
+      filename,
     });
   }
 
@@ -73,5 +74,5 @@ export function getAllHugMessages(): HugMessage[] {
 
 export function getHugMessage(id: string): HugMessage | null {
   const hugMessages = getAllHugMessages();
-  return hugMessages.find(hug => hug.id === id) || null;
+  return hugMessages.find((hug) => hug.id === id) || null;
 }

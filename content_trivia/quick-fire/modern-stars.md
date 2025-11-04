@@ -1,8 +1,8 @@
 ---
-title: "Modern Hockey Stars"
-category: "legends"
-gameType: "quickfire"
-difficulty: "medium"
+title: 'Modern Hockey Stars'
+category: 'legends'
+gameType: 'quickfire'
+difficulty: 'medium'
 timeLimit: 10
 pointsPerQuestion: 10
 totalQuestions: 8
@@ -11,9 +11,11 @@ totalQuestions: 8
 # Quick Fire: Modern Hockey Stars
 
 ## Question 1
+
 **Question:** Who won the Hart Trophy as MVP in 2023?
 
 **Options:**
+
 - Connor McDavid
 - Leon Draisaitl
 - Nathan MacKinnon
@@ -26,9 +28,11 @@ totalQuestions: 8
 ---
 
 ## Question 2
+
 **Question:** Which player scored the most goals in the 2022-23 season?
 
 **Options:**
+
 - David Pastrnak
 - Connor McDavid
 - Leon Draisaitl
@@ -41,9 +45,11 @@ totalQuestions: 8
 ---
 
 ## Question 3
+
 **Question:** Who is known as "Sid the Kid"?
 
 **Options:**
+
 - Sidney Crosby
 - Connor McDavid
 - Nathan MacKinnon
@@ -56,9 +62,11 @@ totalQuestions: 8
 ---
 
 ## Question 4
+
 **Question:** Which goaltender won the Vezina Trophy in 2023?
 
 **Options:**
+
 - Igor Shesterkin
 - Frederik Andersen
 - Linus Ullmark
@@ -71,9 +79,11 @@ totalQuestions: 8
 ---
 
 ## Question 5
+
 **Question:** Who holds the record for fastest hat trick in NHL history?
 
 **Options:**
+
 - Bill Mosienko
 - Wayne Gretzky
 - Mario Lemieux
@@ -86,9 +96,11 @@ totalQuestions: 8
 ---
 
 ## Question 6
+
 **Question:** Which player is known as "The Captain" in Washington?
 
 **Options:**
+
 - Alexander Ovechkin
 - John Carlson
 - T.J. Oshie
@@ -101,9 +113,11 @@ totalQuestions: 8
 ---
 
 ## Question 7
+
 **Question:** Who was the first player to score 70 goals in a season since the 1990s?
 
 **Options:**
+
 - Alexander Ovechkin
 - Auston Matthews
 - Connor McDavid
@@ -116,9 +130,11 @@ totalQuestions: 8
 ---
 
 ## Question 8
+
 **Question:** Which defenseman won the Norris Trophy in 2023?
 
 **Options:**
+
 - Cale Makar
 - Victor Hedman
 - Adam Fox

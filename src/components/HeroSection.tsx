@@ -57,18 +57,6 @@ const FALLBACK_WISDOM: WisdomItem[] = [
     musing: "Hard work beats talent when talent doesn't work hard",
     from_the_box: 'Dedication and effort are the foundations of success.',
   },
-  {
-    id: '6',
-    title: 'Stanley Cup',
-    musing: 'The Stanley Cup weighs 34.5 pounds',
-    from_the_box: 'Lifting the Cup is a testament to a season of dedication.',
-  },
-  {
-    id: '7',
-    title: 'Unique Journey',
-    musing: 'Your hockey journey is unique and valuable',
-    from_the_box: 'Every player brings something special to the game.',
-  },
 ];
 
 export function HeroSection() {
@@ -113,14 +101,14 @@ export function HeroSection() {
         throw new Error('Invalid response: No wisdom available');
       }
 
-      // Randomly select 7 items from the fetched results for variety
+      // Randomly select 5 items from the fetched results for variety
       // Use Fisher-Yates shuffle for better randomization
       const shuffled = [...data.data];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      const selectedWisdom = shuffled.slice(0, 7);
+      const selectedWisdom = shuffled.slice(0, 5);
 
       // Log for debugging
       const selectedIds = selectedWisdom.map((w) => w.id).join(', ');
@@ -227,58 +215,62 @@ export function HeroSection() {
             {/* Funnel-Shaped Explanation */}
             <div className="text-base md:text-lg text-[#a0aec0] leading-relaxed">
               <p>
-                We launched 🏒 Onlyhockey as fans for fans to share 📊 the good
-                stuff they discover on this site. Send motivational 🔥 quotes
-                from legendary players and epic coaches, challenge yourself and
-                your friends with hockey 🧠 trivia games, support people you
-                care about with H.U.G.s 💙. Hang out with fans who truly get it,
-                who know, love, play the game and celebrate the moments that
-                matter, and discover 🔍 what makes our hockey community so 🏆
-                special. Whether you&apos;re here for the stories, the stats, or
-                the pure joy of the game, you belong here. 🏠✨
+                We launched Onlyhockey as a tribute to the great Game of Hockey.
+                Here, you can share motivational 🔥 quotes from legendary
+                players and epic coaches. You can challenge yourself and your
+                friends with hockey 🧠 trivia games. You can support people you
+                care about with H.U.G.s 💙. You can be among fans who truly get
+                it, who know, love, play the game. Celebrate historic moments
+                that matter, and discover 🔍 what makes our hockey community so
+                🏆 special. Whether you&apos;re here for the stories, the stats,
+                or the pure joy of the game, you belong here. 🏠✨
               </p>
             </div>
           </div>
 
           {/* Right Column - Wisdom Card */}
           <div className="relative z-20">
-            <div className="bg-[#16213e] rounded-2xl p-8 shadow-2xl border border-[#2d3748] flex flex-col">
+            <div className="bg-[#16213e] rounded-2xl shadow-2xl border border-[#2d3748] flex flex-col overflow-hidden">
               {/* Header with Title and Refresh Button */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center">
-                  <span className="text-3xl mr-3">{WISDOM_EMOJI}</span>
-                  <div>
-                    <h3 className="text-lg font-bold text-white">
-                      Get in the Game
-                    </h3>
-                    <p className="text-sm text-[#a0aec0]">Hockey Essentials</p>
+              <div className="bg-[#1e2a4a] px-8 pt-8 pb-4 border-b border-[#2d3748]">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <span className="text-3xl mr-3">{WISDOM_EMOJI}</span>
+                    <div>
+                      <h3 className="text-lg font-bold text-white">
+                        Hockey Wisdom
+                      </h3>
+                      <p className="text-sm text-[#a0aec0]">
+                        Penalty Box Philosopher&apos;s Hockey Essentials
+                      </p>
+                    </div>
                   </div>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      refreshContent();
+                    }}
+                    disabled={loading}
+                    className="bg-[#4cc9f0]/20 hover:bg-[#4cc9f0]/30 text-[#4cc9f0] p-2 rounded-full transition-all duration-300 hover:scale-110 flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label="Load new content"
+                    title="🎲 Show Me More"
+                    type="button"
+                  >
+                    🎲
+                  </button>
                 </div>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    refreshContent();
-                  }}
-                  disabled={loading}
-                  className="bg-[#4cc9f0]/20 hover:bg-[#4cc9f0]/30 text-[#4cc9f0] p-2 rounded-full transition-all duration-300 hover:scale-110 flex-shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Load new content"
-                  title="🎲 Show Me More"
-                  type="button"
-                >
-                  🎲
-                </button>
+
+                {/* Error State */}
+                {error && (
+                  <div className="mt-4 bg-red-900/20 border border-red-500/30 rounded-lg p-2">
+                    <p className="text-red-400 text-xs">⚠️ {error}</p>
+                  </div>
+                )}
               </div>
 
-              {/* Error State */}
-              {error && (
-                <div className="mb-4 bg-red-900/20 border border-red-500/30 rounded-lg p-2">
-                  <p className="text-red-400 text-xs">⚠️ {error}</p>
-                </div>
-              )}
-
               {/* Wisdom Messages List */}
-              <div>
+              <div className="p-8">
                 {loading && wisdom.length === 0 ? (
                   <div className="flex items-center justify-center py-8">
                     <div className="text-center">
@@ -293,15 +285,21 @@ export function HeroSection() {
                     role="list"
                     className="divide-y divide-[#2d3748] space-y-0"
                   >
-                    {wisdom.map((item) => (
+                    {wisdom.map((item, index) => (
                       <li
                         key={item.id}
                         className="py-4 transition-all duration-300 hover:bg-[#1e2a4a] flex items-start justify-between"
                       >
-                        {/* Left side: Content */}
-                        <div className="flex-1 min-w-0">
-                          <div className="text-white text-sm font-medium leading-tight text-left">
-                            {item.from_the_box || item.musing}
+                        {/* Left side: Number Badge + Content */}
+                        <div className="flex items-start space-x-4 flex-1 min-w-0">
+                          {/* Cue Ball Style Number Badge */}
+                          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white/90 text-[#0a0e1a] flex items-center justify-center font-bold text-lg shadow-md border-2 border-[#4cc9f0]/30">
+                            {index + 1}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-white text-sm font-medium leading-tight text-left">
+                              {item.from_the_box || item.musing}
+                            </div>
                           </div>
                         </div>
 

@@ -17,20 +17,32 @@ export default function SiteSettingsPage() {
 
           {/* Settings Sections */}
           <div className="space-y-12">
-            
             {/* Display & Theme */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Display & Theme</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Display & Theme
+              </h2>
               <div className="space-y-6">
-                
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Dark Mode</h3>
-                    <p className="text-[#a0aec0] text-sm">Use dark theme for better viewing experience</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Dark Mode
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Use dark theme for better viewing experience
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="dark-mode" className="sr-only" defaultChecked />
-                    <label htmlFor="dark-mode" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="dark-mode"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="dark-mode"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -41,12 +53,24 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Animations</h3>
-                    <p className="text-[#a0aec0] text-sm">Enable hover effects and smooth transitions</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Animations
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Enable hover effects and smooth transitions
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="animations" className="sr-only" defaultChecked />
-                    <label htmlFor="animations" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="animations"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="animations"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -57,12 +81,23 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Large Text</h3>
-                    <p className="text-[#a0aec0] text-sm">Increase font size for better readability</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Large Text
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Increase font size for better readability
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="large-text" className="sr-only" />
-                    <label htmlFor="large-text" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="large-text"
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="large-text"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-gray-600 rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 left-1 transition-transform"></div>
@@ -75,17 +110,30 @@ export default function SiteSettingsPage() {
 
             {/* Notifications */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Notifications</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Notifications
+              </h2>
               <div className="space-y-6">
-                
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Email Notifications</h3>
-                    <p className="text-[#a0aec0] text-sm">Receive updates about new hockey content</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Email Notifications
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Receive updates about new hockey content
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="email-notifications" className="sr-only" defaultChecked />
-                    <label htmlFor="email-notifications" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="email-notifications"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="email-notifications"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -96,12 +144,23 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Weekly Newsletter</h3>
-                    <p className="text-[#a0aec0] text-sm">Hockey tips, trivia, and crew updates</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Weekly Newsletter
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Hockey tips, trivia, and crew updates
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="newsletter" className="sr-only" />
-                    <label htmlFor="newsletter" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="newsletter"
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="newsletter"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-gray-600 rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 left-1 transition-transform"></div>
@@ -112,12 +171,23 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Browser Notifications</h3>
-                    <p className="text-[#a0aec0] text-sm">Get notified about new posts and updates</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Browser Notifications
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Get notified about new posts and updates
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="browser-notifications" className="sr-only" />
-                    <label htmlFor="browser-notifications" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="browser-notifications"
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="browser-notifications"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-gray-600 rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 left-1 transition-transform"></div>
@@ -130,17 +200,30 @@ export default function SiteSettingsPage() {
 
             {/* Content Preferences */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Content Preferences</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Content Preferences
+              </h2>
               <div className="space-y-6">
-                
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Show Trivia Content</h3>
-                    <p className="text-[#a0aec0] text-sm">Display hockey trivia and brain training content</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Show Trivia Content
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Display hockey trivia and brain training content
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="show-trivia" className="sr-only" defaultChecked />
-                    <label htmlFor="show-trivia" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="show-trivia"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="show-trivia"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -151,12 +234,24 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Show Motivational Content</h3>
-                    <p className="text-[#a0aec0] text-sm">Display motivational quotes and coaching tips</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Show Motivational Content
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Display motivational quotes and coaching tips
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="show-motivational" className="sr-only" defaultChecked />
-                    <label htmlFor="show-motivational" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="show-motivational"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="show-motivational"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -167,12 +262,24 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Show Statistics</h3>
-                    <p className="text-[#a0aec0] text-sm">Display hockey stats and analytics content</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Show Statistics
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Display hockey stats and analytics content
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="show-stats" className="sr-only" defaultChecked />
-                    <label htmlFor="show-stats" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="show-stats"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="show-stats"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -185,17 +292,30 @@ export default function SiteSettingsPage() {
 
             {/* Privacy & Data */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Privacy & Data</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Privacy & Data
+              </h2>
               <div className="space-y-6">
-                
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Analytics Data</h3>
-                    <p className="text-[#a0aec0] text-sm">Help improve the site by sharing usage data</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Analytics Data
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Help improve the site by sharing usage data
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="analytics" className="sr-only" defaultChecked />
-                    <label htmlFor="analytics" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="analytics"
+                      className="sr-only"
+                      defaultChecked
+                    />
+                    <label
+                      htmlFor="analytics"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-[#4cc9f0] rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 right-1 transition-transform"></div>
@@ -206,12 +326,23 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Marketing Cookies</h3>
-                    <p className="text-[#a0aec0] text-sm">Allow personalized content and advertisements</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Marketing Cookies
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Allow personalized content and advertisements
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="marketing-cookies" className="sr-only" />
-                    <label htmlFor="marketing-cookies" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="marketing-cookies"
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="marketing-cookies"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-gray-600 rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 left-1 transition-transform"></div>
@@ -222,12 +353,23 @@ export default function SiteSettingsPage() {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-1">Public Profile</h3>
-                    <p className="text-[#a0aec0] text-sm">Make your stats and achievements visible to others</p>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      Public Profile
+                    </h3>
+                    <p className="text-[#a0aec0] text-sm">
+                      Make your stats and achievements visible to others
+                    </p>
                   </div>
                   <div className="relative">
-                    <input type="checkbox" id="public-profile" className="sr-only" />
-                    <label htmlFor="public-profile" className="flex items-center cursor-pointer">
+                    <input
+                      type="checkbox"
+                      id="public-profile"
+                      className="sr-only"
+                    />
+                    <label
+                      htmlFor="public-profile"
+                      className="flex items-center cursor-pointer"
+                    >
                       <div className="relative">
                         <div className="w-12 h-6 bg-gray-600 rounded-full shadow-inner"></div>
                         <div className="absolute w-4 h-4 bg-white rounded-full shadow top-1 left-1 transition-transform"></div>
@@ -240,11 +382,14 @@ export default function SiteSettingsPage() {
 
             {/* Personalization */}
             <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Personalization</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Personalization
+              </h2>
               <div className="space-y-6">
-                
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Favorite Team</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    Favorite Team
+                  </h3>
                   <select className="w-full md:w-64 bg-[#1a1f2e] border border-[#4cc9f0]/20 rounded-lg px-4 py-2 text-white focus:border-[#4cc9f0] focus:outline-none">
                     <option value="">Select your favorite NHL team</option>
                     <option value="bos">Boston Bruins</option>
@@ -259,7 +404,9 @@ export default function SiteSettingsPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Default Landing Page</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    Default Landing Page
+                  </h3>
                   <select className="w-full md:w-64 bg-[#1a1f2e] border border-[#4cc9f0]/20 rounded-lg px-4 py-2 text-white focus:border-[#4cc9f0] focus:outline-none">
                     <option value="home">Home</option>
                     <option value="trivia-zone">Trivia Zone</option>
@@ -270,7 +417,9 @@ export default function SiteSettingsPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Trivia Difficulty</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    Trivia Difficulty
+                  </h3>
                   <select className="w-full md:w-64 bg-[#1a1f2e] border border-[#4cc9f0]/20 rounded-lg px-4 py-2 text-white focus:border-[#4cc9f0] focus:outline-none">
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>

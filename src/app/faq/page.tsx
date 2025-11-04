@@ -11,64 +11,92 @@ export default function FAQPage() {
               FAQ
             </h1>
             <p className="text-lg text-[#a0aec0]">
-              Everything you need to know about OnlyHockey.com and our hockey content.
+              Everything you need to know about OnlyHockey.com and our hockey
+              content.
             </p>
           </div>
 
           {/* FAQ Content - Simple List */}
           <div className="space-y-8">
-            
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">What is OnlyHockey.com?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                What is OnlyHockey.com?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com is hosts shareable hockey content including factoids and trivia, motivational quotes, and stats.
-              </p>
-            </div>
-
-
-
-            <div>
-              <h2 className="text-xl font-bold text-white mb-3">How can I share content from the site?</h2>
-              <p className="text-[#a0aec0] leading-relaxed">
-                Most of our content includes built-in sharing features. Look for share icons on individual stories and posts that allow you to share via your device&apos;s native sharing options or copy content to your clipboard.
+                OnlyHockey.com is hosts shareable hockey content including
+                factoids and trivia, motivational quotes, and stats.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">Is the content free to use?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                How can I share content from the site?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                You may share our content on social media with proper attribution and use small excerpts for educational or commentary purposes. For commercial use or large portions of content, please contact us for licensing information.
+                Most of our content includes built-in sharing features. Look for
+                share icons on individual stories and posts that allow you to
+                share via your device&apos;s native sharing options or copy
+                content to your clipboard.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">How do I contact support?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                Is the content free to use?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                You can reach us at team@onlyhockey.com for general inquiries. Our business hours are Monday-Friday, 9 AM - 5 PM PST.
+                You may share our content on social media with proper
+                attribution and use small excerpts for educational or commentary
+                purposes. For commercial use or large portions of content,
+                please contact us for licensing information.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">What&apos;s the history behind OnlyHockey.com?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                How do I contact support?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                OnlyHockey.com began in the mid-2000s as an e-commerce platform. We were pioneers in publishing comprehensive hockey stick pattern databases and providing &quot;pro-returns&quot; - actual professional equipment used by the pros. Today, we focus on creating engaging hockey content for fans.
+                You can reach us at team@onlyhockey.com for general inquiries.
+                Our business hours are Monday-Friday, 9 AM - 5 PM PST.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">How often is new content added?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                What&apos;s the history behind OnlyHockey.com?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                We regularly update our content with new hockey stories, trivia, and motivational content. Follow us to stay updated with the latest additions from our crew members.
+                OnlyHockey.com began in the mid-2000s as an e-commerce platform.
+                We were pioneers in publishing comprehensive hockey stick
+                pattern databases and providing &quot;pro-returns&quot; - actual
+                professional equipment used by the pros. Today, we focus on
+                creating engaging hockey content for fans.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-white mb-3">Can I suggest content ideas?</h2>
+              <h2 className="text-xl font-bold text-white mb-3">
+                How often is new content added?
+              </h2>
               <p className="text-[#a0aec0] leading-relaxed">
-                Absolutely! We love hearing from our community. Send your content suggestions, story ideas, or feedback to team@onlyhockey.com and we&apos;ll consider them for future content.
+                We regularly update our content with new hockey stories, trivia,
+                and motivational content. Follow us to stay updated with the
+                latest additions from our crew members.
               </p>
             </div>
 
+            <div>
+              <h2 className="text-xl font-bold text-white mb-3">
+                Can I suggest content ideas?
+              </h2>
+              <p className="text-[#a0aec0] leading-relaxed">
+                Absolutely! We love hearing from our community. Send your
+                content suggestions, story ideas, or feedback to
+                team@onlyhockey.com and we&apos;ll consider them for future
+                content.
+              </p>
+            </div>
           </div>
         </div>
       </div>

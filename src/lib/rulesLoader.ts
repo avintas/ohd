@@ -14,7 +14,7 @@ export interface RuleMessage {
 
 export function getAllRuleMessages(): RuleMessage[] {
   const rulesDirectory = path.join(process.cwd(), 'content_rules');
-  
+
   if (!fs.existsSync(rulesDirectory)) {
     return [];
   }
@@ -55,7 +55,8 @@ export function getAllRuleMessages(): RuleMessage[] {
     messageContent = lines.slice(contentStartIndex).join('\n').trim();
 
     // Extract title from the first line (# Title)
-    const title = lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
+    const title =
+      lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
 
     ruleMessages.push({
       id: filename.replace('.md', ''),
@@ -64,7 +65,7 @@ export function getAllRuleMessages(): RuleMessage[] {
       category,
       shareTitle,
       content: messageContent,
-      filename
+      filename,
     });
   }
 
@@ -73,5 +74,5 @@ export function getAllRuleMessages(): RuleMessage[] {
 
 export function getRuleMessage(id: string): RuleMessage | null {
   const ruleMessages = getAllRuleMessages();
-  return ruleMessages.find(rule => rule.id === id) || null;
+  return ruleMessages.find((rule) => rule.id === id) || null;
 }

@@ -1,8 +1,8 @@
 ---
-title: "Gretzky Basics"
-category: "hockey-legends"
-gameType: "quickfire"
-difficulty: "easy"
+title: 'Gretzky Basics'
+category: 'hockey-legends'
+gameType: 'quickfire'
+difficulty: 'easy'
 timeLimit: 10
 pointsPerQuestion: 10
 totalQuestions: 5
@@ -11,9 +11,11 @@ totalQuestions: 5
 # Hockey Legends: Gretzky Basics
 
 ## Question 1
+
 **Question:** Who holds the NHL record for most career assists?
 
 **Options:**
+
 - Mario Lemieux
 - Wayne Gretzky
 - Gordie Howe
@@ -26,9 +28,11 @@ totalQuestions: 5
 ---
 
 ## Question 2
+
 **Question:** Which player is known as "The Great One"?
 
 **Options:**
+
 - Wayne Gretzky
 - Mario Lemieux
 - Gordie Howe
@@ -41,9 +45,11 @@ totalQuestions: 5
 ---
 
 ## Question 3
+
 **Question:** Who scored the most goals in a single NHL season?
 
 **Options:**
+
 - Wayne Gretzky
 - Mario Lemieux
 - Mike Bossy
@@ -56,9 +62,11 @@ totalQuestions: 5
 ---
 
 ## Question 4
+
 **Question:** How many Stanley Cups did Wayne Gretzky win as a player?
 
 **Options:**
+
 - 3
 - 4
 - 5
@@ -71,9 +79,11 @@ totalQuestions: 5
 ---
 
 ## Question 5
+
 **Question:** What was Gretzky's jersey number?
 
 **Options:**
+
 - 9
 - 66
 - 99

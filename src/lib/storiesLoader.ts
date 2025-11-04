@@ -39,7 +39,7 @@ export interface StoriesCurator {
 
 export function getAllStoryMessages(): StoryMessage[] {
   const storiesDirectory = path.join(process.cwd(), 'content_stories');
-  
+
   if (!fs.existsSync(storiesDirectory)) {
     return [];
   }
@@ -80,7 +80,8 @@ export function getAllStoryMessages(): StoryMessage[] {
     messageContent = lines.slice(contentStartIndex).join('\n').trim();
 
     // Extract title from the first line (# Title)
-    const title = lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
+    const title =
+      lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
 
     storyMessages.push({
       id: filename.replace('.md', ''),
@@ -89,7 +90,7 @@ export function getAllStoryMessages(): StoryMessage[] {
       category,
       shareTitle,
       content: messageContent,
-      filename
+      filename,
     });
   }
 
@@ -98,18 +99,22 @@ export function getAllStoryMessages(): StoryMessage[] {
 
 export function getStoryMessage(id: string): StoryMessage | null {
   const storyMessages = getAllStoryMessages();
-  return storyMessages.find(story => story.id === id) || null;
+  return storyMessages.find((story) => story.id === id) || null;
 }
 
 // Load the stories curator configuration
 export function loadStoriesCurator(): StoriesCurator | null {
   try {
-    const curatorPath = path.join(process.cwd(), 'content_stories', 'stories-curator.json');
-    
+    const curatorPath = path.join(
+      process.cwd(),
+      'content_stories',
+      'stories-curator.json'
+    );
+
     if (!fs.existsSync(curatorPath)) {
       return null;
     }
-    
+
     const curatorContent = fs.readFileSync(curatorPath, 'utf8');
     return JSON.parse(curatorContent) as StoriesCurator;
   } catch (error) {
@@ -119,30 +124,42 @@ export function loadStoriesCurator(): StoriesCurator | null {
 }
 
 // Determine the current layout based on date and schedule
-export function determineCurrentLayout(curator: StoriesCurator | null): StoriesLayout | null {
+export function determineCurrentLayout(
+  curator: StoriesCurator | null
+): StoriesLayout | null {
   if (!curator) return null;
-  
+
   const now = new Date();
   const today = now.toISOString().split('T')[0]; // YYYY-MM-DD format
-  const dayName = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
-  
+  const dayName = now
+    .toLocaleDateString('en-US', { weekday: 'long' })
+    .toLowerCase();
+
   // Check for special dates first
   if (curator.schedule['special-dates'][today]) {
     const specialLayoutName = curator.schedule['special-dates'][today];
-    return curator.layouts[specialLayoutName] || curator.layouts[curator.fallback];
+    return (
+      curator.layouts[specialLayoutName] || curator.layouts[curator.fallback]
+    );
   }
-  
+
   // Check if currentLayout is set to a specific layout (not 'auto')
-  if (curator.currentLayout !== 'auto' && curator.layouts[curator.currentLayout]) {
+  if (
+    curator.currentLayout !== 'auto' &&
+    curator.layouts[curator.currentLayout]
+  ) {
     return curator.layouts[curator.currentLayout];
   }
-  
+
   // Use day-based schedule
-  const dayLayoutName = curator.schedule[dayName as keyof Omit<typeof curator.schedule, 'special-dates'>];
+  const dayLayoutName =
+    curator.schedule[
+      dayName as keyof Omit<typeof curator.schedule, 'special-dates'>
+    ];
   if (dayLayoutName && curator.layouts[dayLayoutName]) {
     return curator.layouts[dayLayoutName];
   }
-  
+
   // Fallback to default
   return curator.layouts[curator.fallback] || null;
 }
@@ -152,32 +169,36 @@ export function getTodaysStories(): StoryMessage[] {
   const allStories = getAllStoryMessages();
   const curator = loadStoriesCurator();
   const layout = determineCurrentLayout(curator);
-  
+
   if (!layout) {
     // No curator or layout found, return all stories
     return allStories;
   }
-  
+
   // Filter stories based on the current layout
   const curatedStories = layout.stories
-    .map(storyId => allStories.find(story => story.id === storyId))
+    .map((storyId) => allStories.find((story) => story.id === storyId))
     .filter((story): story is StoryMessage => story !== undefined);
-  
+
   // Respect maxStories limit
   return curatedStories.slice(0, layout.maxStories);
 }
 
 // Get current layout info for display
-export function getCurrentLayoutInfo(): { name: string; description: string; theme: string } | null {
+export function getCurrentLayoutInfo(): {
+  name: string;
+  description: string;
+  theme: string;
+} | null {
   const curator = loadStoriesCurator();
   const layout = determineCurrentLayout(curator);
-  
+
   if (!layout) return null;
-  
+
   return {
     name: layout.name,
     description: layout.description,
-    theme: layout.theme
+    theme: layout.theme,
   };
 }
 

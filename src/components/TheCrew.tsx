@@ -4,18 +4,22 @@ import Link from 'next/link';
 
 export function TheCrew() {
   return (
-<section id="crew-section" className="py-16 md:py-20 px-4 md:px-6 bg-[#0a0e1a]">
+    <section
+      id="crew-section"
+      className="py-16 md:py-20 px-4 md:px-6 bg-[#0a0e1a]"
+    >
       <div className="max-w-7xl mx-auto text-center">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             The Crew
           </h2>
           <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-          Meet your hockey guides! Our crew of friendly experts is here to help you learn, 
-          play safer, and have more fun with the greatest game on ice.
+            Meet your hockey guides! Our crew of friendly experts is here to
+            help you learn, play safer, and have more fun with the greatest game
+            on ice.
           </p>
         </div>
-        
+
         {/* Crew Avatar Grid */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">
           {/* Samantha - Trivia Master */}
@@ -29,8 +33,12 @@ export function TheCrew() {
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Samantha</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Trivia Master</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Samantha
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Trivia Master
+            </p>
           </Link>
 
           {/* Iron Mike - Coach */}
@@ -44,8 +52,12 @@ export function TheCrew() {
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Iron Mike</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Coach</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Iron Mike
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Coach
+            </p>
           </Link>
 
           {/* Coach Fuel - Nutritionist */}
@@ -59,8 +71,12 @@ export function TheCrew() {
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Coach Fuel</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Nutritionist</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Coach Fuel
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Nutritionist
+            </p>
           </Link>
 
           {/* Don The Mic - Hockey Storyteller */}
@@ -74,8 +90,12 @@ export function TheCrew() {
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Don The Mic</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Hockey Storyteller</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Don The Mic
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Hockey Storyteller
+            </p>
           </Link>
 
           {/* Referee Riley - Rules Expert */}
@@ -89,8 +109,12 @@ export function TheCrew() {
                 className="w-16 h-16 md:w-25 md:h-25 rounded-full mx-auto border-3 border-[#4cc9f0] group-hover:border-[#fbbf24] transition-colors duration-300 cursor-pointer"
               />
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Referee Riley</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Rules Expert</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Referee Riley
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Rules Expert
+            </p>
           </Link>
 
           {/* Captain Heart - Community Leader */}
@@ -106,10 +130,13 @@ export function TheCrew() {
                 />
               </div>
             </div>
-            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">Captain Heart</h3>
-            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">Community Leader</p>
+            <h3 className="text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#4cc9f0] transition-colors duration-300">
+              Captain Heart
+            </h3>
+            <p className="text-xs text-[#a0aec0] group-hover:text-[#fbbf24] transition-colors duration-300">
+              Community Leader
+            </p>
           </Link>
-
         </div>
       </div>
     </section>

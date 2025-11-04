@@ -108,25 +108,6 @@ export default function StoriesClient({ stories }: StoriesClientProps) {
                 </button>
               </div>
             </div>
-
-            {/* Right Column - Hockey Stories Video */}
-            <div className="relative z-20">
-              <div className="w-full h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                >
-                  <source
-                    src="https://nbrlopkg7zkkwadf.public.blob.vercel-storage.com/vgim-300.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
           </div>
         </div>
       </section>

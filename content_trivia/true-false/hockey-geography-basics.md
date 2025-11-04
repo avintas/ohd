@@ -1,8 +1,8 @@
 ---
-title: "Hockey Geography Basics"
-category: "hockey-geography"
-gameType: "truefalse"
-difficulty: "easy"
+title: 'Hockey Geography Basics'
+category: 'hockey-geography'
+gameType: 'truefalse'
+difficulty: 'easy'
 timeLimit: 15
 pointsPerQuestion: 5
 totalQuestions: 8
@@ -11,6 +11,7 @@ totalQuestions: 8
 # Hockey Geography: True or False
 
 ## Question 1
+
 **Statement:** The Montreal Canadiens play at the Bell Centre.
 
 **Answer:** True
@@ -20,6 +21,7 @@ totalQuestions: 8
 ---
 
 ## Question 2
+
 **Statement:** The Toronto Maple Leafs play at the Air Canada Centre.
 
 **Answer:** False
@@ -29,6 +31,7 @@ totalQuestions: 8
 ---
 
 ## Question 3
+
 **Statement:** Madison Square Garden is home to the New York Rangers.
 
 **Answer:** True
@@ -38,6 +41,7 @@ totalQuestions: 8
 ---
 
 ## Question 4
+
 **Statement:** The Boston Bruins play at TD Garden.
 
 **Answer:** True
@@ -47,6 +51,7 @@ totalQuestions: 8
 ---
 
 ## Question 5
+
 **Statement:** The Chicago Blackhawks play at the United Center.
 
 **Answer:** True
@@ -56,6 +61,7 @@ totalQuestions: 8
 ---
 
 ## Question 6
+
 **Statement:** Detroit Red Wings play at Joe Louis Arena.
 
 **Answer:** False
@@ -65,6 +71,7 @@ totalQuestions: 8
 ---
 
 ## Question 7
+
 **Statement:** Calgary is farther north than Edmonton.
 
 **Answer:** False
@@ -74,6 +81,7 @@ totalQuestions: 8
 ---
 
 ## Question 8
+
 **Statement:** There are more NHL teams in Canada than in California.
 
 **Answer:** True

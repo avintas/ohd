@@ -1,11 +1,11 @@
-import { 
-  PageLayout, 
+import {
+  PageLayout,
   HeroSection,
   FeaturesSection,
   SocialProofSection,
   FeaturedContentSection,
   TheCrew,
-  FinalWelcome
+  FinalWelcome,
 } from '@/components';
 
 export default function Home() {

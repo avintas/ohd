@@ -1,8 +1,8 @@
 ---
-title: "Original Six Basics"
-category: "original-six"
-gameType: "quickfire"
-difficulty: "medium"
+title: 'Original Six Basics'
+category: 'original-six'
+gameType: 'quickfire'
+difficulty: 'medium'
 timeLimit: 10
 pointsPerQuestion: 10
 totalQuestions: 6
@@ -11,9 +11,11 @@ totalQuestions: 6
 # Original Six: The Foundation Teams
 
 ## Question 1
+
 **Question:** Which teams made up the Original Six?
 
 **Options:**
+
 - Toronto, Montreal, Boston, New York Rangers, Detroit, Chicago
 - Toronto, Montreal, Boston, New York Rangers, Detroit, Philadelphia
 - Toronto, Montreal, Boston, New York Islanders, Detroit, Chicago
@@ -26,9 +28,11 @@ totalQuestions: 6
 ---
 
 ## Question 2
+
 **Question:** What years did the Original Six era span?
 
 **Options:**
+
 - 1940-1965
 - 1942-1967
 - 1944-1969
@@ -41,9 +45,11 @@ totalQuestions: 6
 ---
 
 ## Question 3
+
 **Question:** Which Original Six team has won the most Stanley Cups?
 
 **Options:**
+
 - Toronto Maple Leafs
 - Montreal Canadiens
 - Boston Bruins
@@ -56,9 +62,11 @@ totalQuestions: 6
 ---
 
 ## Question 4
+
 **Question:** What was the Toronto team called during the Original Six era?
 
 **Options:**
+
 - Toronto Arenas
 - Toronto St. Patricks
 - Toronto Maple Leafs
@@ -71,9 +79,11 @@ totalQuestions: 6
 ---
 
 ## Question 5
+
 **Question:** Which Original Six team plays at the oldest arena still in use?
 
 **Options:**
+
 - Boston Bruins
 - New York Rangers
 - Toronto Maple Leafs
@@ -86,9 +96,11 @@ totalQuestions: 6
 ---
 
 ## Question 6
+
 **Question:** How many teams joined the NHL in the 1967 expansion that ended the Original Six era?
 
 **Options:**
+
 - 4
 - 6
 - 8

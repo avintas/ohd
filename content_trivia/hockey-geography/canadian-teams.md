@@ -1,8 +1,8 @@
 ---
-title: "Canadian NHL Teams"
-category: "hockey-geography"
-gameType: "quickfire"
-difficulty: "easy"
+title: 'Canadian NHL Teams'
+category: 'hockey-geography'
+gameType: 'quickfire'
+difficulty: 'easy'
 timeLimit: 10
 pointsPerQuestion: 10
 totalQuestions: 7
@@ -11,9 +11,11 @@ totalQuestions: 7
 # Hockey Geography: Canadian NHL Teams
 
 ## Question 1
+
 **Question:** How many NHL teams are currently based in Canada?
 
 **Options:**
+
 - 6
 - 7
 - 8
@@ -26,9 +28,11 @@ totalQuestions: 7
 ---
 
 ## Question 2
+
 **Question:** Which Canadian city has two NHL teams?
 
 **Options:**
+
 - Toronto
 - Montreal
 - None - no Canadian city has two teams
@@ -41,9 +45,11 @@ totalQuestions: 7
 ---
 
 ## Question 3
+
 **Question:** What is the westernmost NHL team in Canada?
 
 **Options:**
+
 - Calgary Flames
 - Edmonton Oilers
 - Vancouver Canucks
@@ -56,9 +62,11 @@ totalQuestions: 7
 ---
 
 ## Question 4
+
 **Question:** Which Canadian team joined the NHL most recently?
 
 **Options:**
+
 - Ottawa Senators
 - Winnipeg Jets
 - Calgary Flames
@@ -71,9 +79,11 @@ totalQuestions: 7
 ---
 
 ## Question 5
+
 **Question:** In which province would you find the Calgary Flames?
 
 **Options:**
+
 - British Columbia
 - Alberta
 - Saskatchewan
@@ -86,9 +96,11 @@ totalQuestions: 7
 ---
 
 ## Question 6
+
 **Question:** Which Canadian team plays in the Atlantic Division?
 
 **Options:**
+
 - Montreal Canadiens
 - Toronto Maple Leafs
 - Ottawa Senators
@@ -101,9 +113,11 @@ totalQuestions: 7
 ---
 
 ## Question 7
+
 **Question:** What is the home arena of the Montreal Canadiens?
 
 **Options:**
+
 - Olympic Stadium
 - Bell Centre
 - Place des Arts

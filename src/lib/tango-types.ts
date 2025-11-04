@@ -42,3 +42,14 @@ export interface Greeting {
   greeting_text: string;
   attribution?: string;
 }
+
+export interface TriviaQuestion {
+  id: string;
+  question: string;
+  options?: string[];
+  answer?: string;
+  explanation?: string;
+  category?: string;
+  difficulty?: string;
+  points?: number;
+}

@@ -9,13 +9,15 @@ interface FuelStationClientProps {
   fuelMessages: FuelMessage[];
 }
 
-export default function FuelStationClient({ fuelMessages }: FuelStationClientProps) {
+export default function FuelStationClient({
+  fuelMessages,
+}: FuelStationClientProps) {
   const [shareMessage, setShareMessage] = useState('');
 
   const handleShare = async (content: string, title: string) => {
     const shareText = `🏒 Hockey nutrition tip from Coach Fuel - OnlyHockey.com:\n\n"${content}"\n\nFuel Station - Peak Performance Nutrition!`;
     const shareUrl = `${window.location.origin}/fuel-station`;
-    
+
     if (navigator.share) {
       try {
         await navigator.share({
@@ -58,19 +60,29 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
                   Fuel Station
                 </h1>
                 <div className="space-y-4 text-lg md:text-xl text-[#a0aec0] max-w-lg">
-                  <p>Power your performance with expert nutrition guidance! Coach Fuel delivers the nutritional strategies that fuel championship-level hockey players.</p>
-                  <p>From pre-game meals to post-workout recovery, learn what to eat, when to eat it, and why proper nutrition is your secret weapon on the ice.</p>
+                  <p>
+                    Power your performance with expert nutrition guidance! Coach
+                    Fuel delivers the nutritional strategies that fuel
+                    championship-level hockey players.
+                  </p>
+                  <p>
+                    From pre-game meals to post-workout recovery, learn what to
+                    eat, when to eat it, and why proper nutrition is your secret
+                    weapon on the ice.
+                  </p>
                   <p>Ready to fuel like a champion?</p>
                 </div>
               </header>
-              
+
               <div className="pt-4 flex justify-center lg:justify-start">
-                <button 
+                <button
                   onClick={() => {
-                    document.getElementById('nutrition-section')?.scrollIntoView({ 
-                      behavior: 'smooth',
-                      block: 'start'
-                    });
+                    document
+                      .getElementById('nutrition-section')
+                      ?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
                   }}
                   className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
@@ -91,8 +103,12 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
                   priority
                 />
                 <div className="mt-4">
-                  <h3 className="text-xl md:text-2xl font-bold text-white">Coach Fuel</h3>
-                  <p className="text-[#4cc9f0] font-semibold">Nutrition Expert</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">
+                    Coach Fuel
+                  </h3>
+                  <p className="text-[#4cc9f0] font-semibold">
+                    Nutrition Expert
+                  </p>
                 </div>
               </div>
             </div>
@@ -101,23 +117,32 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
       </div>
 
       {/* Nutrition Tips Section */}
-      <div id="nutrition-section" className="py-16 px-4 md:px-6 bg-[#16213e]/30">
+      <div
+        id="nutrition-section"
+        className="py-16 px-4 md:px-6 bg-[#16213e]/30"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Performance Nutrition Guide
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Expert nutrition strategies to optimize your energy, recovery, and on-ice performance
+              Expert nutrition strategies to optimize your energy, recovery, and
+              on-ice performance
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {fuelMessages.map((fuel) => (
-              <div key={fuel.id} className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative">
+              <div
+                key={fuel.id}
+                className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 pt-8 pb-20 transition-all duration-300 hover:scale-105 cursor-pointer group relative"
+              >
                 <div className="text-center space-y-2">
                   <div className="text-3xl mb-2">{fuel.emoji}</div>
-                  <h3 className="text-base font-bold text-white mb-2">{fuel.title}</h3>
+                  <h3 className="text-base font-bold text-white mb-2">
+                    {fuel.title}
+                  </h3>
                   <p className="text-[#a0aec0] text-xs leading-snug">
                     {fuel.content}
                   </p>
@@ -134,7 +159,6 @@ export default function FuelStationClient({ fuelMessages }: FuelStationClientPro
           </div>
         </div>
       </div>
-
     </PageLayout>
   );
 }

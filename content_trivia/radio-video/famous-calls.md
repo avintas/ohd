@@ -1,8 +1,8 @@
 ---
-title: "Famous Hockey Calls"
-category: "media"
-gameType: "picturequiz"
-difficulty: "hard"
+title: 'Famous Hockey Calls'
+category: 'media'
+gameType: 'picturequiz'
+difficulty: 'hard'
 timeLimit: 240
 pointsPerQuestion: 20
 totalQuestions: 5
@@ -11,10 +11,12 @@ totalQuestions: 5
 # Radio/Video: Famous Hockey Calls
 
 ## Question 1
+
 **Audio/Context:** "Do you believe in miracles? YES!"
 **Question:** Which broadcaster made this famous call during the 1980 Olympics?
 
 **Options:**
+
 - Bob Cole
 - Al Michaels
 - Don Cherry
@@ -27,10 +29,12 @@ totalQuestions: 5
 ---
 
 ## Question 2
+
 **Audio/Context:** "He shoots, he scores! Henderson has scored for Canada!"
 **Question:** This call was made during which historic hockey series?
 
 **Options:**
+
 - 1972 Summit Series
 - 1976 Canada Cup
 - 1987 Canada Cup
@@ -43,10 +47,12 @@ totalQuestions: 5
 ---
 
 ## Question 3
+
 **Audio/Context:** "Save by Roy! Save by Roy! Save by Roy!"
 **Question:** Which broadcaster was known for his passionate calls of Patrick Roy's saves?
 
 **Options:**
+
 - Danny Gallivan
 - Bob Cole
 - Rick Jeanneret
@@ -59,10 +65,12 @@ totalQuestions: 5
 ---
 
 ## Question 4
+
 **Audio/Context:** "May Day! May Day! May Day!"
 **Question:** This famous call was made after which player scored?
 
 **Options:**
+
 - Brad May
 - Mike Modano
 - Brad Marchand
@@ -75,10 +83,12 @@ totalQuestions: 5
 ---
 
 ## Question 5
+
 **Audio/Context:** "Oh baby!"
 **Question:** Which broadcaster was famous for this signature catchphrase?
 
 **Options:**
+
 - Mike Emrick
 - Gary Thorne
 - John Davidson

@@ -20,58 +20,86 @@ interface GameParams {
 }
 
 // Sample question sets for different game types and categories
-const QUESTION_SETS: Record<string, Record<string, Record<string, TriviaQuestion[]>>> = {
+const QUESTION_SETS: Record<
+  string,
+  Record<string, Record<string, TriviaQuestion[]>>
+> = {
   quickfire: {
     legends: {
       '1': [
         {
           id: 1,
-          question: "Who holds the NHL record for most career assists?",
-          options: ["Mario Lemieux", "Wayne Gretzky", "Gordie Howe", "Mark Messier"],
-          correctAnswer: "Wayne Gretzky",
-          explanation: "Gretzky has 1,963 career assists - more than any other player has total points!",
-          points: 10
+          question: 'Who holds the NHL record for most career assists?',
+          options: [
+            'Mario Lemieux',
+            'Wayne Gretzky',
+            'Gordie Howe',
+            'Mark Messier',
+          ],
+          correctAnswer: 'Wayne Gretzky',
+          explanation:
+            'Gretzky has 1,963 career assists - more than any other player has total points!',
+          points: 10,
         },
         {
           id: 2,
-          question: "Which player is known as &apos;The Great One&apos;?",
-          options: ["Wayne Gretzky", "Mario Lemieux", "Gordie Howe", "Maurice Richard"],
-          correctAnswer: "Wayne Gretzky",
-          explanation: "Wayne Gretzky earned this nickname through his incredible dominance of the sport.",
-          points: 10
+          question: 'Which player is known as &apos;The Great One&apos;?',
+          options: [
+            'Wayne Gretzky',
+            'Mario Lemieux',
+            'Gordie Howe',
+            'Maurice Richard',
+          ],
+          correctAnswer: 'Wayne Gretzky',
+          explanation:
+            'Wayne Gretzky earned this nickname through his incredible dominance of the sport.',
+          points: 10,
         },
         {
           id: 3,
-          question: "Who scored the most goals in a single NHL season?",
-          options: ["Wayne Gretzky", "Mario Lemieux", "Mike Bossy", "Brett Hull"],
-          correctAnswer: "Wayne Gretzky",
-          explanation: "Gretzky scored 92 goals in the 1981-82 season, a record that still stands.",
-          points: 10
-        }
-      ]
-    }
+          question: 'Who scored the most goals in a single NHL season?',
+          options: [
+            'Wayne Gretzky',
+            'Mario Lemieux',
+            'Mike Bossy',
+            'Brett Hull',
+          ],
+          correctAnswer: 'Wayne Gretzky',
+          explanation:
+            'Gretzky scored 92 goals in the 1981-82 season, a record that still stands.',
+          points: 10,
+        },
+      ],
+    },
   },
   truefalse: {
     geography: {
       '1': [
         {
           id: 1,
-          question: "The Montreal Canadiens play at the Bell Centre.",
-          options: ["True", "False"],
-          correctAnswer: "True",
-          explanation: "The Bell Centre has been home to the Canadiens since 1996.",
-          points: 5
-        }
-      ]
-    }
-  }
+          question: 'The Montreal Canadiens play at the Bell Centre.',
+          options: ['True', 'False'],
+          correctAnswer: 'True',
+          explanation:
+            'The Bell Centre has been home to the Canadiens since 1996.',
+          points: 5,
+        },
+      ],
+    },
+  },
 };
 
-export default function TriviaGame({ params }: { params: Promise<GameParams> }) {
+export default function TriviaGame({
+  params,
+}: {
+  params: Promise<GameParams>;
+}) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10);
-  const [gameState, setGameState] = useState<'ready' | 'playing' | 'finished'>('ready');
+  const [gameState, setGameState] = useState<'ready' | 'playing' | 'finished'>(
+    'ready'
+  );
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [showResult, setShowResult] = useState(false);
   const [answers, setAnswers] = useState<boolean[]>([]);
@@ -88,66 +116,83 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
   useEffect(() => {
     async function loadQuestions() {
       if (!gameParams) return;
-      
+
       setIsLoading(true);
-      
+
       try {
         // Try to load from markdown files via API
-        const response = await fetch(`/api/trivia/${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
-        
+        const response = await fetch(
+          `/api/trivia/${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`
+        );
+
         if (response.ok) {
           const triviaSet = await response.json();
-          console.log(`✅ Loaded ${triviaSet.questions.length} questions from markdown for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+          console.log(
+            `✅ Loaded ${triviaSet.questions.length} questions from markdown for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`
+          );
           setQuestions(triviaSet.questions);
         } else {
           // Fallback to hardcoded questions
-          const hardcodedQuestions = QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [];
+          const hardcodedQuestions =
+            QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[
+              gameParams.challengeId
+            ] || [];
           if (hardcodedQuestions.length > 0) {
-            console.log(`⚠️ Using ${hardcodedQuestions.length} hardcoded questions for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+            console.log(
+              `⚠️ Using ${hardcodedQuestions.length} hardcoded questions for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`
+            );
           } else {
-            console.log(`❌ No questions found for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`);
+            console.log(
+              `❌ No questions found for ${gameParams.gameType}/${gameParams.category}/${gameParams.challengeId}`
+            );
           }
           setQuestions(hardcodedQuestions);
         }
       } catch (error) {
         console.error('Error loading questions:', error);
         // Fallback to hardcoded questions
-        const hardcodedQuestions = QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[gameParams.challengeId] || [];
+        const hardcodedQuestions =
+          QUESTION_SETS[gameParams.gameType]?.[gameParams.category]?.[
+            gameParams.challengeId
+          ] || [];
         setQuestions(hardcodedQuestions);
       }
-      
+
       setIsLoading(false);
     }
-    
+
     loadQuestions();
   }, [gameParams]);
-  
-  const handleAnswer = useCallback((answer: string) => {
-    if (showResult) return;
-    
-    setSelectedAnswer(answer);
-    setShowResult(true);
-    
-    const isCorrect = answer === questions[currentQuestion]?.correctAnswer;
-    const newAnswers = [...answers, isCorrect];
-    setAnswers(newAnswers);
-    
-    if (isCorrect) {
-      setScore(score + questions[currentQuestion].points);
-    }
 
-    // Move to next question after 2 seconds
-    setTimeout(() => {
-      if (currentQuestion + 1 >= questions.length) {
-        setGameState('finished');
-      } else {
-        setCurrentQuestion(currentQuestion + 1);
-        setTimeLeft(gameParams?.gameType === 'quickfire' ? 10 : 15);
-        setSelectedAnswer(null);
-        setShowResult(false);
+  const handleAnswer = useCallback(
+    (answer: string) => {
+      if (showResult) return;
+
+      setSelectedAnswer(answer);
+      setShowResult(true);
+
+      const isCorrect = answer === questions[currentQuestion]?.correctAnswer;
+      const newAnswers = [...answers, isCorrect];
+      setAnswers(newAnswers);
+
+      if (isCorrect) {
+        setScore(score + questions[currentQuestion].points);
       }
-    }, 2000);
-  }, [showResult, questions, currentQuestion, answers, score, gameParams]);
+
+      // Move to next question after 2 seconds
+      setTimeout(() => {
+        if (currentQuestion + 1 >= questions.length) {
+          setGameState('finished');
+        } else {
+          setCurrentQuestion(currentQuestion + 1);
+          setTimeLeft(gameParams?.gameType === 'quickfire' ? 10 : 15);
+          setSelectedAnswer(null);
+          setShowResult(false);
+        }
+      }, 2000);
+    },
+    [showResult, questions, currentQuestion, answers, score, gameParams]
+  );
 
   // Timer logic
   useEffect(() => {
@@ -181,10 +226,10 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
 
   const shareTrivia = () => {
     if (!gameParams) return;
-    
+
     const url = window.location.href;
     const text = `Check out this ${gameParams.gameType} hockey trivia challenge! Can you beat my score?`;
-    
+
     if (navigator.share) {
       navigator.share({
         title: gameTitle,
@@ -202,7 +247,9 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
     return (
       <PageLayout>
         <div className="py-12 px-4 text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">Loading Challenge...</h1>
+          <h1 className="text-3xl font-bold text-white mb-4">
+            Loading Challenge...
+          </h1>
           <div className="text-[#4cc9f0] text-6xl">🏒</div>
         </div>
       </PageLayout>
@@ -213,9 +260,13 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
     return (
       <PageLayout>
         <div className="py-12 px-4 text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">Challenge Not Found</h1>
-          <p className="text-[#a0aec0] mb-8">This challenge doesn&apos;t exist yet.</p>
-          <Link 
+          <h1 className="text-3xl font-bold text-white mb-4">
+            Challenge Not Found
+          </h1>
+          <p className="text-[#a0aec0] mb-8">
+            This challenge doesn&apos;t exist yet.
+          </p>
+          <Link
             href="/trivia-zone"
             className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-3 px-6 rounded-full"
           >
@@ -227,23 +278,28 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
   }
 
   const currentQ = questions[currentQuestion];
-  const gameTitle = gameParams ? `${gameParams.gameType.charAt(0).toUpperCase() + gameParams.gameType.slice(1)} ${gameParams.category.charAt(0).toUpperCase() + gameParams.category.slice(1)} Challenge ${gameParams.challengeId}` : 'Loading...';
+  const gameTitle = gameParams
+    ? `${gameParams.gameType.charAt(0).toUpperCase() + gameParams.gameType.slice(1)} ${gameParams.category.charAt(0).toUpperCase() + gameParams.category.slice(1)} Challenge ${gameParams.challengeId}`
+    : 'Loading...';
 
   return (
     <PageLayout>
       <div className="py-8 px-4 max-w-4xl mx-auto">
-        
         {/* Header */}
         <div className="text-center mb-8">
-          <Link 
+          <Link
             href="/trivia-zone"
             className="inline-block text-[#4cc9f0] hover:text-[#fbbf24] mb-4 transition-colors"
           >
             ← Back to Trivia Zone
           </Link>
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">{gameTitle}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            {gameTitle}
+          </h1>
           <div className="flex justify-center gap-8 text-sm text-[#a0aec0]">
-            <span>Question {currentQuestion + 1} of {questions.length}</span>
+            <span>
+              Question {currentQuestion + 1} of {questions.length}
+            </span>
             <span>Score: {score}</span>
             {gameState === 'playing' && <span>Time: {timeLeft}s</span>}
           </div>
@@ -260,16 +316,24 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
               📤
             </button>
 
-            <h2 className="text-3xl font-bold text-white mb-4">🏒 Ready to Play?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              🏒 Ready to Play?
+            </h2>
             <div className="text-[#a0aec0] mb-6">
               <p className="text-lg mb-2">Test your hockey knowledge!</p>
               <div className="flex justify-center gap-8 text-sm">
                 <span>📝 {questions.length} Questions</span>
-                <span>⏱️ {gameParams?.gameType === 'quickfire' ? '10' : '15'} seconds per question</span>
-                <span>🎯 {gameParams?.gameType === 'quickfire' ? '10' : '5'} points each</span>
+                <span>
+                  ⏱️ {gameParams?.gameType === 'quickfire' ? '10' : '15'}{' '}
+                  seconds per question
+                </span>
+                <span>
+                  🎯 {gameParams?.gameType === 'quickfire' ? '10' : '5'} points
+                  each
+                </span>
               </div>
             </div>
-            
+
             <button
               onClick={startGame}
               className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 hover:scale-105 shadow-lg"
@@ -283,17 +347,21 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
           <div className="bg-[#16213e] rounded-lg p-8 mb-6">
             {/* Progress Bar */}
             <div className="w-full bg-[#2d3748] rounded-full h-2 mb-6">
-              <div 
+              <div
                 className="bg-[#4cc9f0] h-2 rounded-full transition-all duration-300"
-                style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
+                style={{
+                  width: `${((currentQuestion + 1) / questions.length) * 100}%`,
+                }}
               ></div>
             </div>
 
             {/* Timer Bar */}
             <div className="w-full bg-[#2d3748] rounded-full h-1 mb-8">
-              <div 
+              <div
                 className={`h-1 rounded-full transition-all duration-1000 ${timeLeft > 3 ? 'bg-green-500' : 'bg-red-500'}`}
-                style={{ width: `${(timeLeft / (gameParams?.gameType === 'quickfire' ? 10 : 15)) * 100}%` }}
+                style={{
+                  width: `${(timeLeft / (gameParams?.gameType === 'quickfire' ? 10 : 15)) * 100}%`,
+                }}
               ></div>
             </div>
 
@@ -314,8 +382,8 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
                       ? option === currentQ.correctAnswer
                         ? 'bg-green-600 text-white'
                         : option === selectedAnswer
-                        ? 'bg-red-600 text-white'
-                        : 'bg-[#2d3748] text-[#a0aec0]'
+                          ? 'bg-red-600 text-white'
+                          : 'bg-[#2d3748] text-[#a0aec0]'
                       : 'bg-[#2d3748] hover:bg-[#4cc9f0] text-white hover:text-[#0a0e1a] cursor-pointer'
                   }`}
                 >
@@ -344,13 +412,18 @@ export default function TriviaGame({ params }: { params: Promise<GameParams> }) 
               📤
             </button>
 
-            <h2 className="text-3xl font-bold text-white mb-4">🏆 Challenge Complete!</h2>
-            <div className="text-6xl font-bold text-[#4cc9f0] mb-4">{score}</div>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              🏆 Challenge Complete!
+            </h2>
+            <div className="text-6xl font-bold text-[#4cc9f0] mb-4">
+              {score}
+            </div>
             <p className="text-xl text-[#a0aec0] mb-2">Final Score</p>
             <p className="text-[#a0aec0] mb-8">
-              You got {answers.filter(Boolean).length} out of {questions.length} questions correct!
+              You got {answers.filter(Boolean).length} out of {questions.length}{' '}
+              questions correct!
             </p>
-            
+
             <div className="flex gap-4 justify-center">
               <button
                 onClick={resetGame}

@@ -14,13 +14,13 @@
       "publishDate": "2024-09-14"
     },
     {
-      "id": "qf-001", 
+      "id": "qf-001",
       "title": "Quick Fire Challenge",
       "type": "quick-fire",
       "category": "general",
       "file": "1.md",
       "difficulty": "Medium",
-      "estimatedTime": "3 minutes", 
+      "estimatedTime": "3 minutes",
       "questions": 10,
       "description": "Fast-paced hockey trivia for quick thinkers",
       "featured": false,
@@ -30,7 +30,7 @@
       "id": "tf-001",
       "title": "Hockey Geography Basics",
       "type": "true-false",
-      "category": "hockey-geography", 
+      "category": "hockey-geography",
       "file": "hockey-geography-basics.md",
       "difficulty": "Easy",
       "estimatedTime": "2 minutes",
@@ -42,7 +42,7 @@
     {
       "id": "tf-002",
       "title": "True or False Challenge",
-      "type": "true-false", 
+      "type": "true-false",
       "category": "general",
       "file": "1.md",
       "difficulty": "Easy",

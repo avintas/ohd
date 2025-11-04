@@ -1,22 +1,24 @@
 ---
-title: "Daily Quiz - September 14, 2024"
-category: "mixed"
-gameType: "daily"
-difficulty: "mixed"
+title: 'Daily Quiz - September 14, 2024'
+category: 'mixed'
+gameType: 'daily'
+difficulty: 'mixed'
 timeLimit: 420
 pointsPerQuestion: 20
 totalQuestions: 7
-date: "2024-09-14"
+date: '2024-09-14'
 ---
 
 # Daily Quiz - September 14, 2024
 
-*Today's mix: Legends, Geography, and Stanley Cup History*
+_Today's mix: Legends, Geography, and Stanley Cup History_
 
 ## Question 1
+
 **Question:** Which player scored the famous "Goal of the Century" in the 1972 Summit Series?
 
 **Options:**
+
 - Paul Henderson
 - Phil Esposito
 - Yvan Cournoyer
@@ -29,9 +31,11 @@ date: "2024-09-14"
 ---
 
 ## Question 2
+
 **Question:** What is the capacity of Rogers Place in Edmonton?
 
 **Options:**
+
 - 18,347
 - 18,641
 - 18,500
@@ -44,9 +48,11 @@ date: "2024-09-14"
 ---
 
 ## Question 3
+
 **Question:** Which team won the Stanley Cup in 1994?
 
 **Options:**
+
 - New York Rangers
 - Vancouver Canucks
 - Montreal Canadiens
@@ -59,9 +65,11 @@ date: "2024-09-14"
 ---
 
 ## Question 4
+
 **Question:** Wayne Gretzky never played for the New York Islanders.
 
 **Options:**
+
 - True
 - False
 
@@ -72,9 +80,11 @@ date: "2024-09-14"
 ---
 
 ## Question 5
+
 **Question:** Which player was known as "Le Magnifique" during his career with Pittsburgh?
 
 **Options:**
+
 - Mario Lemieux
 - Jaromir Jagr
 - Sidney Crosby
@@ -87,9 +97,11 @@ date: "2024-09-14"
 ---
 
 ## Question 6
+
 **Question:** Which Original Six team has gone the longest without winning a Stanley Cup?
 
 **Options:**
+
 - Toronto Maple Leafs
 - Chicago Blackhawks
 - Boston Bruins
@@ -102,9 +114,11 @@ date: "2024-09-14"
 ---
 
 ## Question 7
+
 **Question:** In which city would you find the "Hockey Hall of Fame"?
 
 **Options:**
+
 - Montreal
 - Toronto
 - Ottawa

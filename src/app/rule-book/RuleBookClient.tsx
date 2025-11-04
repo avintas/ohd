@@ -9,10 +9,8 @@ interface RuleBookClientProps {
 }
 
 export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
-
   return (
     <PageLayout>
-
       {/* Hero Section */}
       <div className="py-16 md:py-24 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
@@ -24,18 +22,26 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
                   Rule Book
                 </h1>
                 <div className="space-y-4 text-lg md:text-xl text-[#a0aec0] max-w-lg">
-                  <p>Master the game by understanding its rules! Referee Riley breaks down hockey&apos;s most important rules in simple, easy-to-understand terms.</p>
-                  <p>From basic penalties to complex situations, get the official word on what&apos;s legal, what&apos;s not, and why it matters for the game we all love.</p>
+                  <p>
+                    Master the game by understanding its rules! Referee Riley
+                    breaks down hockey&apos;s most important rules in simple,
+                    easy-to-understand terms.
+                  </p>
+                  <p>
+                    From basic penalties to complex situations, get the official
+                    word on what&apos;s legal, what&apos;s not, and why it
+                    matters for the game we all love.
+                  </p>
                   <p>Ready to referee like a pro?</p>
                 </div>
               </header>
-              
+
               <div className="pt-4 flex justify-center lg:justify-start">
-                <button 
+                <button
                   onClick={() => {
-                    document.getElementById('rules-section')?.scrollIntoView({ 
+                    document.getElementById('rules-section')?.scrollIntoView({
                       behavior: 'smooth',
-                      block: 'start'
+                      block: 'start',
                     });
                   }}
                   className="bg-[#4cc9f0] hover:bg-[#3bb5e0] text-[#0a0e1a] font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 shadow-lg"
@@ -57,7 +63,9 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
                   priority
                 />
                 <div className="mt-4">
-                  <h3 className="text-xl md:text-2xl font-bold text-white">Referee Riley</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white">
+                    Referee Riley
+                  </h3>
                   <p className="text-[#4cc9f0] font-semibold">Head Official</p>
                 </div>
               </div>
@@ -74,16 +82,22 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
               Official Rule Guide
             </h2>
             <p className="text-lg text-[#a0aec0] max-w-2xl mx-auto">
-              Clear explanations of hockey&apos;s most important rules, penalties, and situations from a certified official
+              Clear explanations of hockey&apos;s most important rules,
+              penalties, and situations from a certified official
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {ruleMessages.map((rule) => (
-              <div key={rule.id} className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 transition-all duration-300 hover:scale-105 cursor-pointer group">
+              <div
+                key={rule.id}
+                className="bg-[#16213e] hover:bg-[#1e2a4a] rounded-2xl p-8 transition-all duration-300 hover:scale-105 cursor-pointer group"
+              >
                 <div className="text-center space-y-2">
                   <div className="text-3xl mb-2">{rule.emoji}</div>
-                  <h3 className="text-base font-bold text-white mb-2">{rule.title}</h3>
+                  <h3 className="text-base font-bold text-white mb-2">
+                    {rule.title}
+                  </h3>
                   <p className="text-[#a0aec0] text-xs leading-snug">
                     {rule.content}
                   </p>
@@ -93,7 +107,6 @@ export default function RuleBookClient({ ruleMessages }: RuleBookClientProps) {
           </div>
         </div>
       </div>
-
     </PageLayout>
   );
 }

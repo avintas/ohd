@@ -14,7 +14,7 @@ export interface FuelMessage {
 
 export function getAllFuelMessages(): FuelMessage[] {
   const fuelDirectory = path.join(process.cwd(), 'content_nutrition');
-  
+
   if (!fs.existsSync(fuelDirectory)) {
     return [];
   }
@@ -55,7 +55,8 @@ export function getAllFuelMessages(): FuelMessage[] {
     messageContent = lines.slice(contentStartIndex).join('\n').trim();
 
     // Extract title from the first line (# Title)
-    const title = lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
+    const title =
+      lines[0]?.replace('#', '').trim() || filename.replace('.md', '');
 
     fuelMessages.push({
       id: filename.replace('.md', ''),
@@ -64,7 +65,7 @@ export function getAllFuelMessages(): FuelMessage[] {
       category,
       shareTitle,
       content: messageContent,
-      filename
+      filename,
     });
   }
 
@@ -73,5 +74,5 @@ export function getAllFuelMessages(): FuelMessage[] {
 
 export function getFuelMessage(id: string): FuelMessage | null {
   const fuelMessages = getAllFuelMessages();
-  return fuelMessages.find(fuel => fuel.id === id) || null;
+  return fuelMessages.find((fuel) => fuel.id === id) || null;
 }

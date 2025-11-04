@@ -4,6 +4,7 @@ import type {
   Wisdom,
   Motivational,
   Greeting,
+  TriviaQuestion,
 } from './tango-types';
 
 const TANGO_CMS_URL = process.env.TANGO_CMS_URL!;
@@ -63,4 +64,43 @@ export async function fetchGreeting(
   limit: number = 1
 ): Promise<TangoApiResponse<Greeting>> {
   return fetchFromTango<Greeting>(`/api/public/greetings?limit=${limit}`);
+}
+
+export async function fetchTriviaQuestions(
+  limit: number = 1
+): Promise<TangoApiResponse<TriviaQuestion>> {
+  // Note: This endpoint returns counts only (aggregates from trivia_multiple_choice,
+  // trivia_true_false, trivia_who_am_i tables). The count property contains the total
+  // number of published trivia questions. For fetching individual questions, use:
+  // /api/public/multiple-choice-trivia, /api/public/true-false-trivia, /api/public/who-am-i-trivia
+  return fetchFromTango<TriviaQuestion>(
+    `/api/public/trivia-questions?limit=${limit}`
+  );
+}
+
+// Helper function to get all content counts
+export async function getContentCounts() {
+  const [
+    greetingsResult,
+    wisdomResult,
+    statsResult,
+    motivationalResult,
+    triviaResult,
+  ] = await Promise.all([
+    fetchGreeting(1), // Fetch 1 item to get the total count
+    fetchWisdom(1),
+    fetchStats(1),
+    fetchMotivational(1),
+    fetchTriviaQuestions(1),
+  ]);
+
+  return {
+    hugsCount: greetingsResult.success ? greetingsResult.count || 0 : 0,
+    wisdomCount: wisdomResult.success ? wisdomResult.count || 0 : 0,
+    statsCount: statsResult.success ? statsResult.count || 0 : 0,
+    motivationalCount: motivationalResult.success
+      ? motivationalResult.count || 0
+      : 0,
+    triviaCount: triviaResult.success ? triviaResult.count || 0 : 0,
+  };
 }

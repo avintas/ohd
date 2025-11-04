@@ -1,8 +1,8 @@
 ---
-title: "Hockey Evolution Timeline"
-category: "history"
-gameType: "timeline"
-difficulty: "hard"
+title: 'Hockey Evolution Timeline'
+category: 'history'
+gameType: 'timeline'
+difficulty: 'hard'
 timeLimit: 300
 pointsPerQuestion: 30
 totalQuestions: 3
@@ -11,9 +11,11 @@ totalQuestions: 3
 # Timeline Challenge: Hockey Evolution
 
 ## Question 1
+
 **Question:** Put these hockey innovations in chronological order:
 
 **Events:**
+
 - A) Introduction of the forward pass in all zones
 - B) Goaltender masks become mandatory
 - C) Three-point line introduced (assist counting)
@@ -26,9 +28,11 @@ totalQuestions: 3
 ---
 
 ## Question 2
+
 **Question:** Arrange these expansion eras in the correct chronological order:
 
 **Events:**
+
 - A) Original Six expansion to 12 teams
 - B) WHA merger brings 4 teams to NHL
 - C) Modern expansion begins with Vegas and Seattle
@@ -41,9 +45,11 @@ totalQuestions: 3
 ---
 
 ## Question 3
+
 **Question:** Put these rule changes in chronological order:
 
 **Events:**
+
 - A) Shootout introduced to end tie games
 - B) Two-line pass (offside pass) eliminated
 - C) Instigator penalty introduced
